@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :email
       t.string :phone_number
-      t.string :address
+      t.string :address, :optional => true
       t.boolean :admin, :default => false
       t.string :password_digest
 

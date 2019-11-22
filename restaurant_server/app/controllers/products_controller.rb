@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    render :json => @products, :include => [:line_item, :include => :order]
+    render :json => @products, :include => :line_items
   end
 
   def show

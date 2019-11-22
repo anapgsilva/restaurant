@@ -46,38 +46,29 @@ puts "There are #{ Product.count } products"
 
 Order.destroy_all
 p "Creating orders"
-o1 = Order.create :total_price => 71.10, :user_id => u1.id, :type => "Pick-up"
-o2 = Order.create :total_price => 91.40, :user_id => u4.id, :type => "Delivery"
-o3 = Order.create :total_price => 65.80, :user_id => u1.id, :type => "Pick-up"
-o4 = Order.create :total_price => 40.00, :user_id => u2.id, :type => "Pick-up"
-o5 = Order.create :total_price => 56.7, :user_id => u3.id, :type => "Delivery"
+o1 = Order.create :total_price => 71.10, :user_id => u1.id, :kind => "Pick-up"
+o2 = Order.create :total_price => 91.40, :user_id => u4.id, :kind => "Delivery"
+o3 = Order.create :total_price => 65.80, :user_id => u1.id, :kind => "Pick-up"
+o4 = Order.create :total_price => 40.00, :user_id => u2.id, :kind => "Pick-up"
+o5 = Order.create :total_price => 56.7, :user_id => u3.id, :kind => "Delivery"
 puts "There are #{ Order.count } orders"
 
 LineItem.destroy_all
 puts "Creating line items"
-l1 = LineItem.create :quantity => 1, :product_id => p1.id
-l2 = LineItem.create :quantity => 1, :product_id => p6.id
-l3 = LineItem.create :quantity => 1, :product_id => p17.id
-l4 = LineItem.create :quantity => 2, :product_id => p32.id
-l5 = LineItem.create :quantity => 1, :product_id => p2.id
-l6 = LineItem.create :quantity => 1, :product_id => p3.id
-l7 = LineItem.create :quantity => 2, :product_id => p11.id
-l8 = LineItem.create :quantity => 2, :product_id => p28.id
-l9 = LineItem.create :quantity => 1, :product_id => p13.id
-l10 = LineItem.create :quantity => 1, :product_id => p16.id
-l11 = LineItem.create :quantity => 1, :product_id => p27.id
-l12 = LineItem.create :quantity => 1, :product_id => p24.id
-l13 = LineItem.create :quantity => 1, :product_id => p27.id
-l14 = LineItem.create :quantity => 1, :product_id => p2.id
-l15 = LineItem.create :quantity => 1, :product_id => p19.id
-l16 = LineItem.create :quantity => 1, :product_id => p31.id
+l1 = LineItem.create :quantity => 1, :product_id => p1.id, :order_id => o1.id
+l2 = LineItem.create :quantity => 1, :product_id => p6.id, :order_id => o1.id
+l3 = LineItem.create :quantity => 1, :product_id => p17.id, :order_id => o1.id
+l4 = LineItem.create :quantity => 2, :product_id => p32.id, :order_id => o1.id
+l5 = LineItem.create :quantity => 1, :product_id => p2.id, :order_id => o2.id
+l6 = LineItem.create :quantity => 1, :product_id => p3.id, :order_id => o2.id
+l7 = LineItem.create :quantity => 2, :product_id => p11.id, :order_id => o2.id
+l8 = LineItem.create :quantity => 2, :product_id => p28.id, :order_id => o2.id
+l9 = LineItem.create :quantity => 1, :product_id => p13.id, :order_id => o3.id
+l10 = LineItem.create :quantity => 1, :product_id => p16.id, :order_id => o3.id
+l11 = LineItem.create :quantity => 1, :product_id => p27.id, :order_id => o3.id
+l12 = LineItem.create :quantity => 1, :product_id => p24.id, :order_id => o4.id
+l13 = LineItem.create :quantity => 1, :product_id => p27.id, :order_id => o4.id
+l14 = LineItem.create :quantity => 1, :product_id => p2.id, :order_id => o5.id
+l15 = LineItem.create :quantity => 1, :product_id => p19.id, :order_id => o5.id
+l16 = LineItem.create :quantity => 1, :product_id => p31.id, :order_id => o5.id
 puts "There are #{ LineItem.count } line_items"
-
-
-puts "line_items into order"
-
-o1.line_items << l1 << l2 << l3 << l4
-o2.line_items << l5 << l6 << l7 << l8
-o3.line_items << l9 << l10 << l11
-o4.line_items << l12 << l13
-o5.line_items << l14 << l15 << l16

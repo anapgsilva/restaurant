@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2019_11_22_031728) do
   create_table "orders", force: :cascade do |t|
     t.float "total_price"
     t.integer "user_id"
-    t.string "type"
+    t.string "kind"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2019_11_22_031728) do
     t.string "category"
     t.float "price"
     t.string "image"
+    t.integer "stars"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -45,7 +46,8 @@ ActiveRecord::Schema.define(version: 2019_11_22_031728) do
     t.string "email"
     t.string "phone_number"
     t.string "address"
-    t.boolean "admin"
+    t.boolean "admin", default: false
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

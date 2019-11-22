@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
-  before_action :check_for_admin, :only => [:index]
+  # before_action :check_for_admin, :only => [:index]
 
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
     @users = User.all
-    render :json => @users, :include => [:orders, :include => [:line_items, :include => :product]]
+    render :json => @users, :include => :orders
   end
 
   def show
