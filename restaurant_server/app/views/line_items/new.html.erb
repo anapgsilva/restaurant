@@ -1,2 +1,5 @@
-<h1>LineItems#new</h1>
-<p>Find me in app/views/line_items/new.html.erb</p>
+<h1>New LineItem</h1>
+
+<%= render 'form', line_item: @line_item %>
+
+<%= link_to 'Back', line_items_path %>
