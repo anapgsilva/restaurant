@@ -4,7 +4,9 @@ class Payment extends Component {
 
   render() {
     return (
-      <h1>Payment form coming soon</h1>
+      <div>
+        <h1>Payment form coming soon</h1>
+      </div>
     );
   }
 }

@@ -5,7 +5,9 @@ class Nav extends Component {
 
   render() {
     return (
-      <h1>Nav bar coming soon</h1>
+      <nav>
+        <h1>Nav bar coming soon</h1>
+      </nav>
     );
   }
 

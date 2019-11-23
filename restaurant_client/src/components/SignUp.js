@@ -49,15 +49,16 @@ class SignUp extends Component {
 
   render() {
     return (
-      // <h1>Sign Up page coming soon</h1>
-      <form onSubmit={ this._handleSubmit }>
-        <input type="text" placeholder="Name" onInput={ this._handleInputName } />
-        <input type="text" placeholder="Email" onInput={ this._handleInputEmail } />
-        <input type="text" placeholder="Password" onInput={ this._handleInputPassword } />
-        <input type="integer" placeholder="000-000-000" onInput={ this._handleInputPhone_number } />
-        <input type="text" placeholder="Address" onInput={ this._handleInputAddress } />
-        <input type="submit" placeholder="SignUp"  />
-      </form>
+      <div>
+        <form onSubmit={ this._handleSubmit }>
+          <input type="text" placeholder="Name" onInput={ this._handleInputName } />
+          <input type="text" placeholder="Email" onInput={ this._handleInputEmail } />
+          <input type="text" placeholder="Password" onInput={ this._handleInputPassword } />
+          <input type="integer" placeholder="000-000-000" onInput={ this._handleInputPhone_number } />
+          <input type="text" placeholder="Address" onInput={ this._handleInputAddress } />
+          <input type="submit" placeholder="SignUp" />
+        </form>
+      </div>
     );
   }
 }
