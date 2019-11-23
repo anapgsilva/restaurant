@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import UserForm from './UserForm';
 
 class OrderComplete extends Component {
 
@@ -8,8 +8,9 @@ class OrderComplete extends Component {
       <div>
         <h1>Thank you for your order.</h1>
 
+        <p>If not logged in, show sign up form</p>
+        <UserForm />
 
-      //if user not logged in, then ask if he wants to signup, show sign up form
       </div>
     );
 
