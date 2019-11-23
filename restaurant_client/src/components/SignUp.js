@@ -8,7 +8,9 @@ class SignUp extends Component {
     this.state = {
       name: '',
       email: '',
-      password: ''
+      password: '',
+      phone_number: '',
+      address: ''
     }
   }
 
@@ -22,6 +24,12 @@ class SignUp extends Component {
   _handleInputPassword = event => {
     this.setState( {password: event.target.value} )
   }
+  _handleInputPassword = event => {
+    this.setState( {phone_number: event.target.value} )
+  }
+  _handleInputPassword = event => {
+    this.setState( {address: event.target.value} )
+  }
 
   _handleSubmit = event => {
     event.preventDefault();
@@ -31,7 +39,7 @@ class SignUp extends Component {
 
   createUser = event => {
     axios.post('http://localhost:3000/users', { user:
-      {name: this.state.name, email: this.state.email, password: this.state.password}
+      {name: this.state.name, email: this.state.email, password: this.state.password, phone_number: this.state.phone_number, address: this.state.address}
     }).then( result => {
       console.log( result );
     }).catch( error => {
@@ -46,6 +54,8 @@ class SignUp extends Component {
         <input type="text" placeholder="Name" onInput={ this._handleInputName } />
         <input type="text" placeholder="Email" onInput={ this._handleInputEmail } />
         <input type="text" placeholder="Password" onInput={ this._handleInputPassword } />
+        <input type="integer" placeholder="000-000-000" onInput={ this._handleInputPhone_number } />
+        <input type="text" placeholder="Address" onInput={ this._handleInputAddress } />
         <input type="submit" placeholder="SignUp"  />
       </form>
     );
