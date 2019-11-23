@@ -10,7 +10,8 @@ class Menu extends Component {
   constructor() {
     super();
     this.state ={
-      products: {},
+      products: [],
+      categories: [],
       selected_products: []
     }
   }
@@ -19,7 +20,12 @@ class Menu extends Component {
   fetchProducts() {
     axios.get(SERVER_URL).then( (results) => {
       const allProducts = results.data;
-      console.log(allProducts);
+      this.setState({products: allProducts})
+
+
+      const courses = [...new Set(allProducts.map(p => p.category))]
+      this.setState({categories: courses})
+
 
     })
 
@@ -27,7 +33,6 @@ class Menu extends Component {
 
   componentDidMount() {
     this.fetchProducts();
-
   }
 
 
@@ -36,6 +41,18 @@ class Menu extends Component {
     return (
       <div>
         <h1>Menu page coming soon</h1>
+        {this.state.categories.map( c => {
+          return (
+          <div>
+            <h3>{c}</h3>
+            {this.state.products.map( p => {
+              if (p.category === c){
+                return <p>{p.name} ${p.price}</p>
+              }
+            })}
+          </div>)
+        })}
+
 
 
         <Cart />
