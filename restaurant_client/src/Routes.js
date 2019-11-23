@@ -9,6 +9,7 @@ import Nav from './components/Nav';
 import Menu from './components/Menu';
 import CheckOut from './components/CheckOut';
 import SignUp from './components/SignUp';
+import OrderComplete from './components/OrderComplete'
 
 
 //This is not a component: just a collection of JSX
@@ -18,8 +19,9 @@ const Routes = (
     <div>
       <Route component={Nav}/>
       <Route exact path="/menu" component={Menu}/>
-      <Route path="/checkout" component={CheckOut}/>
-      <Route path="/signup" component={SignUp}/>
+      <Route exact path="/checkout" component={CheckOut}/>
+      <Route exact path="/signup" component={SignUp}/>
+      <Route exact path="/ordercomplete" component={OrderComplete}/>
     </div>
   </Router>
 );

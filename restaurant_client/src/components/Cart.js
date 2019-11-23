@@ -1,11 +1,18 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
+
 
 class Cart extends Component {
 
 
   render() {
     return (
-      <h1>Cart div coming soon</h1>
+      <div>
+        <h1>Cart div coming soon</h1>
+        <button onSubmit="">
+          <Link to="/checkout">Check Out</Link>
+        </button>
+      </div>
     );
   }
 }
