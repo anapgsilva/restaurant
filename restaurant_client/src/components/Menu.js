@@ -1,8 +1,17 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-import Cart from './components/Cart';
+import Cart from './Cart';
 
 
+class Menu extends Component {
+
+
+  render() {
+    return (
+      <h1>Menu page coming soon</h1>
+    );
+  }
+}
 
 
 
