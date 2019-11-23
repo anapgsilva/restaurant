@@ -1,52 +1,37 @@
-import React, {Component} from 'react';
-// import {Link} from 'react-router-dom';
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 
-class Cart extends Component {
+const Cart = (props) => {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      shoppingCart: []
-    }
-    this.removeItem = this.removeItem.bind(this);
-    this.componentDidMount = this.componentDidMount.bind(this);
-  };
+  const orderItems = props.cart_products;
+  const allProducts = props.products;
 
-  componentDidMount() {
-
-    const props = this.props;
-
-    this.setState({shoppingCart: [...this.state.shoppingCart, props.cart_products] });
-
-    setTimeout(this.componentDidMount, 2000);
-  };
-
-  removeItem(p) {
-    console.log(p);
-    this.setState({shoppingCart: [this.state.shoppingCart]})
+  const removeItem = function(id) {
+    return props.onClick(id);
   }
 
+  return (
+    <aside className='orderList'>
+      <h1>Your Order</h1>
 
-  render() {
+      {Object.entries(orderItems).map( ([id, quantity]) => {
+        const item = allProducts.find( p => p.id.toString() === id);
 
-    return (
-      <div key='orderList'>
-        <h1>Cart div coming soon</h1>
-        {this.state.shoppingCart.map( p => {
-          return ( p.length > 0 &&
-            <div key={p.name}>
-              <p>{p.name}</p>
-              <input value="-" type="submit" onClick={ () => this.removeItem(p)} />
-            </div>
-          )
-        })}
-        <button>
-          Check Out
-        </button>
-      </div>
-    );
-  }
+        return (quantity > 0 &&
+          <div key={id}>
+            <label>{quantity} X {item.name}<span>${item.price}</span></label>
+            <button onClick={ () => removeItem(id)}>
+            -
+            </button>
+          </div>)
+      })}
+
+      <button>
+        <Link to="/checkout">Check Out</Link>
+      </button>
+    </aside>
+  );
 }
 
 
