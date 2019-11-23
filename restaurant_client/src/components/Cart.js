@@ -11,6 +11,16 @@ const Cart = (props) => {
     return props.onClick(id);
   }
 
+  const submitOrder = (orderItems, allProducts) => {
+    console.log('orderItems', orderItems);
+    let order = JSON.stringify(orderItems);
+    localStorage.setItem('orderItems', order);
+    let products = JSON.stringify(allProducts);
+    localStorage.setItem('allProducts', products);
+    console.log('order', order);
+    console.log('products', products);
+  }
+
   return (
     <aside className='orderList'>
       <h1>Your Order</h1>
@@ -27,7 +37,7 @@ const Cart = (props) => {
           </div>)
       })}
 
-      <button>
+      <button onClick={() => submitOrder(orderItems, allProducts)}>
         <Link to="/checkout">Check Out</Link>
       </button>
     </aside>
