@@ -18,12 +18,18 @@ class Menu extends Component {
   //get all products
   fetchProducts() {
     axios.get(SERVER_URL).then( (results) => {
-      const allProducts = results.data
+      const allProducts = results.data;
       console.log(allProducts);
 
     })
 
   }
+
+  componentDidMount() {
+    this.fetchProducts();
+
+  }
+
 
 
   render() {

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
 
 class Cart extends Component {
@@ -9,8 +9,8 @@ class Cart extends Component {
     return (
       <div>
         <h1>Cart div coming soon</h1>
-        <button onSubmit="">
-          <Link to="/checkout">Check Out</Link>
+        <button>
+          Check Out
         </button>
       </div>
     );
