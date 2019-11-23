@@ -9,8 +9,10 @@ class CheckOut extends Component {
       orderItems: {},
       allProducts: [],
       delivery: false,
+      paymentOption: "Cash",
     }
     this._handleCheck = this._handleCheck.bind(this);
+    this._handleChange = this._handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -23,6 +25,9 @@ class CheckOut extends Component {
     this.setState({delivery: !this.state.delivery});
   }
 
+  _handleChange(event) {
+    this.setState({paymentOption: event.target.value})
+  }
 
   render() {
     let total = 0;
@@ -54,6 +59,21 @@ class CheckOut extends Component {
         )})}
         <p>{deliveryCost}</p>
         <p>Total ${total}</p>
+
+        <form>
+        <div className="radio">
+            <label>
+              <input type="radio" value="Cash" checked={this.state.paymentOption === "Cash"} onChange={this._handleChange}/>
+              Cash
+            </label>
+          </div>
+          <div className="radio">
+            <label>
+              <input type="radio" value="Card" checked={this.state.paymentOption === "Card"} onChange={this._handleChange}/>
+              Card
+            </label>
+          </div>
+        </form>
         <Payment />
         <button>Pay</button>
       </div>
