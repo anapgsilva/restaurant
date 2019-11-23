@@ -10,6 +10,7 @@ class CheckOut extends Component {
       allProducts: [],
       delivery: false,
     }
+    this._handleCheck = this._handleCheck.bind(this);
   }
 
   componentDidMount() {
@@ -18,6 +19,9 @@ class CheckOut extends Component {
     this.setState({ orderItems, allProducts });
   }
 
+  _handleCheck() {
+    this.setState({delivery: !this.state.delivery});
+  }
 
 
   render() {
@@ -34,7 +38,7 @@ class CheckOut extends Component {
         <div className="orderKind">
           <h2>Pick-Up</h2>
           <label className="switch">
-            <input type="checkbox" value="Delivery"/>
+            <input type="checkbox" onChange={this._handleCheck} defaultChecked={this.state.delivery}/>
             <span className="slider"></span>
           </label>
           <h2>Delivery</h2>
