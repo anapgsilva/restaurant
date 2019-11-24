@@ -33,8 +33,8 @@ class SignUp extends Component {
 
   _handleSubmit = event => {
     event.preventDefault();
-    // console.log('getting ready to be submitted');
     this.createUser();
+    this.props.history.push('/')
 
   }
 
