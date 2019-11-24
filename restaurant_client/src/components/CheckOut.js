@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Payment from './Payment';
+import {Link} from 'react-router-dom';
 
 class CheckOut extends Component {
 
