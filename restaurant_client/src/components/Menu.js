@@ -12,9 +12,10 @@ class Menu extends Component {
     this.state ={
       products: [],
       categories: [],
-      selected_products: []
+      selected_products: {}
     }
     this.addItemToOrder = this.addItemToOrder.bind(this);
+    this._handleChange = this._handleChange.bind(this);
   }
 
   //get all products
@@ -23,28 +24,42 @@ class Menu extends Component {
       const allProducts = results.data;
       this.setState({products: allProducts})
 
-
       const courses = [...new Set(allProducts.map(p => p.category))]
-      this.setState({categories: courses})
-
-
+      this.setState({categories: courses});
     })
-
   }
 
   componentDidMount() {
     this.fetchProducts();
+    const orderProducts = JSON.parse(localStorage.getItem('orderItems'));
+    if (orderProducts) {
+      this.setState({selected_products: orderProducts});
+    };
   }
 
   addItemToOrder(p) {
-    this.setState({selected_products: [...this.state.selected_products, p]})
-    console.log(this.state.selected_products);
+    const currentCart = this.state.selected_products;
+    //checks if item is already there and changes the quantity
+    if (currentCart[p.id]) {
+      currentCart[p.id] += 1;
+    } else {
+      currentCart[p.id] = 1;
+    }
+    this.setState({selected_products: currentCart});
   }
 
+  _handleChange(id) {
+    const currentCart = this.state.selected_products;
+    currentCart[id] -= 1;
+    if (currentCart[id] === 0){
+      delete currentCart[id];
+    }
+    this.setState({selected_products: currentCart});
+  }
 
   render() {
     return (
-      <div className="homePage">
+      <div className="main">
         <div className="menu">
           <h1>Menu</h1>
           {this.state.categories.map( c => {
@@ -54,7 +69,7 @@ class Menu extends Component {
               {this.state.products.map( p => {
                   return (p.category === c &&
                   <div key={p.id}>
-                    <p>{p.name} ${p.price}</p>
+                    <label>{p.name} {} ${p.price}</label>
                     <button type="button" onClick={() => this.addItemToOrder(p)}>
                     +</button>
                   </div>);
@@ -62,10 +77,9 @@ class Menu extends Component {
             </div>);
           })}
         </div>
-
-        <aside className="shoppingCart">
-          <Cart cart_products={this.state.selected_products}/>
-        </aside>
+        {Object.keys(this.state.selected_products).length > 0 &&
+        <Cart onClick={this._handleChange} cart_products={this.state.selected_products} products={this.state.products} />
+        }
       </div>
     );
   }
