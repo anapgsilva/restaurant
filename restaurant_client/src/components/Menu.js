@@ -32,7 +32,7 @@ class Menu extends Component {
   componentDidMount() {
     this.fetchProducts();
     const orderProducts = JSON.parse(localStorage.getItem('orderItems'));
-    if (orderProducts.length > 0) {
+    if (orderProducts) {
       this.setState({selected_products: orderProducts});
     };
   }
@@ -69,7 +69,7 @@ class Menu extends Component {
               {this.state.products.map( p => {
                   return (p.category === c &&
                   <div key={p.id}>
-                    <label>{p.name} ${p.price}</label>
+                    <label>{p.name} {} ${p.price}</label>
                     <button type="button" onClick={() => this.addItemToOrder(p)}>
                     +</button>
                   </div>);
