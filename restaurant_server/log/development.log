@@ -11549,3 +11549,388 @@ Processing by ProductsController#index as JSON
 Completed 200 OK in 76ms (Views: 64.2ms | ActiveRecord: 11.4ms | Allocations: 38989)
 
 
+Started GET "/" for ::1 at 2019-11-25 09:34:03 +1100
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "restaurant_server_development" does not exist
+):
+  
+activerecord (6.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:50:in `rescue in postgresql_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:33:in `postgresql_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:889:in `new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:933:in `checkout_new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:912:in `try_to_checkout_new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:873:in `acquire_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:595:in `checkout'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:439:in `connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1121:in `retrieve_connection'
+activerecord (6.0.1) lib/active_record/connection_handling.rb:238:in `retrieve_connection'
+activerecord (6.0.1) lib/active_record/connection_handling.rb:206:in `connection'
+activerecord (6.0.1) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:77:in `call'
+rack-cors (1.0.6) lib/rack/cors.rb:98:in `call'
+webpacker (4.2.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "restaurant_server_development"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "restaurant_server_test"[0m
+  [1m[35m (178.7ms)[0m  [1m[35mCREATE DATABASE "restaurant_server_development" ENCODING = 'unicode'[0m
+  [1m[35m (85.0ms)[0m  [1m[35mCREATE DATABASE "restaurant_server_test" ENCODING = 'unicode'[0m
+  [1m[35m (58.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (45.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(664605785810863575)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20191122031521)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (49.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "phone_number" character varying, "address" character varying, "admin" boolean DEFAULT FALSE, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191122031521"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrders (20191122031609)
+  [1m[35m (39.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "total_price" float, "user_id" integer, "kind" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191122031609"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLineItems (20191122031646)
+  [1m[35m (40.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "line_items" ("id" bigserial primary key, "quantity" integer, "product_id" integer, "order_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191122031646"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProducts (20191122031728)
+  [1m[35m (40.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "category" character varying, "price" float, "image" character varying, "stars" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191122031728"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (41.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-24 22:37:42.663933"], ["updated_at", "2019-11-24 22:37:42.663933"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(664605785810863575)[0m
+  [1m[35m (41.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ana@ga"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "admin", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ana"], ["email", "ana@ga"], ["admin", true], ["password_digest", "$2a$12$kCw6WJz4KGoWdEd50m/9ruWtQAeMQyyVwC8wERtCkaqj2r/liE7sK"], ["created_at", "2019-11-24 22:37:53.488723"], ["updated_at", "2019-11-24 22:37:53.488723"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kait@ga"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "admin", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Kait"], ["email", "kait@ga"], ["admin", true], ["password_digest", "$2a$12$qfm/UQnGtbgjXm2ynp4HKOE5irUOb/ySOlKE5rpP722IZBt8koeI6"], ["created_at", "2019-11-24 22:37:53.753552"], ["updated_at", "2019-11-24 22:37:53.753552"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kian@ga"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "admin", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Kian"], ["email", "kian@ga"], ["admin", true], ["password_digest", "$2a$12$b8joixjw7T0.XmpItIG34uKYScy2g/iz4x4Ufurs93rlbsbvod.aS"], ["created_at", "2019-11-24 22:37:54.002001"], ["updated_at", "2019-11-24 22:37:54.002001"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "eva@ga"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Eva"], ["email", "eva@ga"], ["password_digest", "$2a$12$y/yMHD81ov7zApOdINCB.OYDyu1Pn6KiL09kYx0zCPH6dmezpyvvi"], ["created_at", "2019-11-24 22:37:54.250688"], ["updated_at", "2019-11-24 22:37:54.250688"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (1.8ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Garlic Bread"], ["category", "Starter"], ["price", 5.5], ["image", ""], ["created_at", "2019-11-24 22:37:54.299208"], ["updated_at", "2019-11-24 22:37:54.299208"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Traditional Bruschetta"], ["category", "Starter"], ["price", 10.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.308465"], ["updated_at", "2019-11-24 22:37:54.308465"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Arancini Pomodoro"], ["category", "Starter"], ["price", 15.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.319501"], ["updated_at", "2019-11-24 22:37:54.319501"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Garlic Prawns"], ["category", "Starter"], ["price", 18.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.325095"], ["updated_at", "2019-11-24 22:37:54.325095"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Calamari Fritti"], ["category", "Starter"], ["price", 15.5], ["image", ""], ["created_at", "2019-11-24 22:37:54.329298"], ["updated_at", "2019-11-24 22:37:54.329298"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Arrabiata"], ["category", "Pasta"], ["price", 18.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.337670"], ["updated_at", "2019-11-24 22:37:54.337670"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Puttanesca"], ["category", "Pasta"], ["price", 18.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.341252"], ["updated_at", "2019-11-24 22:37:54.341252"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Napolitana"], ["category", "Pasta"], ["price", 18.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.344761"], ["updated_at", "2019-11-24 22:37:54.344761"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Pesto"], ["category", "Pasta"], ["price", 18.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.348444"], ["updated_at", "2019-11-24 22:37:54.348444"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bolognese"], ["category", "Pasta"], ["price", 18.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.351923"], ["updated_at", "2019-11-24 22:37:54.351923"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Carbonara"], ["category", "Pasta"], ["price", 18.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.355269"], ["updated_at", "2019-11-24 22:37:54.355269"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Marinara"], ["category", "Pasta"], ["price", 23.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.358635"], ["updated_at", "2019-11-24 22:37:54.358635"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Lasagne"], ["category", "Pasta"], ["price", 18.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.363240"], ["updated_at", "2019-11-24 22:37:54.363240"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Chicken Cacciatore"], ["category", "Main"], ["price", 24.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.368797"], ["updated_at", "2019-11-24 22:37:54.368797"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Chicken Funghi"], ["category", "Main"], ["price", 24.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.373333"], ["updated_at", "2019-11-24 22:37:54.373333"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Veal Marsala"], ["category", "Main"], ["price", 24.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.377181"], ["updated_at", "2019-11-24 22:37:54.377181"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Veal Boscaiola"], ["category", "Main"], ["price", 24.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.381396"], ["updated_at", "2019-11-24 22:37:54.381396"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Grain Fed Sirloin"], ["category", "Main"], ["price", 29.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.385458"], ["updated_at", "2019-11-24 22:37:54.385458"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Wagyu"], ["category", "Main"], ["price", 29.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.389423"], ["updated_at", "2019-11-24 22:37:54.389423"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Margherita"], ["category", "Pizza"], ["price", 18.0], ["image", ""], ["created_at", "2019-11-24 22:37:54.393090"], ["updated_at", "2019-11-24 22:37:54.393090"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Napoletana"], ["category", "Pizza"], ["price", 18.0], ["image", ""], ["created_at", "2019-11-24 22:37:54.397102"], ["updated_at", "2019-11-24 22:37:54.397102"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tropical"], ["category", "Pizza"], ["price", 18.0], ["image", ""], ["created_at", "2019-11-24 22:37:54.400844"], ["updated_at", "2019-11-24 22:37:54.400844"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Capriccosa"], ["category", "Pizza"], ["price", 18.5], ["image", ""], ["created_at", "2019-11-24 22:37:54.404654"], ["updated_at", "2019-11-24 22:37:54.404654"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Pepperoni"], ["category", "Pizza"], ["price", 18.0], ["image", ""], ["created_at", "2019-11-24 22:37:54.408303"], ["updated_at", "2019-11-24 22:37:54.408303"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Seafood"], ["category", "Pizza"], ["price", 19.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.411916"], ["updated_at", "2019-11-24 22:37:54.411916"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Vegetarian"], ["category", "Pizza"], ["price", 18.0], ["image", ""], ["created_at", "2019-11-24 22:37:54.415692"], ["updated_at", "2019-11-24 22:37:54.415692"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Supreme"], ["category", "Pizza"], ["price", 22.0], ["image", ""], ["created_at", "2019-11-24 22:37:54.419312"], ["updated_at", "2019-11-24 22:37:54.419312"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tiramisu"], ["category", "Dessert"], ["price", 10.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.423030"], ["updated_at", "2019-11-24 22:37:54.423030"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Vanilla Pannacotta"], ["category", "Dessert"], ["price", 9.0], ["image", ""], ["created_at", "2019-11-24 22:37:54.426779"], ["updated_at", "2019-11-24 22:37:54.426779"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Belgium Chocolate Mousse"], ["category", "Dessert"], ["price", 9.0], ["image", ""], ["created_at", "2019-11-24 22:37:54.430770"], ["updated_at", "2019-11-24 22:37:54.430770"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cheesecake"], ["category", "Dessert"], ["price", 10.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.434409"], ["updated_at", "2019-11-24 22:37:54.434409"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Chocolate Mud Cake"], ["category", "Dessert"], ["price", 10.9], ["image", ""], ["created_at", "2019-11-24 22:37:54.438016"], ["updated_at", "2019-11-24 22:37:54.438016"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "category", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Nutella Pizza"], ["category", "Dessert"], ["price", 10.0], ["image", ""], ["created_at", "2019-11-24 22:37:54.441679"], ["updated_at", "2019-11-24 22:37:54.441679"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.7ms)[0m  [1m[32mINSERT INTO "orders" ("total_price", "user_id", "kind", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["total_price", 71.1], ["user_id", 1], ["kind", "Pick-up"], ["created_at", "2019-11-24 22:37:54.480005"], ["updated_at", "2019-11-24 22:37:54.480005"]]
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("total_price", "user_id", "kind", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["total_price", 91.4], ["user_id", 4], ["kind", "Delivery"], ["created_at", "2019-11-24 22:37:54.528262"], ["updated_at", "2019-11-24 22:37:54.528262"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("total_price", "user_id", "kind", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["total_price", 65.8], ["user_id", 1], ["kind", "Pick-up"], ["created_at", "2019-11-24 22:37:54.535076"], ["updated_at", "2019-11-24 22:37:54.535076"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.3ms)[0m  [1m[32mINSERT INTO "orders" ("total_price", "user_id", "kind", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["total_price", 40.0], ["user_id", 2], ["kind", "Pick-up"], ["created_at", "2019-11-24 22:37:54.540280"], ["updated_at", "2019-11-24 22:37:54.540280"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("total_price", "user_id", "kind", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["total_price", 56.7], ["user_id", 3], ["kind", "Delivery"], ["created_at", "2019-11-24 22:37:54.557761"], ["updated_at", "2019-11-24 22:37:54.557761"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLineItem Create (0.7ms)[0m  [1m[32mINSERT INTO "line_items" ("quantity", "product_id", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["product_id", 1], ["order_id", 1], ["created_at", "2019-11-24 22:37:54.580711"], ["updated_at", "2019-11-24 22:37:54.580711"]]
+  [1m[35m (41.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLineItem Create (0.4ms)[0m  [1m[32mINSERT INTO "line_items" ("quantity", "product_id", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["product_id", 6], ["order_id", 1], ["created_at", "2019-11-24 22:37:54.630720"], ["updated_at", "2019-11-24 22:37:54.630720"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLineItem Create (0.4ms)[0m  [1m[32mINSERT INTO "line_items" ("quantity", "product_id", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["product_id", 17], ["order_id", 1], ["created_at", "2019-11-24 22:37:54.638734"], ["updated_at", "2019-11-24 22:37:54.638734"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLineItem Create (0.4ms)[0m  [1m[32mINSERT INTO "line_items" ("quantity", "product_id", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 2], ["product_id", 32], ["order_id", 1], ["created_at", "2019-11-24 22:37:54.645708"], ["updated_at", "2019-11-24 22:37:54.645708"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLineItem Create (0.3ms)[0m  [1m[32mINSERT INTO "line_items" ("quantity", "product_id", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["product_id", 2], ["order_id", 2], ["created_at", "2019-11-24 22:37:54.651911"], ["updated_at", "2019-11-24 22:37:54.651911"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLineItem Create (0.3ms)[0m  [1m[32mINSERT INTO "line_items" ("quantity", "product_id", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["product_id", 3], ["order_id", 2], ["created_at", "2019-11-24 22:37:54.657993"], ["updated_at", "2019-11-24 22:37:54.657993"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLineItem Create (0.3ms)[0m  [1m[32mINSERT INTO "line_items" ("quantity", "product_id", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 2], ["product_id", 11], ["order_id", 2], ["created_at", "2019-11-24 22:37:54.664124"], ["updated_at", "2019-11-24 22:37:54.664124"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLineItem Create (0.4ms)[0m  [1m[32mINSERT INTO "line_items" ("quantity", "product_id", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 2], ["product_id", 28], ["order_id", 2], ["created_at", "2019-11-24 22:37:54.670147"], ["updated_at", "2019-11-24 22:37:54.670147"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLineItem Create (0.3ms)[0m  [1m[32mINSERT INTO "line_items" ("quantity", "product_id", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["product_id", 13], ["order_id", 3], ["created_at", "2019-11-24 22:37:54.676535"], ["updated_at", "2019-11-24 22:37:54.676535"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLineItem Create (0.3ms)[0m  [1m[32mINSERT INTO "line_items" ("quantity", "product_id", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["product_id", 16], ["order_id", 3], ["created_at", "2019-11-24 22:37:54.682501"], ["updated_at", "2019-11-24 22:37:54.682501"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLineItem Create (0.3ms)[0m  [1m[32mINSERT INTO "line_items" ("quantity", "product_id", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["product_id", 27], ["order_id", 3], ["created_at", "2019-11-24 22:37:54.688279"], ["updated_at", "2019-11-24 22:37:54.688279"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mLineItem Create (0.3ms)[0m  [1m[32mINSERT INTO "line_items" ("quantity", "product_id", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["product_id", 24], ["order_id", 4], ["created_at", "2019-11-24 22:37:54.693973"], ["updated_at", "2019-11-24 22:37:54.693973"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mLineItem Create (0.3ms)[0m  [1m[32mINSERT INTO "line_items" ("quantity", "product_id", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["product_id", 27], ["order_id", 4], ["created_at", "2019-11-24 22:37:54.700164"], ["updated_at", "2019-11-24 22:37:54.700164"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLineItem Create (0.3ms)[0m  [1m[32mINSERT INTO "line_items" ("quantity", "product_id", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["product_id", 2], ["order_id", 5], ["created_at", "2019-11-24 22:37:54.706095"], ["updated_at", "2019-11-24 22:37:54.706095"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLineItem Create (1.0ms)[0m  [1m[32mINSERT INTO "line_items" ("quantity", "product_id", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["product_id", 19], ["order_id", 5], ["created_at", "2019-11-24 22:37:54.712177"], ["updated_at", "2019-11-24 22:37:54.712177"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLineItem Create (0.3ms)[0m  [1m[32mINSERT INTO "line_items" ("quantity", "product_id", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 1], ["product_id", 31], ["order_id", 5], ["created_at", "2019-11-24 22:37:54.718851"], ["updated_at", "2019-11-24 22:37:54.718851"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+Started GET "/" for ::1 at 2019-11-25 09:38:10 +1100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 139ms (Views: 108.6ms | ActiveRecord: 24.5ms | Allocations: 55334)
+
+
