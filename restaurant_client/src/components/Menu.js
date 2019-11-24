@@ -31,6 +31,10 @@ class Menu extends Component {
 
   componentDidMount() {
     this.fetchProducts();
+    const orderProducts = JSON.parse(localStorage.getItem('orderItems'));
+    if (orderProducts.length > 0) {
+      this.setState({selected_products: orderProducts});
+    };
   }
 
   addItemToOrder(p) {

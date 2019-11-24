@@ -17,16 +17,27 @@ class CheckOut extends Component {
 
   componentDidMount() {
     const orderItems = JSON.parse(localStorage.getItem('orderItems'));
+
     const allProducts = JSON.parse(localStorage.getItem('allProducts'));
-    this.setState({ orderItems, allProducts });
+
+    const delivery = JSON.parse(localStorage.getItem('delivery'));
+
+    const paymentOption = JSON.parse(localStorage.getItem('paymentOption'));
+
+    this.setState({ orderItems, allProducts, delivery, paymentOption });
+
   }
 
   _handleCheck() {
     this.setState({delivery: !this.state.delivery});
+    let deliveryStatus = JSON.stringify(this.state.delivery);
+    localStorage.setItem('delivery', deliveryStatus);
   }
 
   _handleChange(event) {
     this.setState({paymentOption: event.target.value})
+    let paymentStatus = JSON.stringify(this.state.paymentOption);
+    localStorage.setItem('paymentOption', paymentStatus);
   }
 
   render() {
@@ -74,8 +85,8 @@ class CheckOut extends Component {
             </label>
           </div>
         </form>
-        <Payment />
-        <button>Pay</button>
+        {this.state.paymentOption === "Card" ? <Payment /> : ""}
+        <Link to="/ordercomplete" <button>Pay</button></Link>
       </div>
     );
   }
