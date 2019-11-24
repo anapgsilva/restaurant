@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Payment from './Payment';
+import {Link} from 'react-router-dom';
 
 class CheckOut extends Component {
 
@@ -86,7 +87,7 @@ class CheckOut extends Component {
           </div>
         </form>
         {this.state.paymentOption === "Card" ? <Payment /> : ""}
-        <Link to="/ordercomplete" <button>Pay</button></Link>
+        <Link to="/ordercomplete" ><button>Pay</button></Link>
       </div>
     );
   }
