@@ -1,17 +1,19 @@
 import React from 'react';
-
 import {HashRouter as Router, Route} from 'react-router-dom';
-
-//This is goign to replace App.js
-
-
 import Nav from './components/Nav';
 import Home from './components/Home';
 import Menu from './components/Menu';
 import CheckOut from './components/CheckOut';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
-import OrderComplete from './components/OrderComplete'
+import OrderComplete from './components/OrderComplete';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab, faStar);
+//This is goign to replace App.js
+
 
 
 //This is not a component: just a collection of JSX

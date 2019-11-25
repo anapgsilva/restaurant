@@ -3,6 +3,11 @@ import UserForm from './UserForm';
 
 class OrderComplete extends Component {
 
+  componentDidMount() {
+    const orderItems = JSON.stringify({});
+    localStorage.setItem('orderItems', orderItems);
+  }
+
   render() {
     return(
       <div>
