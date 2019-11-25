@@ -21,13 +21,14 @@ const Cart = (props) => {
     console.log('products', products);
   }
 
-  return (
+  return (allProducts.length > 0 ?
     <aside className='orderList'>
       <h1>Your Order</h1>
 
       {Object.entries(orderItems).map( ([id, quantity]) => {
+        console.log(orderItems);
         const item = allProducts.find( p => p.id.toString() === id);
-
+        console.log(item);
         return (quantity > 0 &&
           <div key={id}>
             <label>{quantity} X {item.name}<span>${item.price}</span></label>
@@ -41,6 +42,7 @@ const Cart = (props) => {
         <Link to="/checkout">Check Out</Link>
       </button>
     </aside>
+    : ""
   );
 }
 

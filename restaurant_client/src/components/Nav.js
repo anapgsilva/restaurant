@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import logo from "../logo.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Button, Form, FormGroup, Label, Input,Row, Col}
+//import DropdownButton from 'react-bootstrap/DropdownButton';
+import {Dropdown,DropdownButton,Button, Form, FormGroup, Label, Input,Row, Col}
 from 'react-bootstrap';
 
 class Nav extends Component {
@@ -33,27 +34,26 @@ class Nav extends Component {
           </li>
         </ul>
         
-        <div className="d-flex justify-content-end">
-        <Form >
-       
-          <Row>
-          <div className="p-2">
-            <Col>
-            
-          <Form.Control type="text" placeholder="email"/>
-          
-          </Col>
-          </div>
-          <div className="p-2">
-          <Col>
-          <Form.Control type="text" placeholder="password"/>
-          <Link to="/signin"><input type="submit" value="Log In" /></Link>
-          </Col>
-          </div>
-          <Link to="/signup">Sign Up</Link>
-        </Row>
-        </Form>
-        </div>
+  <DropdownButton id="dropdown-item-button" title="Log In">
+  <Form className="loginForm">
+  <Form.Group controlId="formBasicEmail">
+    <Form.Label>Email address</Form.Label>
+    <Form.Control type="email" placeholder="Enter email" />
+    
+  </Form.Group>
+
+  <Form.Group controlId="formBasicPassword">
+    <Form.Label>Password</Form.Label>
+    <Form.Control type="password" placeholder="Password" />
+  </Form.Group>
+  <Form.Group controlId="formBasicCheckbox">
+    <Form.Check type="checkbox" label="Check me out" />
+  </Form.Group>
+  <Button variant="primary" type="submit">
+    Submit
+  </Button>
+</Form>
+  </DropdownButton>
 
       </nav>
     );
