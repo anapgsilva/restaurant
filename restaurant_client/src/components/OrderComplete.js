@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import UserForm from './UserForm';
+import SignUp from './SignUp';
 import OrderSummary from './OrderSummary';
 
 
@@ -32,14 +32,15 @@ class OrderComplete extends Component {
 
   render() {
     return(
-      <div>
-        <div>
-          <h2>Thank you for your order!</h2>
-          <OrderSummary />
+      <div className="main">
+        <div className="orderComplete">
+          <h3>Thank you for your order!</h3>
+          <h6>Fast check out next time?</h6>
+          <SignUp />
         </div>
 
         <div>
-          <UserForm />
+          <OrderSummary />
         </div>
 
       </div>
