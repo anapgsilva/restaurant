@@ -8,38 +8,38 @@ puts "There are #{ User.count } users"
 
 Product.destroy_all
 p "Creating products"
-p1 = Product.create :name => "Garlic Bread" , :category => "Starter", :price => 5.50, :image => ""
-p2 = Product.create :name => "Traditional Bruschetta", :category => "Starter", :price => 10.90, :image => ""
+p1 = Product.create :name => "Garlic Bread" , :category => "Starter", :price => 5.50, :image => "", :stars => 5
+p2 = Product.create :name => "Traditional Bruschetta", :category => "Starter", :price => 10.90, :image => "", :stars => 4
 p3 = Product.create :name => "Arancini Pomodoro", :category => "Starter", :price => 15.90, :image => ""
 p4 = Product.create :name => "Garlic Prawns", :category => "Starter", :price => 18.90, :image => ""
-p5 = Product.create :name => "Calamari Fritti", :category => "Starter", :price => 15.50, :image => ""
-p6 = Product.create :name => "Arrabiata", :category => "Pasta", :price => 18.90, :image => ""
+p5 = Product.create :name => "Calamari Fritti", :category => "Starter", :price => 15.50, :image => "", :stars => 3
+p6 = Product.create :name => "Arrabiata", :category => "Pasta", :price => 18.90, :image => "", :stars => 4
 p7 = Product.create :name => "Puttanesca", :category => "Pasta", :price => 18.90, :image => ""
 p8 = Product.create :name => "Napolitana", :category => "Pasta", :price => 18.90, :image => ""
-p9 = Product.create :name => "Pesto", :category => "Pasta", :price => 18.90, :image => ""
-p10 = Product.create :name => "Bolognese", :category => "Pasta", :price => 18.90, :image => ""
-p11 = Product.create :name => "Carbonara", :category => "Pasta", :price => 18.90, :image => ""
+p9 = Product.create :name => "Pesto", :category => "Pasta", :price => 18.90, :image => "", :stars => 2
+p10 = Product.create :name => "Bolognese", :category => "Pasta", :price => 18.90, :image => "", :stars => 5
+p11 = Product.create :name => "Carbonara", :category => "Pasta", :price => 18.90, :image => "", :stars => 5
 p12 = Product.create :name => "Marinara", :category => "Pasta", :price => 23.90, :image => ""
-p13 = Product.create :name => "Lasagne", :category => "Pasta", :price => 18.90, :image => ""
+p13 = Product.create :name => "Lasagne", :category => "Pasta", :price => 18.90, :image => "", :stars => 5
 p14 = Product.create :name => "Chicken Cacciatore", :category => "Main", :price => 24.90, :image => ""
-p15 = Product.create :name => "Chicken Funghi", :category => "Main", :price => 24.90, :image => ""
+p15 = Product.create :name => "Chicken Funghi", :category => "Main", :price => 24.90, :image => "", :stars => 3
 p16 = Product.create :name => "Veal Marsala", :category => "Main", :price => 24.90, :image => ""
 p17 = Product.create :name => "Veal Boscaiola", :category => "Main", :price => 24.90, :image => ""
 p18 = Product.create :name => "Grain Fed Sirloin", :category => "Main", :price => 29.90, :image => ""
-p19 = Product.create :name => "Wagyu", :category => "Main", :price => 29.90, :image => ""
+p19 = Product.create :name => "Wagyu", :category => "Main", :price => 29.90, :image => "", :stars => 5
 p20 = Product.create :name => 'Margherita', :category => "Pizza", :price => 18, :image => ""
-p21 = Product.create :name => 'Napoletana', :category => "Pizza", :price => 18, :image => ""
-p22 = Product.create :name => 'Tropical', :category => "Pizza", :price => 18, :image => ""
+p21 = Product.create :name => 'Napoletana', :category => "Pizza", :price => 18, :image => "", :stars => 3
+p22 = Product.create :name => 'Tropical', :category => "Pizza", :price => 18, :image => "", :stars => 4
 p23 = Product.create :name => 'Capriccosa', :category => "Pizza", :price => 18.50, :image => ""
-p24 = Product.create :name => 'Pepperoni', :category => "Pizza", :price => 18, :image => ""
+p24 = Product.create :name => 'Pepperoni', :category => "Pizza", :price => 18, :image => "", :stars => 4
 p25 = Product.create :name => 'Seafood', :category => "Pizza", :price => 19.90, :image => ""
-p26 = Product.create :name => 'Vegetarian', :category => "Pizza", :price => 18, :image => ""
-p27 = Product.create :name => 'Supreme', :category => "Pizza", :price => 22, :image => ""
-p28 = Product.create :name => 'Tiramisu', :category => "Dessert", :price => 10.90, :image => ""
-p29 = Product.create :name => 'Vanilla Pannacotta', :category => "Dessert", :price => 9, :image => ""
-p30 = Product.create :name => "Belgium Chocolate Mousse", :category => "Dessert", :price => 9, :image => ""
+p26 = Product.create :name => 'Vegetarian', :category => "Pizza", :price => 18, :image => "", :stars => 5
+p27 = Product.create :name => 'Supreme', :category => "Pizza", :price => 22, :image => "", :stars => 4
+p28 = Product.create :name => 'Tiramisu', :category => "Dessert", :price => 10.90, :image => "", :stars => 5
+p29 = Product.create :name => 'Vanilla Pannacotta', :category => "Dessert", :price => 9, :image => "", :stars => 4
+p30 = Product.create :name => "Belgium Chocolate Mousse", :category => "Dessert", :price => 9, :image => "", :stars => 5
 p31 = Product.create :name => 'Cheesecake', :category => "Dessert", :price => 10.90, :image => ""
-p32 = Product.create :name => 'Chocolate Mud Cake', :category => "Dessert", :price => 10.90, :image => ""
+p32 = Product.create :name => 'Chocolate Mud Cake', :category => "Dessert", :price => 10.90, :image => "", :stars => 5
 p33 = Product.create :name => 'Nutella Pizza', :category => "Dessert", :price => 10, :image => ""
 puts "There are #{ Product.count } products"
 

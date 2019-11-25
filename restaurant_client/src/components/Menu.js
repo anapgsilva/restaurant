@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Cart from './Cart';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 
 const SERVER_URL = "http://localhost:3000/products.json"
@@ -14,8 +16,8 @@ class Menu extends Component {
       categories: [],
       selected_products: {}
     }
-    this.addItemToOrder = this.addItemToOrder.bind(this);
     this._handleChange = this._handleChange.bind(this);
+    this.addItemToOrder = this.addItemToOrder.bind(this);
   }
 
   //get all products
@@ -26,35 +28,28 @@ class Menu extends Component {
 
       const courses = [...new Set(allProducts.map(p => p.category))]
       this.setState({categories: courses});
+
     })
   }
 
   componentDidMount() {
     this.fetchProducts();
+
     const orderProducts = JSON.parse(localStorage.getItem('orderItems'));
     if (orderProducts) {
       this.setState({selected_products: orderProducts});
     };
   }
 
-  addItemToOrder(p) {
-    const currentCart = this.state.selected_products;
-    //checks if item is already there and changes the quantity
-    if (currentCart[p.id]) {
-      currentCart[p.id] += 1;
-    } else {
-      currentCart[p.id] = 1;
-    }
-    this.setState({selected_products: currentCart});
+  addItemToOrder(id) {
+    const orderItems = this.state.selected_products;
+    orderItems[id] = 1;
+    this.setState({selected_products: orderItems})
   }
 
-  _handleChange(id) {
-    const currentCart = this.state.selected_products;
-    currentCart[id] -= 1;
-    if (currentCart[id] === 0){
-      delete currentCart[id];
-    }
-    this.setState({selected_products: currentCart});
+  _handleChange(orderItems) {
+    this.setState({selected_products: orderItems});
+    console.log(this.state.selected_products);
   }
 
   render() {
@@ -62,24 +57,37 @@ class Menu extends Component {
       <div className="main">
         <div className="menu">
           <h1>Menu</h1>
-          {this.state.categories.map( c => {
+          {this.state.categories.map( cat => {
             return (
-            <div key={c}>
-              <h3>{c}</h3>
-              {this.state.products.map( p => {
-                  return (p.category === c &&
-                  <div key={p.id}>
-                    <label>{p.name} {} ${p.price}</label>
-                    <button type="button" onClick={() => this.addItemToOrder(p)}>
-                    +</button>
+            <div key={cat}>
+              <h3>{cat}</h3>
+              {this.state.products.map( prod => {
+                  return (prod.category === cat &&
+                  <div key={prod.id}>
+                    <label className="product-name">
+                      {prod.name}
+                    </label>
+                    <label className="product-price">
+                      ${Number(prod.price).toFixed(2)}
+                    </label>
+                    {this.state.selected_products[Number(prod.id).toString()] ?
+                      (<button type="button">Added</button>)
+                      :
+                      (<button type="button" onClick={() => this.addItemToOrder(prod.id)}>Add</button>)
+                    }
+                    <br/>
+                    {prod.stars > 1 ? Array.from(Array(prod.stars).keys()).map( star => { return (<FontAwesomeIcon key={star} icon='star' />)
+                    }) : ""}
+                    <br/>
                   </div>);
               })}
             </div>);
           })}
         </div>
-        {Object.keys(this.state.selected_products).length > 0 &&
-        <Cart onClick={this._handleChange} cart_products={this.state.selected_products} products={this.state.products} />
-        }
+
+        <aside className='orderList'>
+          <Cart onClick={this._handleChange} cart_products={this.state.selected_products} products={this.state.products} />
+        </aside>
       </div>
     );
   }
