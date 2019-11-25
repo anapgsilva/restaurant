@@ -96,8 +96,7 @@ class CheckOut extends Component {
         </div>
 
 
-        <div className='rightside'>
-          <h2>Order Summary</h2>
+        <div className='orderList'>
           <OrderSummary />
         </div>
 

@@ -39,25 +39,27 @@ class OrderSummary extends Component {
 
     return(
       <div className='orderList'>
+        <h2>Order Summary</h2>
 
         {Object.entries(this.state.orderItems).map( ([id, quantity]) => {
           const item = this.state.allProducts.find( p => p.id.toString() === id);
           total += quantity * item.price;
           return (
-            <div key={id}>
-              <label>
-                {quantity} X
-              </label>
-              <label>
+            <div className="item" key={id}>
+              <label className="itemName">
                {item.name}
               </label>
-              <label>
+              <label className="quantity">
+                x {quantity}
+              </label>
+
+              <label className="itemPrice">
                 ${Number(item.price).toFixed(2)}
               </label>
             </div>
         )})}
-        <p>{deliveryCost}</p>
-        <p>Total ${Number(total).toFixed(2)}</p>
+        <p className="totalPrice">{deliveryCost}</p>
+        <p className="totalPrice">Total ${Number(total).toFixed(2)}</p>
 
       </div>
     );

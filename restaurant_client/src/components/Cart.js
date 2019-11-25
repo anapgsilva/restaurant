@@ -50,8 +50,8 @@ const Cart = (props) => {
 
           ( <div>
               <div className="title">
-                <label>Qty</label>
-                <label>Total</label>
+                <label className="quantity">Qty</label>
+                <label className="itemPrice">Total</label>
               </div>
 
               <div className="items-list">
@@ -59,29 +59,31 @@ const Cart = (props) => {
                 {Object.entries(orderItems).map( ([id, quantity]) => {
                 const item = allProducts.find( p => p.id.toString() === id);
                 return (quantity > 0 &&
-                  <div key={id}>
-                    <label>
+                  <div className="item" key={id}>
+                    <label className="itemName">
                     {item.name}
                     </label>
 
+
+                    <label className="quantity">
                     <button className="minus" onClick={ () => removeItem(id)}>
                     -
                     </button>
-                    <label>
                     {quantity}
-                    </label>
                     <button className="plus" onClick={ () => addItem(id)}>
                     +
                     </button>
+                    </label>
 
-                    <label>
+
+                    <label className="itemPrice">
                     ${Number(quantity * item.price).toFixed(2)}
                     </label>
                   </div>)
                 })}
-              </div>)
+              </div>
 
-              <p>Total (exc. delivery): ${Number(totalPrice).toFixed(2)}</p>
+              <p className="totalPrice">Total (exc. delivery): ${Number(totalPrice).toFixed(2)}</p>
 
             </div>
           )

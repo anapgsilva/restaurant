@@ -56,13 +56,48 @@ label {
   right: 0px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .orderList h2 {
   text-align: center;
 }
 
+.title {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start space-between;
+  align-items: center;
+}
+
+.itemName {
+  width: 150px;
+  text-align: left;
+}
+
+.quantity {
+  width: 80px;
+  text-align: center;
+}
+
+.itemPrice {
+  width: 60px;
+  text-align: right;
+}
+
+.quantity button {
+  margin: 5px;
+}
+
+
+.totalPrice {
+  text-align: center;
+}
 
 .checkout-button {
   width: 150px;

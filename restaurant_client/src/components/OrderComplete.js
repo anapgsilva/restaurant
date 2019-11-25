@@ -34,12 +34,12 @@ class OrderComplete extends Component {
     return(
       <div>
         <div>
-        <h2>Thank you for your order!</h2>
-        <OrderSummary />
+          <h2>Thank you for your order!</h2>
+          <OrderSummary />
         </div>
 
         <div>
-
+          <UserForm />
         </div>
 
       </div>
