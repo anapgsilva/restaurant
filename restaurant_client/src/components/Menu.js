@@ -20,19 +20,24 @@ class Menu extends Component {
 
   //get all products
   fetchProducts() {
+    console.log("I am fetching");
     axios.get(SERVER_URL).then( (results) => {
       const allProducts = results.data;
+      console.log("all P", allProducts);
       this.setState({products: allProducts})
 
       const courses = [...new Set(allProducts.map(p => p.category))]
       this.setState({categories: courses});
+
     })
   }
 
   componentDidMount() {
     this.fetchProducts();
+
     const orderProducts = JSON.parse(localStorage.getItem('orderItems'));
     if (orderProducts) {
+      console.log(orderProducts);
       this.setState({selected_products: orderProducts});
     };
   }
