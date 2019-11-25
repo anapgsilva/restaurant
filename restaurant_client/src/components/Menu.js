@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Cart from './Cart';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 
 const SERVER_URL = "http://localhost:3000/products.json"
@@ -20,10 +22,8 @@ class Menu extends Component {
 
   //get all products
   fetchProducts() {
-    console.log("I am fetching");
     axios.get(SERVER_URL).then( (results) => {
       const allProducts = results.data;
-      console.log("all P", allProducts);
       this.setState({products: allProducts})
 
       const courses = [...new Set(allProducts.map(p => p.category))]
@@ -74,7 +74,12 @@ class Menu extends Component {
               {this.state.products.map( p => {
                   return (p.category === c &&
                   <div key={p.id}>
-                    <label>{p.name} {} ${p.price}</label>
+                    <label>
+                      {p.name}
+                      {Array.from(Array(p.stars).keys()).map( s => { return (<FontAwesomeIcon icon='star' size="2x" />)
+                      })}
+                      ${p.price}
+                    </label>
                     <button type="button" onClick={() => this.addItemToOrder(p)}>
                     +</button>
                   </div>);
