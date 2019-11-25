@@ -8,45 +8,71 @@ const Cart = (props) => {
   const allProducts = props.products;
 
   const removeItem = function(id) {
-    return props.onClick(id);
+    orderItems[id] -= 1;
+    if (orderItems[id] === 0){
+      delete orderItems[id];
+    }
+    return props.onClick(orderItems);
+  }
+
+  const addItem = function(id) {
+    //checks if item is already there and changes the quantity
+    if (orderItems[id]) {
+      orderItems[id] += 1;
+    } else {
+      orderItems[id] = 1;
+    }
+    return props.onClick(orderItems)
   }
 
   const submitOrder = (orderItems, allProducts) => {
-    console.log('orderItems', orderItems);
     let order = JSON.stringify(orderItems);
     localStorage.setItem('orderItems', order);
     let products = JSON.stringify(allProducts);
     localStorage.setItem('allProducts', products);
-    console.log('order', order);
-    console.log('products', products);
   }
 
+  let totalPrice = 0;
+  Object.entries(orderItems).map( ([id, quantity]) => {
+    const item = allProducts.find( p => {
+    if (p.id.toString() === id) {
+      totalPrice += p.price * quantity;
+    };
+  })});
+
   return (allProducts.length > 0 ?
-    <aside className='orderList'>
-      <h1>Your Order</h1>
+    <div className='orderList'>
+      <h2>Cart</h2>
 
-      {Object.entries(orderItems).map( ([id, quantity]) => {
-        console.log(orderItems);
-        const item = allProducts.find( p => p.id.toString() === id);
-        console.log(item);
-        return (quantity > 0 &&
-          <div key={id}>
-            <label>{quantity} X {item.name}<span>${item.price}</span></label>
-            <button onClick={ () => removeItem(id)}>
-            -
-            </button>
-          </div>)
-      })}
+      {Object.keys(orderItems).length > 0 ?
+        (<div>
+          <label>Qty</label>
+          <label>Total</label>
+          {Object.entries(orderItems).map( ([id, quantity]) => {
+          const item = allProducts.find( p => p.id.toString() === id);
+          return (quantity > 0 &&
+            <div key={id}>
+              <label>{item.name}<span>${item.price}</span></label>
 
+              <button onClick={ () => removeItem(id)}>
+              -
+              </button>
+              {quantity}
+              <button onClick={ () => addItem(id)}>
+              +
+              </button>
+            </div>)
+          })}
+        </div>)
+        : (<h4>Your cart is empty.</h4>)
+      }
+      <p>Total (exc. delivery): ${Number(totalPrice).toFixed(2)}</p>
       <button onClick={() => submitOrder(orderItems, allProducts)}>
-        <Link to="/checkout">Check Out</Link>
+        {Object.keys(orderItems).length > 0 ? (<Link to="/checkout">Check Out</Link>) : "Check Out"}
       </button>
-    </aside>
+    </div>
     : ""
   );
 }
-
-
-
 
 export default Cart;
