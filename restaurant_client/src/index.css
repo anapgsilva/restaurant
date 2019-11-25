@@ -23,16 +23,25 @@ nav {
 .main {
   display: flex;
   justify-content: space-between;
-  /* position: relative; */
   padding: 30px;
+  flex-direction: row;
 }
 
 .menu {
-  min-width: 400px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
 }
 
 .menu h1 {
   text-align: center;
+}
+
+.menu button {
+  font-size: 15px;
+  border-radius: 5px;
 }
 
 label {
@@ -44,20 +53,25 @@ label {
   max-width: 300px;
   position: fixed;
   top: 30px;
-  right: 200px;
+  right: 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.orderList button {
-  margin-left: 30px;
+.orderList h2 {
+  text-align: center;
+}
+
+
+.checkout-button {
+  width: 150px;
   font-size: 20px;
   border-radius: 5px;
 }
 
-.checkout {
-  max-width: 600px;
+.checkout-button a {
+  text-decoration: none;
 }
 
 .kind-order {

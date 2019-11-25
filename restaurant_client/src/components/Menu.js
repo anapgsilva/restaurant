@@ -84,6 +84,7 @@ class Menu extends Component {
             </div>);
           })}
         </div>
+
         <aside className='orderList'>
           <Cart onClick={this._handleChange} cart_products={this.state.selected_products} products={this.state.products} />
         </aside>

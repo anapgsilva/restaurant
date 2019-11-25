@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Payment from './Payment';
 import {Link} from 'react-router-dom';
+import UserForm from './UserForm';
+import OrderSummary from './OrderSummary';
 
 class CheckOut extends Component {
 
@@ -54,69 +56,50 @@ class CheckOut extends Component {
   }
 
   render() {
-    let total = 0;
-    let deliveryCost;
-    //updates total price according to delivery status
-    if (this.state.delivery) {
-      total += 5;
-      deliveryCost = "Delivery fee: $5.00";
-    }
 
     return (
-      <div className="checkout">
-        <div className="kind-order">
-          <h2>Please select:</h2>
-          <button type='button' onClick={this._handleClick} value="Pick-up">
-          Pick-up
-          </button>
-          <button type='button' onClick={this._handleClick} value="Delivery">
-          Delivery
-          </button>
+      <div className="main">
+
+        <div className="leftside">
+
+          <div className="kind-order">
+            <h2>Please select:</h2>
+            <button type='button' onClick={this._handleClick} value="Pick-up">
+            Pick-up
+            </button>
+            <button type='button' onClick={this._handleClick} value="Delivery">
+            Delivery
+            </button>
+          </div>
+
+          <UserForm />
+
+          <form className="payment-form">
+            <h2>Payment option:</h2>
+            <div className="cash-option">
+              <label>
+                <input type="radio" value="Cash" checked={this.state.paymentOption === "Cash"} onChange={this._handleChange}/>
+                Cash
+              </label>
+            </div>
+            <div className="card-option">
+              <label>
+                <input type="radio" value="Card" checked={this.state.paymentOption === "Card"} onChange={this._handleChange}/>
+                Card
+              </label>
+            </div>
+          </form>
+
+          {this.state.paymentOption === "Card" ? <Payment /> : ""}
+          <Link to="/ordercomplete"> <button className="pay">Pay</button></Link>
+
         </div>
 
-        <UserForm />
 
-
-        <form className="payment-form">
-          <h2>Payment option:</h2>
-          <div className="cash-option">
-            <label>
-              <input type="radio" value="Cash" checked={this.state.paymentOption === "Cash"} onChange={this._handleChange}/>
-              Cash
-            </label>
-          </div>
-          <div className="card-option">
-            <label>
-              <input type="radio" value="Card" checked={this.state.paymentOption === "Card"} onChange={this._handleChange}/>
-              Card
-            </label>
-          </div>
-        </form>
-        {this.state.paymentOption === "Card" ? <Payment /> : ""}
-        <Link to="/ordercomplete"> <button className="pay">Pay</button></Link>
-
-        <div className='orderList'>
+        <div className='rightside'>
           <h2>Order Summary</h2>
-          {Object.entries(this.state.orderItems).map( ([id, quantity]) => {
-            const item = this.state.allProducts.find( p => p.id.toString() === id);
-            total += quantity * item.price;
-            return (
-              <div key={id}>
-                <label>
-                  {quantity} X
-                </label>
-                <label>
-                 {item.name}
-                </label>
-                <label>
-                  ${Number(item.price).toFixed(2)}
-                </label>
-              </div>
-          )})}
-          <p>{deliveryCost}</p>
-          <p>Total ${Number(total).toFixed(2)}</p>
+          <OrderSummary />
         </div>
-
 
       </div>
 
