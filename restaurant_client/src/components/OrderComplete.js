@@ -8,8 +8,8 @@ class OrderComplete extends Component {
   constructor() {
     super();
     this.state = {
-      orderItems: '',
-      allProducts: '',
+      orderItems: {},
+      allProducts: [],
       delivery: '',
       paymentOption: ''
     }

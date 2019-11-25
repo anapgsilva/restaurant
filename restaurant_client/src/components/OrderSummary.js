@@ -3,11 +3,11 @@ import React, {Component} from 'react';
 
 class OrderSummary extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      orderItems: '',
-      allProducts: '',
+      orderItems: {},
+      allProducts: [],
       delivery: '',
       paymentOption: ''
     }
@@ -29,17 +29,19 @@ class OrderSummary extends Component {
   }
 
   render() {
+    const props = this.props;
+
     let total = 0;
     let deliveryCost;
     //updates total price according to delivery status
-    if (this.state.delivery) {
+    if (props.deliveryStatus) {
       total += 5;
       deliveryCost = "Delivery fee: $5.00";
     }
 
     return(
       <div className='orderList'>
-        <h2>Order Summary</h2>
+        <h3>Order Summary</h3>
 
         {Object.entries(this.state.orderItems).map( ([id, quantity]) => {
           const item = this.state.allProducts.find( p => p.id.toString() === id);
@@ -54,11 +56,13 @@ class OrderSummary extends Component {
               </label>
 
               <label className="itemPrice">
-                ${Number(item.price).toFixed(2)}
+                ${Number(item.price * quantity).toFixed(2)}
               </label>
             </div>
         )})}
-        <p className="totalPrice">{deliveryCost}</p>
+        {props.deliveryStatus ?
+        (<p className="totalPrice">{deliveryCost}</p>)
+        : ""}
         <p className="totalPrice">Total ${Number(total).toFixed(2)}</p>
 
       </div>

@@ -11,7 +11,7 @@ class CheckOut extends Component {
     this.state = {
       orderItems: {},
       allProducts: [],
-      delivery: false,
+      delivery: '',
       paymentOption: "Cash",
     }
     this._handleClick = this._handleClick.bind(this);
@@ -34,7 +34,6 @@ class CheckOut extends Component {
   }
 
   _handleClick(event) {
-    console.log(event);
     const value = event.target.value
     //get value of button and set state
     if (value === "Pick-up"){
@@ -63,7 +62,7 @@ class CheckOut extends Component {
         <div className="leftside">
 
           <div className="kind-order">
-            <h2>Please select:</h2>
+            <h3>Please select:</h3>
             <button type='button' onClick={this._handleClick} value="Pick-up">
             Pick-up
             </button>
@@ -75,7 +74,7 @@ class CheckOut extends Component {
           <UserForm />
 
           <form className="payment-form">
-            <h2>Payment option:</h2>
+            <h3>Payment option:</h3>
             <div className="cash-option">
               <label>
                 <input type="radio" value="Cash" checked={this.state.paymentOption === "Cash"} onChange={this._handleChange}/>
@@ -96,8 +95,8 @@ class CheckOut extends Component {
         </div>
 
 
-        <div className='orderList'>
-          <OrderSummary />
+        <div>
+          <OrderSummary deliveryStatus={this.state.delivery} />
         </div>
 
       </div>

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class Payment extends Component {
   constructor(props) {
     super(props);
-    this.state ={
+    this.state = {
       ccName: "",
       ccNumber: "",
       ccCVV: ""
@@ -34,14 +34,14 @@ class Payment extends Component {
 
   render() {
     return (
-      <div>
+      <div className="ccForm">
         <h4>Paying by card</h4>
         <form>
           <label>Card holder's name: </label>
-          <input onChange={this._handleNameChange} value={this.state.ccName} placeholder="Name on the card" />
+          <input onChange={this._handleNameChange} value={this.state.ccName} placeholder="Name on the card" /><br/>
 
           <label>Card number: </label>
-          <input value={this.state.ccNumber} onChange={this._handleNumberChange} placeholder="Card number"/>
+          <input value={this.state.ccNumber} onChange={this._handleNumberChange} placeholder="Card number"/><br/>
 
           <label>Card Validation Value: </label>
           <input value={this.state.ccCVV} onChange={this._handleCVVChange} placeholder="CVV number (3 digits) "/>
