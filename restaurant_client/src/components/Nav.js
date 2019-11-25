@@ -1,5 +1,10 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import logo from "../logo.png"
+import 'bootstrap/dist/css/bootstrap.min.css';
+//import DropdownButton from 'react-bootstrap/DropdownButton';
+import {Dropdown,DropdownButton,Button, Form, FormGroup, Label, Input,Row, Col}
+from 'react-bootstrap';
 
 class Nav extends Component {
 
@@ -17,16 +22,38 @@ class Nav extends Component {
 
   render() {
     return (
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/menu">Menu</Link>
+      <nav className="navbar navbar-expand-sm bg-primary navbar-dark px-sm-5 ">
+        <Link to="/">
+          <img src={logo} alt="Home"
+          className="navbar-brand"/>
+        </Link>
+        <ul className="navbar-nav align-items-center">
+          <li className="nav-item ml-5">
+          <Link to="/menu" className="nav-link">Menu 
+          </Link>
+          </li>
+        </ul>
+        
+  <DropdownButton id="dropdown-item-button" title="Log In">
+  <Form className="loginForm">
+  <Form.Group controlId="formBasicEmail">
+    <Form.Label>Email address</Form.Label>
+    <Form.Control type="email" placeholder="Enter email" />
+    
+  </Form.Group>
 
-        <form>
-          <input type="text" placeholder="email"/>
-          <input type="text" placeholder="password"/>
-          <Link to="/signin"><input type="submit" value="Log In" /></Link>
-        </form>
-        <Link to="/signup">Sign Up</Link>
+  <Form.Group controlId="formBasicPassword">
+    <Form.Label>Password</Form.Label>
+    <Form.Control type="password" placeholder="Password" />
+  </Form.Group>
+  <Form.Group controlId="formBasicCheckbox">
+    <Form.Check type="checkbox" label="Check me out" />
+  </Form.Group>
+  <Button variant="primary" type="submit">
+    Submit
+  </Button>
+</Form>
+  </DropdownButton>
 
       </nav>
     );

@@ -1,13 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Nav from './components/Nav'
 import './App.css';
+import {Button, Form, FormGroup, Label, Input}
+from 'reactstrap';
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+class App extends Component {
+  state = {  }
+  render() { 
+    return (  
+      <React.Fragment>
+        <Nav/>
+      </React.Fragment>
+    );
+  }
 }
-
+ 
 export default App;
+
