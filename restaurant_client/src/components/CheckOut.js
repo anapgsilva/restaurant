@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Payment from './Payment';
+import PaymentForm from './PaymentForm';
 import {Link} from 'react-router-dom';
 import UserForm from './UserForm';
 import OrderSummary from './OrderSummary';
