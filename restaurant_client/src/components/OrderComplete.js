@@ -19,14 +19,18 @@ class OrderComplete extends Component {
 
     //Gets shopping cart from local storage
     const orderItems = JSON.parse(localStorage.getItem('orderItems'));
-    //Gets all products from local storage
-    const allProducts = JSON.parse(localStorage.getItem('allProducts'));
     //Gets delivery status from local storage
     const delivery = JSON.parse(localStorage.getItem('delivery'));
     //Gets payment option from local storage
     const paymentOption = JSON.parse(localStorage.getItem('paymentOption'));
     //sets state of all variables
-    this.setState({ orderItems, allProducts, delivery, paymentOption });
+    this.setState({ orderItems, delivery, paymentOption });
+
+
+
+    localStorage.setItem('orderItems', JSON.stringify({}));
+    localStorage.setItem('delivery', JSON.stringify(false));
+    localStorage.setItem('paymentOption', JSON.stringify(""));
 
   }
 

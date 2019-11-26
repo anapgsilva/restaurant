@@ -20,6 +20,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 #to allow the react server to talk to rails
 gem "rack-cors"
+# Stripe Payment Online
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 #use for user login authentication
 gem 'knock'

@@ -22,26 +22,29 @@ const Cart = (props) => {
     } else {
       orderItems[id] = 1;
     }
-    return props.onClick(orderItems)
+    return props.onClick(orderItems);
   }
 
-  const submitOrder = (orderItems, allProducts) => {
+  const submitOrder = (orderItems) => {
     let order = JSON.stringify(orderItems);
     localStorage.setItem('orderItems', order);
-    let products = JSON.stringify(allProducts);
-    localStorage.setItem('allProducts', products);
   }
 
   let totalPrice = 0;
-  Object.entries(orderItems).map( ([id, quantity]) => {
-    const item = allProducts.find( p => {
-    if (p.id.toString() === id) {
-      totalPrice += p.price * quantity;
-    };
-  })});
+  if (Object.entries(orderItems).length > 0) {
+    Object.entries(orderItems).map( ([id, quantity]) => {
+      return allProducts.find( p => {
+        if (p.id.toString() === id) {
+          totalPrice += p.price * quantity;
+          return totalPrice;
+        };
+      })
+    });
+  }
+
 
   return (
-    allProducts.length > 0 ?
+    allProducts.length > 0 &&
 
       (<div className='orderList'>
         <h2>Cart</h2>
@@ -90,12 +93,12 @@ const Cart = (props) => {
           : (<h4>Your cart is empty.</h4>)}
 
 
-      <button className="checkout-button" onClick={() => submitOrder(orderItems, allProducts)}>
+      <button className="checkout-button" onClick={() => submitOrder(orderItems)}>
         {Object.keys(orderItems).length > 0 ? (<Link to="/checkout">Check Out</Link>) : "Check Out"}
       </button>
     </div>)
 
-    : "");
+    );
 
 }
 

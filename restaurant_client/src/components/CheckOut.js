@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Payment from './Payment';
+import PaymentForm from './PaymentForm';
 import {Link} from 'react-router-dom';
 import UserForm from './UserForm';
 import OrderSummary from './OrderSummary';
@@ -13,24 +13,26 @@ class CheckOut extends Component {
       allProducts: [],
       delivery: '',
       paymentOption: "Cash",
+      ccName: '',
+      ccNumber: '',
+      ccCVV: '',
+      totalPrice: 0
     }
     this._handleClick = this._handleClick.bind(this);
     this._handleChange = this._handleChange.bind(this);
+    this._handleCardDetails = this._handleCardDetails.bind(this);
   }
 
   componentDidMount() {
 
     //Gets shopping cart from local storage
     const orderItems = JSON.parse(localStorage.getItem('orderItems'));
-    //Gets all products from local storage
-    const allProducts = JSON.parse(localStorage.getItem('allProducts'));
     //Gets delivery status from local storage
     const delivery = JSON.parse(localStorage.getItem('delivery'));
     //Gets payment option from local storage
     const paymentOption = JSON.parse(localStorage.getItem('paymentOption'));
     //sets state of all variables
-    this.setState({ orderItems, allProducts, delivery, paymentOption });
-
+    this.setState({ orderItems, delivery, paymentOption });
   }
 
   _handleClick(event) {
@@ -53,6 +55,22 @@ class CheckOut extends Component {
     let paymentStatus = JSON.stringify(this.state.paymentOption);
     localStorage.setItem('paymentOption', paymentStatus);
   }
+
+  _handleCardDetails(name, number, cvv) {
+    this.setState({ccName: name});
+    this.setState({ccNumber: number});
+    this.setState({ccCVV: cvv});
+    console.log("I cna see this", this.state.ccName);
+    this.createOrder();
+  }
+
+  createOrder() {
+    //make order and each line item
+    console.log("will make request");
+    // redirect to /ordercomplete if all verified
+
+  }
+
 
   render() {
 
@@ -89,8 +107,7 @@ class CheckOut extends Component {
             </div>
           </form>
 
-          {this.state.paymentOption === "Card" ? <Payment /> : ""}
-          <Link to="/ordercomplete"> <button className="pay">Pay</button></Link>
+          {this.state.paymentOption === "Card" ? <PaymentForm onClick={this._handleCardDetails} totalPrice={30.00} orderItems={this.state.orderItems} /> : <button onClick={this.createOrder} className="pay">Pay</button>}
 
         </div>
 
