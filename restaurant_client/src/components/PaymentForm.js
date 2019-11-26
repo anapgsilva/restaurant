@@ -1,13 +1,13 @@
 import React from 'react';
-import StripeCheckout from 'react-stripe-checkout'
+import StripeCheckout from 'react-stripe-checkout';
 import CheckOut from './CheckOut';
 
-   
+
     const  PaymentForm = (props) => {
-        
+
      function handleToken(token){
         console.log(token);
-        
+
 }
     return (
         <div className="container">
@@ -17,7 +17,7 @@ import CheckOut from './CheckOut';
         </div>
     )
 }
-   
- 
- 
+
+
+
 export default PaymentForm;
