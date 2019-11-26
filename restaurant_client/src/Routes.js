@@ -2,16 +2,17 @@ import React from 'react';
 import {HashRouter as Router, Route} from 'react-router-dom';
 import Nav from './components/Nav';
 import Home from './components/Home';
-import Menu from './components/Menu';
+// import Menu from './components/Menu';
 import CheckOut from './components/CheckOut';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import OrderComplete from './components/OrderComplete';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import Logout from './components/Logout';
+// import { library } from '@fortawesome/fontawesome-svg-core';
+// import { fab } from '@fortawesome/free-brands-svg-icons';
+// import { faStar } from '@fortawesome/free-solid-svg-icons';
 
-library.add(fab, faStar);
+// library.add(fab, faStar);
 //This is goign to replace App.js
 
 
@@ -23,13 +24,16 @@ const Routes = (
     <div>
       <Route component={Nav}/>
       <Route exact path="/" component={Home}/>
-      <Route exact path="/menu" component={Menu}/>
       <Route exact path="/checkout" component={CheckOut}/>
       <Route exact path="/signin" component={SignIn}/>
       <Route exact path="/signup" component={SignUp}/>
       <Route exact path="/ordercomplete" component={OrderComplete}/>
+      <Route exact path="/logout" component={Logout}/>
     </div>
   </Router>
 );
 
 export default Routes;
+
+
+  // <Route exact path="/menu" component={Menu}/>

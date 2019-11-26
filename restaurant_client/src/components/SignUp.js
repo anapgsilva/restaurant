@@ -9,6 +9,7 @@ class SignUp extends Component {
       name: '',
       email: '',
       password: '',
+      password_confirmation: '',
       phone_number: '',
       address: ''
     }
@@ -23,6 +24,9 @@ class SignUp extends Component {
   }
   _handleInputPassword = event => {
     this.setState( {password: event.target.value} )
+  }
+  _handleInputPasswordConfirmation = event => {
+    this.setState( {password_confirmation: event.target.value} )
   }
   _handleInputPhoneNumber = event => {
     this.setState( {phone_number: event.target.value} )
@@ -40,7 +44,7 @@ class SignUp extends Component {
 
   createUser = event => {
     axios.post('http://localhost:3000/users', { user:
-      {name: this.state.name, email: this.state.email, password: this.state.password, phone_number: this.state.phone_number, address: this.state.address}
+      {name: this.state.name, email: this.state.email, password: this.state.password, password_confirmation: this.state.password_confirmation, phone_number: this.state.phone_number, address: this.state.address}
     }).then( result => {
       console.log( result );
     }).catch( error => {
@@ -56,14 +60,14 @@ class SignUp extends Component {
           <label>Name:</label>
           <input type="text" placeholder="Name" required onInput={ this._handleInputName } /><br/>
 
-          <label>E-mail:</label>
+          <label>Email:</label>
           <input type="text" placeholder="Email" required onInput={ this._handleInputEmail } /><br/>
 
           <label>Password:</label>
           <input type="text" placeholder="Password" required onInput={ this._handleInputPassword } /><br/>
 
           <label>Password confirmation:</label>
-          <input type="text" placeholder="Password" required onInput={ this._handleInputPassword } /><br/>
+          <input type="text" placeholder="Confirm Password" required onInput={ this._handleInputPasswordConfirmation } /><br/>
 
           <label>Phone number:</label>
           <input type="text" placeholder="000-000-000" required onInput={ this._handleInputPhoneNumber } /><br/>
@@ -71,7 +75,7 @@ class SignUp extends Component {
           <label>Delivery address:</label>
           <input type="text" placeholder="Street address" onInput={ this._handleInputAddress } /><br/>
 
-          <input type="submit" placeholder="SignUp" onClick={this._handleSubmit} />
+          <input type="submit" placeholder="Sign Up" onClick={this._handleSubmit} />
         </form>
       </div>
     );
