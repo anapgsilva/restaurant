@@ -107,7 +107,7 @@ class CheckOut extends Component {
             </div>
           </form>
 
-          {this.state.paymentOption === "Card" ? <PaymentForm onClick={this._handleCardDetails} totalPrice={30.00} /> : <button onClick={this.createOrder} className="pay">Pay</button>}
+          {this.state.paymentOption === "Card" ? <PaymentForm onClick={this._handleCardDetails} totalPrice={30.00} orderItems={this.state.orderItems} /> : <button onClick={this.createOrder} className="pay">Pay</button>}
 
         </div>
 
