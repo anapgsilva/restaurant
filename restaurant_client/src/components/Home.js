@@ -5,6 +5,12 @@ import Nav from './Nav';
 const Home = () => {
 
 
+  fetchUser() {
+    axios
+  }
+
+
+
   return (
     <div>
       <Nav />

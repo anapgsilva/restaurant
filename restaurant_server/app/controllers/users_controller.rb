@@ -2,10 +2,12 @@ class UsersController < ApplicationController
   # before_action :check_for_admin, :only => [:index]
 
   # before_action :set_user, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
+  # before_action :authenticate_user , :only => [:current]
 
-  def current
-    render :json => current_user.as_json(only: %i(id email))
-  end
+  # def current
+  #   render :json => current_user, :include => :orders
+  # end
 
   def index
     @users = User.all
