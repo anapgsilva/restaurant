@@ -4,10 +4,10 @@ import Nav from './Nav';
 
 const Home = () => {
 
-
-  fetchUser() {
-    axios
-  }
+  // 
+  // fetchUser() {
+  //
+  // }
 
 
 
