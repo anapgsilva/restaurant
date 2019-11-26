@@ -34,10 +34,7 @@ const Cart = (props) => {
   if (Object.entries(orderItems).length > 0) {
     Object.entries(orderItems).map( ([id, quantity]) => {
       return allProducts.find( p => {
-        if (p.id.toString() === id) {
-          totalPrice += p.price * quantity;
-          return totalPrice;
-        };
+        return (p.id.toString() === id ? (totalPrice += p.price * quantity): totalPrice);
       })
     });
   }

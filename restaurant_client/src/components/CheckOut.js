@@ -3,6 +3,7 @@ import PaymentForm from './PaymentForm';
 // import {Link} from 'react-router-dom';
 import UserForm from './UserForm';
 import OrderSummary from './OrderSummary';
+import DropdownTime from './DropdownTime';
 
 class CheckOut extends Component {
 
@@ -92,7 +93,9 @@ class CheckOut extends Component {
             </button>
           </div>
 
-          <UserForm />
+          <DropdownTime />
+
+          <UserForm deliveryStatus={this.state.delivery} />
 
           <form className="payment-form">
             <h3>Payment option:</h3>
