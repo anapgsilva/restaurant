@@ -23,3 +23,7 @@
 .loginForm{
   width: 400px;
 }
+
+.dropdown{
+  float: left;
+}
