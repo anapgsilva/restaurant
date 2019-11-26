@@ -17,7 +17,7 @@ class Nav extends Component {
   fetchUser() {
   //need to fetch current user
   //if current user present then dont show login and signup below
-  
+
   }
 
   render() {
@@ -41,8 +41,8 @@ class Nav extends Component {
             variant="outline-primary"
             className="dropdown"
             id="dropdown-item-button"
-            title="Log In"
-          >
+            title="Log In">
+            
             <Form className="loginForm">
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
