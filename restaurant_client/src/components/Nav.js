@@ -16,19 +16,16 @@ class Nav extends Component {
       current_user: {}
     }
   }
-  fetchUser() {
-  //need to fetch current user
-  //if current user present then dont show login and signup below
 
-  }
 
   render() {
-    let userSession;
-    if (localStorage.getItem('jwt')) {
-      userSession = JSON.parse(localStorage.getItem('jwt'));
-    } else {
-      userSession = "";
-    }
+    // let userSession;
+    // console.log(localStorage.getItem('jwt'));
+    // if (JSON.parse(localStorage.getItem('jwt')).length > 0) {
+    //   userSession = JSON.parse(localStorage.getItem('jwt'));
+    // } else {
+    //   userSession = "";
+    // }
 
     return (
       <Navbar bg="light" variant="light" className="justify-content-between">
@@ -44,6 +41,7 @@ class Nav extends Component {
           </li>
         </ul>
 
+        {localStorage.getItem('jwt') ? "" :
         <Form inline>
           <DropdownButton
             variant="outline-primary"
@@ -54,9 +52,9 @@ class Nav extends Component {
           <SignIn />
           </DropdownButton>
         </Form>
+        }
 
-
-        {userSession.length > 0 ? <Link to="/logout">Logout</Link> : <Link to="/signup">Sign Up</Link>}
+        {localStorage.getItem('jwt') ? <Link to="/logout">Logout</Link> : <Link to="/signup">Sign Up</Link>}
 
 
       </Navbar>

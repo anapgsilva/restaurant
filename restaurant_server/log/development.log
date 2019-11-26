@@ -19865,3 +19865,38 @@ Processing by ProductsController#index as JSON
 Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 1.4ms | Allocations: 5722)
 
 
+Started GET "/products.json" for ::1 at 2019-11-27 09:58:07 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 1.3ms | Allocations: 5825)
+
+
+Started GET "/products.json" for ::1 at 2019-11-27 09:58:20 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (2.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 2.7ms | Allocations: 5722)
+
+
+Started POST "/user/token" for ::1 at 2019-11-27 10:06:03 +1100
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"ana@ga", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"ana@ga", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ana@ga"], ["LIMIT", 1]]
+Completed 201 Created in 264ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 8676)
+
+
+Started POST "/user/token" for ::1 at 2019-11-27 10:08:37 +1100
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"ana@ga", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"ana@ga", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ana@ga"], ["LIMIT", 1]]
+Completed 201 Created in 270ms (Views: 0.1ms | ActiveRecord: 9.4ms | Allocations: 1487)
+
+
+Started POST "/user/token" for ::1 at 2019-11-27 10:10:36 +1100
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"ana@ga", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"ana@ga", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ana@ga"], ["LIMIT", 1]]
+Completed 201 Created in 261ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 1487)
+
+

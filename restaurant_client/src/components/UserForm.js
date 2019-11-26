@@ -6,11 +6,18 @@ class UserForm extends Component {
   constructor() {
     super();
     this.state = {
-      delivery: ''
+      delivery: '',
+      currentUser: false
     }
   }
 
   componentDidMount() {
+    const currentUser = JSON.parse(localStorage.getItem('jwt'));
+
+    // if (currentUser.length > 0) {
+    //
+    // }
+
     // const deliveryStatus = props.deliveryStatus;
     // this.setState({delivery: deliveryStatus})
 
