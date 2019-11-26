@@ -39,6 +39,7 @@ class Menu extends Component {
     if (orderProducts) {
       this.setState({selected_products: orderProducts});
     };
+
   }
 
   addItemToOrder(id) {
@@ -49,7 +50,6 @@ class Menu extends Component {
 
   _handleChange(orderItems) {
     this.setState({selected_products: orderItems});
-    console.log(this.state.selected_products);
   }
 
   render() {
@@ -85,9 +85,7 @@ class Menu extends Component {
           })}
         </div>
 
-        <aside className='orderList'>
-          <Cart onClick={this._handleChange} cart_products={this.state.selected_products} products={this.state.products} />
-        </aside>
+        <Cart onClick={this._handleChange} cart_products={this.state.selected_products} products={this.state.products} />
       </div>
     );
   }

@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
+
 
 class Payment extends Component {
   constructor(props) {
@@ -38,13 +40,15 @@ class Payment extends Component {
         <h4>Paying by card</h4>
         <form>
           <label>Card holder's name: </label>
-          <input onChange={this._handleNameChange} value={this.state.ccName} placeholder="Name on the card" /><br/>
+          <input value={this.state.ccName} onChange={this._handleNameChange} placeholder="Name on the card" required /><br/>
 
           <label>Card number: </label>
-          <input value={this.state.ccNumber} onChange={this._handleNumberChange} placeholder="Card number"/><br/>
+          <input value={this.state.ccNumber} onChange={this._handleNumberChange} placeholder="Card number" required/><br/>
 
           <label>Card Validation Value: </label>
-          <input value={this.state.ccCVV} onChange={this._handleCVVChange} placeholder="CVV number (3 digits) "/>
+          <input value={this.state.ccCVV} onChange={this._handleCVVChange} placeholder="CVV number (3 digits)" required/><br/>
+
+          <button className="pay">Pay</button>
         </form>
       </div>
     );

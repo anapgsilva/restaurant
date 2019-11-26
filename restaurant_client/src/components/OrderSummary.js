@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import axios from 'axios';
+
+const SERVER_URL = "http://localhost:3000/products.json"
 
 
 class OrderSummary extends Component {
@@ -13,20 +16,29 @@ class OrderSummary extends Component {
     }
   }
 
+  //get all products
+  fetchProducts() {
+    axios.get(SERVER_URL).then( (results) => {
+      const products = results.data;
+      this.setState({allProducts: products});
+    })
+  }
+
   componentDidMount() {
 
     //Gets shopping cart from local storage
     const orderItems = JSON.parse(localStorage.getItem('orderItems'));
-    //Gets all products from local storage
-    const allProducts = JSON.parse(localStorage.getItem('allProducts'));
     //Gets delivery status from local storage
     const delivery = JSON.parse(localStorage.getItem('delivery'));
     //Gets payment option from local storage
     const paymentOption = JSON.parse(localStorage.getItem('paymentOption'));
     //sets state of all variables
-    this.setState({ orderItems, allProducts, delivery, paymentOption });
+    this.setState({ orderItems, delivery, paymentOption });
 
+    this.fetchProducts();
   }
+
+
 
   render() {
     const props = this.props;
@@ -39,8 +51,8 @@ class OrderSummary extends Component {
       deliveryCost = "Delivery fee: $5.00";
     }
 
-    return(
-      <div className='orderList'>
+    return(this.state.allProducts.length > 0 &&
+      (<div className='orderList'>
         <h3>Order Summary</h3>
 
         {Object.entries(this.state.orderItems).map( ([id, quantity]) => {
@@ -65,7 +77,7 @@ class OrderSummary extends Component {
         : ""}
         <p className="totalPrice">Total ${Number(total).toFixed(2)}</p>
 
-      </div>
+      </div>)
     );
   }
 
