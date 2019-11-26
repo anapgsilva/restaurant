@@ -16080,3 +16080,1975 @@ Processing by ProductsController#index as JSON
 Completed 200 OK in 310ms (Views: 298.7ms | ActiveRecord: 11.0ms | Allocations: 38853)
 
 
+Started GET "/products.json" for ::1 at 2019-11-26 14:03:26 +1100
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (41.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 324ms (Views: 194.0ms | ActiveRecord: 116.6ms | Allocations: 58276)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:03:27 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (7.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (6.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (48.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (41.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (10.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (6.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (13.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (10.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 318ms (Views: 144.8ms | ActiveRecord: 172.6ms | Allocations: 38871)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:03:29 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 91ms (Views: 76.4ms | ActiveRecord: 14.2ms | Allocations: 38874)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:05:47 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (4.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 75ms (Views: 59.4ms | ActiveRecord: 14.9ms | Allocations: 38871)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:05:50 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (4.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 140ms (Views: 116.0ms | ActiveRecord: 23.0ms | Allocations: 38859)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:08:44 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (115.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (19.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (5.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (105.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (87.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (42.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (18.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (25.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 557ms (Views: 112.4ms | ActiveRecord: 444.7ms | Allocations: 38856)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:08:46 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (3.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (101.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (223.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (6.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (13.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (4.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (4.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 454ms (Views: 81.8ms | ActiveRecord: 371.5ms | Allocations: 38854)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:10:47 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (5.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (21.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (22.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (20.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (35.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (57.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (63.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (4.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (8.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (9.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (82.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 453ms (Views: 105.0ms | ActiveRecord: 347.1ms | Allocations: 38856)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:11:48 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (4.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (11.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (24.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (4.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (12.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (15.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (20.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (29.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (11.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (39.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (7.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 307ms (Views: 97.7ms | ActiveRecord: 209.2ms | Allocations: 38859)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:11:55 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (23.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (4.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (51.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (4.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (4.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (12.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (21.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (15.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (5.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (8.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 280ms (Views: 110.7ms | ActiveRecord: 168.3ms | Allocations: 38856)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:13:29 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 102ms (Views: 85.8ms | ActiveRecord: 16.3ms | Allocations: 38874)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:13:30 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (4.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (5.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (4.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 156ms (Views: 125.3ms | ActiveRecord: 30.0ms | Allocations: 38856)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:15:13 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (102.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (7.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (22.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (9.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (31.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (25.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (68.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (5.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (12.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (72.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (11.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 573ms (Views: 188.4ms | ActiveRecord: 384.6ms | Allocations: 38859)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:15:13 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (156.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (37.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (11.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (23.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 391ms (Views: 138.2ms | ActiveRecord: 252.8ms | Allocations: 38853)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:20:37 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (56.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (44.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 229ms (Views: 113.6ms | ActiveRecord: 114.9ms | Allocations: 38993)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:42:40 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 149ms (Views: 131.1ms | ActiveRecord: 16.6ms | Allocations: 38992)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:43:00 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (405.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (6.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (4.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (4.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (5.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (32.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (102.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (32.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 717ms (Views: 107.8ms | ActiveRecord: 609.1ms | Allocations: 38854)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:43:01 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (38.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (22.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (20.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (215.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (11.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (8.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 435ms (Views: 98.6ms | ActiveRecord: 335.8ms | Allocations: 38858)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:44:22 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (5.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 101ms (Views: 85.0ms | ActiveRecord: 15.8ms | Allocations: 38856)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:44:24 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (2.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (7.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 103ms (Views: 77.1ms | ActiveRecord: 25.5ms | Allocations: 38856)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:50:52 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (9.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (13.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (30.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (230.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (110.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (110.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (18.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (52.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (30.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (105.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (6.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (24.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (7.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 1980ms (Views: 1200.5ms | ActiveRecord: 778.1ms | Allocations: 38997)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:50:55 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (12.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (18.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (131.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 276ms (Views: 94.4ms | ActiveRecord: 181.3ms | Allocations: 38854)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:50:55 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (98.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (39.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (57.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (7.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (52.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (7.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (13.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (34.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (11.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 447ms (Views: 109.7ms | ActiveRecord: 337.0ms | Allocations: 38856)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:51:38 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (4.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (10.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (103.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (201.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (60.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (27.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (9.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (11.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (113.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (271.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (169.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (14.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (15.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (8.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 1202ms (Views: 159.9ms | ActiveRecord: 1040.0ms | Allocations: 38854)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:51:39 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (12.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (118.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (13.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (3.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 1109ms (Views: 944.2ms | ActiveRecord: 164.0ms | Allocations: 38860)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:52:34 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (28.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (8.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (5.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (9.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (200.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (16.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (2.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (4.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (58.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (4.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 501ms (Views: 140.8ms | ActiveRecord: 359.4ms | Allocations: 38856)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:52:35 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (13.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (44.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (4.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (19.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (10.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (4.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (1.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 28]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 29]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 30]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 31]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."product_id" = $1[0m  [["product_id", 33]]
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 268ms (Views: 159.8ms | ActiveRecord: 108.0ms | Allocations: 38853)
+
+
