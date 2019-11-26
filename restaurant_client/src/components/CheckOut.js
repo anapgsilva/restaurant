@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import PaymentForm from './PaymentForm';
+import Payment from './Payment';
 import {Link} from 'react-router-dom';
 import UserForm from './UserForm';
 import OrderSummary from './OrderSummary';
@@ -56,12 +56,15 @@ class CheckOut extends Component {
     localStorage.setItem('paymentOption', paymentStatus);
   }
 
-  _handleCardDetails(name, number, cvv) {
-    this.setState({ccName: name});
-    this.setState({ccNumber: number});
-    this.setState({ccCVV: cvv});
-    console.log("I cna see this", this.state.ccName);
+  _handleCardDetails(event) {
+    event.preventDefault();
+    console.log("handling card details");
+    // this.setState({ccName: name});
+    // this.setState({ccNumber: number});
+    // this.setState({ccCVV: cvv});
+    console.log(event.target.value);
     this.createOrder();
+    
   }
 
   createOrder() {
@@ -107,7 +110,7 @@ class CheckOut extends Component {
             </div>
           </form>
 
-          {this.state.paymentOption === "Card" ? <PaymentForm onClick={this._handleCardDetails} totalPrice={30.00} orderItems={this.state.orderItems} /> : <button onClick={this.createOrder} className="pay">Pay</button>}
+          {this.state.paymentOption === "Card" ? <Payment onClick={this._handleCardDetails} totalPrice={30.00} orderItems={this.state.orderItems} /> : <button onClick={this.createOrder} className="pay">Pay</button>}
 
         </div>
 

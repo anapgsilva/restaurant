@@ -87,10 +87,10 @@ class Menu extends Component {
 
         <Cart onClick={this._handleChange} cart_products={this.state.selected_products} products={this.state.products} />
       </div>
-      
+
     );
   }
- 
+
 
 }
 

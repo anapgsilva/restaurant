@@ -13,6 +13,7 @@ class Payment extends Component {
     this._handleNameChange = this._handleNameChange.bind(this);
     this._handleNumberChange = this._handleNumberChange.bind(this);
     this._handleCVVChange = this._handleCVVChange.bind(this);
+    this.submitCardDetails = this.submitCardDetails.bind(this);
 
   }
 
@@ -33,6 +34,11 @@ class Payment extends Component {
 
   }
 
+  submitCardDetails() {
+    console.log("submitCardDetails");
+    // return this.state.ccName, this.state.ccNumber, this.state.ccCVV;
+  }
+
 
   render() {
     return (
@@ -46,9 +52,9 @@ class Payment extends Component {
           <input value={this.state.ccNumber} onChange={this._handleNumberChange} placeholder="Card number" required/><br/>
 
           <label>Card Validation Value: </label>
-          <input value={this.state.ccCVV} onChange={this._handleCVVChange} placeholder="CVV number (3 digits)" required/><br/>
+          <input value={this.state.ccCVV} onChange={this._handleCVVChange} placeholder="3 digits at the back of the card" required/><br/>
 
-          <button className="pay">Pay</button>
+          <button onClick={this.submitCardDetails} className="pay">Pay</button>
         </form>
       </div>
     );
