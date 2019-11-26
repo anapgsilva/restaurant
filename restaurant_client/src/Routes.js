@@ -25,7 +25,6 @@ library.add(fab, faStar);
 const Routes = (
   <Router>
     <div>
-      <Route component={Nav}/>
       <Route exact path="/" component={Home}/>
       <Route exact path="/menu" component={Menu}/>
       <Route exact path="/checkout" component={CheckOut}/>

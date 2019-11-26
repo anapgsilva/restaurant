@@ -14,7 +14,7 @@ class CheckOut extends Component {
     this.state = {
       orderItems: {},
       allProducts: [],
-      delivery: '',
+      delivery: false,
       paymentOption: "Cash",
       ccName: '',
       ccNumber: '',
