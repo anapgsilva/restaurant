@@ -3,7 +3,9 @@ import PaymentForm from './PaymentForm';
 // import {Link} from 'react-router-dom';
 import UserForm from './UserForm';
 import OrderSummary from './OrderSummary';
+import {Button} from 'semantic-ui-react';
 import DropdownTime from './DropdownTime';
+
 
 class CheckOut extends Component {
 
@@ -27,7 +29,6 @@ class CheckOut extends Component {
   }
 
   componentDidMount() {
-
     //Gets shopping cart from local storage
     const orderItems = JSON.parse(localStorage.getItem('orderItems'));
     //Gets delivery status from local storage
@@ -38,15 +39,15 @@ class CheckOut extends Component {
     this.setState({ orderItems, delivery, paymentOption });
   }
 
-  _handleClick(event) {
-    const value = event.target.value
+  _handleClick(event, state) {
+    const value = state.value
     //get value of button and set state
     if (value === "Pick-up"){
       this.setState({delivery: false});
     } else if (value === "Delivery" ){
       this.setState({delivery: true});
     }
-    //sets delivery state in local storage
+    // //sets delivery state in local storage
     let deliveryStatus = JSON.stringify(this.state.delivery);
     localStorage.setItem('delivery', deliveryStatus);
   }
@@ -92,12 +93,10 @@ class CheckOut extends Component {
 
           <div className="kind-order">
             <h3>Please select:</h3>
-            <button type='button' onClick={this._handleClick} value="Pick-up">
-            Pick-up
-            </button>
-            <button type='button' onClick={this._handleClick} value="Delivery">
-            Delivery
-            </button>
+
+            <Button onClick={this._handleClick} value='Pick-up'>Pick-Up</Button>
+            <Button onClick={this._handleClick} value='Delivery'>Delivery</Button>
+
           </div>
 
           <DropdownTime onChange={this.updateTime} />

@@ -1,11 +1,13 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 
 
 const Cart = (props) => {
   //GET PROPS FROM PARENT
   const orderItems = props.cart_products;
   const allProducts = props.products;
+  const history = useHistory(); //so we can redirect to checkout page
+
 
   //REMOVE ITEM FROM CART
   const removeItem = function(id) {
@@ -34,7 +36,9 @@ const Cart = (props) => {
   //ADD CART LIST TO LOCALSTORAGE
   const submitOrder = (orderItems) => {
     //Redirect to checkout page
-
+    if (Object.keys(orderItems).length > 0) {
+      history.push("/checkout");
+    }
   }
 
 
@@ -96,7 +100,7 @@ const Cart = (props) => {
 
 
       <button className="checkout-button" onClick={() => submitOrder(orderItems)}>
-        {Object.keys(orderItems).length > 0 ? (<Link to="/checkout">Check Out</Link>) : "Check Out"}
+        Check Out
       </button>
     </div>)
 
