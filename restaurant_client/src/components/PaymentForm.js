@@ -1,49 +1,23 @@
-import React, { Component } from 'react';
-import { injectStripe} from 'react-stripe-elements';
+import React from 'react';
+import StripeCheckout from 'react-stripe-checkout'
+import CheckOut from './CheckOut';
 
-class PaymentForm extends Component {
-    state = {  }
-    }
-
-    async submit(event){
-        let chargeToken = await this.props.stripe.createToken({name:"Name"})
-        let charge ={
-            token: chargeToken.token.id
-        }
-        let response = await fetch("The backend charges", {
-            method: 'POST',
-            headers:{
-               'Content-Type': 'application/json',
-               'Accept':'application/json',
-            },
-            body: JSON.stringify({
-                charge: charge
-            })
-        })
-        if(response.ok) console.log("Purchase Complete!");
+   
+    const  PaymentForm = (props) => {
         
-    }
-    render() { 
-        return ( 
-            <div>
-              <form action="/charge" method="post" id="payment-form">
-            <div class="form-row">
-             <label for="card-element">
-                Credit or debit card
-                </label>
-             <div id="card-element">
-                
-            </div>
-
-            
-         <div id="card-errors" role="alert"></div>
-        </div>
-
-        <button>Submit Payment</button>
-</form>
-            </div>
-         );
-    }
+     function handleToken(token){
+        console.log(token);
+        
 }
+    return (
+        <div className="container">
+            <StripeCheckout stripeKey="pk_test_JhdcAxGUY3owc3ECy0W1PWGC0048vo2QDZ"
+            token={handleToken}/>
+
+        </div>
+    )
+}
+   
  
-export default injectStripe(CheckoutForm);
+ 
+export default PaymentForm;
