@@ -61,13 +61,13 @@ class OrderSummary extends Component {
   render(props) {
     const deliveryCost = "Delivery fee: $5.00";
     //updates total price according to delivery status
-    const total = this.props.delivery ? (this.state.total + 5) : this.state.total;
+    const total = this.props.deliveryStatus ? (this.state.total + 5) : this.state.total;
 
     return(this.state.allProducts.length > 0 &&
       (<div className='orderList'>
         <h3>Order Summary</h3>
 
-        <h6>For {this.props.delivery ? "delivery" : "pick-up"} at {this.props.time} pm.</h6>
+        <h6>For {this.props.deliveryStatus ? "delivery" : "pick-up"} at {this.props.time} pm.</h6>
 
         {Object.entries(this.state.orderItems).map( ([id, quantity]) => {
           const item = this.state.allProducts.find( p => p.id.toString() === id);
@@ -85,7 +85,7 @@ class OrderSummary extends Component {
               </label>
             </div>
         )})}
-        {this.state.delivery ?
+        {this.props.deliveryStatus ?
         (<p className="totalPrice">{deliveryCost}</p>)
         : ""}
         <p className="totalPrice">Total ${Number(total).toFixed(2)}</p>

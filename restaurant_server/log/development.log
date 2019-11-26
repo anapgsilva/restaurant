@@ -19816,3 +19816,52 @@ Processing by ProductsController#index as JSON
 Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.5ms | Allocations: 5722)
 
 
+Started GET "/products.json" for ::1 at 2019-11-27 09:39:38 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (5.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 6.7ms | ActiveRecord: 5.5ms | Allocations: 5722)
+
+
+Started GET "/products.json" for ::1 at 2019-11-27 09:41:43 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (2.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 2.4ms | Allocations: 5722)
+
+
+Started GET "/products.json" for ::1 at 2019-11-27 09:42:01 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.4ms | Allocations: 5723)
+
+
+Started POST "/user/token" for ::1 at 2019-11-27 09:44:15 +1100
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"ana@ga", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"ana@ga", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (19.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ana@ga"], ["LIMIT", 1]]
+Completed 201 Created in 444ms (Views: 0.3ms | ActiveRecord: 61.1ms | Allocations: 12140)
+
+
+Started POST "/user/token" for ::1 at 2019-11-27 09:44:44 +1100
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"ana@ga", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"ana@ga", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ana@ga"], ["LIMIT", 1]]
+Completed 201 Created in 269ms (Views: 0.2ms | ActiveRecord: 7.2ms | Allocations: 8837)
+
+
+Started GET "/products.json" for ::1 at 2019-11-27 09:47:50 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (450.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 497ms (Views: 22.7ms | ActiveRecord: 468.5ms | Allocations: 11837)
+
+
+Started GET "/products.json" for ::1 at 2019-11-27 09:47:56 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 1.4ms | Allocations: 5722)
+
+
