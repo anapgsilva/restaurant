@@ -17407,6 +17407,179 @@ Completed 200 OK in 310ms (Views: 298.7ms | ActiveRecord: 11.0ms | Allocations: 
 
 
 <<<<<<< HEAD
+Started GET "/" for ::1 at 2019-11-26 12:56:51 +1100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (4.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 36ms (Views: 24.3ms | ActiveRecord: 4.3ms | Allocations: 11923)
+
+
+Started GET "/users" for ::1 at 2019-11-26 12:56:56 +1100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mOrder Load (3.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mOrder Load (1.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 83ms (Views: 47.3ms | ActiveRecord: 28.9ms | Allocations: 20086)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:03:53 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (4.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 351ms (Views: 344.7ms | ActiveRecord: 4.7ms | Allocations: 5815)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:05:23 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 1.3ms | Allocations: 5708)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:05:49 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.9ms | Allocations: 5708)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:06:47 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (3.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 3.1ms | Allocations: 5709)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:07:48 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (2.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 2.5ms | Allocations: 5708)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:08:58 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.7ms | Allocations: 5708)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:09:49 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.7ms | Allocations: 5708)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:10:39 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.6ms | Allocations: 5708)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:10:55 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.6ms | Allocations: 5708)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:11:02 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (3.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 27ms (Views: 23.2ms | ActiveRecord: 3.3ms | Allocations: 5708)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:11:06 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (2.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 53ms (Views: 49.3ms | ActiveRecord: 2.4ms | Allocations: 5711)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:13:42 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (3.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 165ms (Views: 154.7ms | ActiveRecord: 3.7ms | Allocations: 5708)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:14:08 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (3.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 27ms (Views: 23.0ms | ActiveRecord: 3.1ms | Allocations: 5708)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:15:15 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 1.5ms | Allocations: 5708)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:15:18 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 1.7ms | Allocations: 5708)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:15:25 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 1.2ms | Allocations: 5708)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:19:23 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (3.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 36ms (Views: 31.8ms | ActiveRecord: 3.8ms | Allocations: 5708)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:20:02 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 1.1ms | Allocations: 5708)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 14:55:56 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (2.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 334ms (Views: 327.5ms | ActiveRecord: 2.5ms | Allocations: 5814)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 15:02:10 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 1.5ms | Allocations: 5811)
+
+
+Started GET "/products.json" for ::1 at 2019-11-26 15:02:20 +1100
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 2.3ms | Allocations: 5708)
+
+
+=======
+<<<<<<< HEAD
 Started GET "/products.json" for ::1 at 2019-11-26 14:03:26 +1100
   [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by ProductsController#index as JSON
@@ -19382,3 +19555,4 @@ Completed 200 OK in 268ms (Views: 159.8ms | ActiveRecord: 108.0ms | Allocations:
 =======
 >>>>>>> e493d8a1cb93fbabb89be0175de88e1931d264a7
 >>>>>>> e0cd0e6e18216029be470c6ac401840de39f6dc8
+>>>>>>> 59322526a28a0dab7c851072401568174a461490
