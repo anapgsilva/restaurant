@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {withRouter} from 'react-router-dom';
+
 
 class SignIn extends Component {
   constructor () {
@@ -57,7 +59,7 @@ class SignIn extends Component {
 
 }
 
-export default SignIn;
+export default withRouter(SignIn);
 
 
 // <Form className="loginForm">

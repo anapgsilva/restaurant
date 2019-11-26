@@ -35,9 +35,9 @@ class Menu extends Component {
   componentDidMount() {
     this.fetchProducts();
 
-    const orderProducts = JSON.parse(localStorage.getItem('orderItems'));
-    if (orderProducts) {
-      this.setState({selected_products: orderProducts});
+    const orderItems = JSON.parse(localStorage.getItem('orderItems'));
+    if (orderItems) {
+      this.setState({selected_products: orderItems});
     };
 
   }

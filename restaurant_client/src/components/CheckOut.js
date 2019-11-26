@@ -5,6 +5,8 @@ import UserForm from './UserForm';
 import OrderSummary from './OrderSummary';
 import {Button} from 'semantic-ui-react';
 import DropdownTime from './DropdownTime';
+import {withRouter} from 'react-router-dom';
+
 
 
 class CheckOut extends Component {
@@ -16,16 +18,15 @@ class CheckOut extends Component {
       allProducts: [],
       delivery: false,
       paymentOption: "Cash",
-      ccName: '',
-      ccNumber: '',
-      ccCVV: '',
       totalPrice: 0,
       time: ''
-    }
+    };
+
     this._handleClick = this._handleClick.bind(this);
     this._handleChange = this._handleChange.bind(this);
     this._handleCardDetails = this._handleCardDetails.bind(this);
     this.updateTime = this.updateTime.bind(this);
+    this.createOrder = this.createOrder.bind(this);
   }
 
   componentDidMount() {
@@ -40,28 +41,34 @@ class CheckOut extends Component {
   }
 
   _handleClick(event, state) {
-    const value = state.value
+    const value = state.value;
+    console.log(value);
     //get value of button and set state
     if (value === "Pick-up"){
       this.setState({delivery: false});
     } else if (value === "Delivery" ){
       this.setState({delivery: true});
     }
+    console.log(this.state.delivery);
     // //sets delivery state in local storage
     let deliveryStatus = JSON.stringify(this.state.delivery);
     localStorage.setItem('delivery', deliveryStatus);
   }
-
+  //
   updateTime(timeOrder) {
+    console.log(timeOrder);
+    // //save stime in state
     this.setState({time: timeOrder});
-    localStorage.setItem('time', timeOrder);
+    //save time to local storage
+    const time = JSON.stringify(timeOrder);
+    localStorage.setItem('time', time);
   }
 
   _handleChange(event) {
     //sets state of payment type
     this.setState({paymentOption: event.target.value})
     //saves payment type to local storage
-    let paymentStatus = JSON.stringify(this.state.paymentOption);
+    let paymentStatus = JSON.stringify(event.target.value);
     localStorage.setItem('paymentOption', paymentStatus);
   }
 
@@ -80,7 +87,7 @@ class CheckOut extends Component {
     //make order and each line item
     console.log("will make request");
     // redirect to /ordercomplete if all verified
-
+    this.props.history.push('/ordercomplete');
   }
 
 
@@ -119,13 +126,13 @@ class CheckOut extends Component {
             </div>
           </form>
 
-          {this.state.paymentOption === "Card" ? <PaymentForm onClick={this._handleCardDetails} orderItems={this.state.orderItems} totalPrice={30} /> : <button onClick={this.createOrder} className="pay">Pay</button>}
+          {this.state.paymentOption === "Card" ? <PaymentForm onClick={this._handleCardDetails} orderItems={this.state.orderItems} totalPrice={this.state.totalPrice} /> : <button onClick={this.createOrder} className="pay">Pay</button>}
 
         </div>
 
 
         <div>
-          <OrderSummary deliveryStatus={this.state.delivery} />
+          <OrderSummary deliveryStatus={this.state.delivery} time={this.state.time} />
         </div>
 
       </div>
@@ -136,4 +143,4 @@ class CheckOut extends Component {
 }
 
 
-export default CheckOut;
+export default withRouter(CheckOut);

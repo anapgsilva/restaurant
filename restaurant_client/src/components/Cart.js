@@ -35,6 +35,8 @@ const Cart = (props) => {
 
   //ADD CART LIST TO LOCALSTORAGE
   const submitOrder = (orderItems) => {
+    let order = JSON.stringify(orderItems);
+    localStorage.setItem('orderItems', order);
     //Redirect to checkout page
     if (Object.keys(orderItems).length > 0) {
       history.push("/checkout");
@@ -44,11 +46,12 @@ const Cart = (props) => {
 
   let totalPrice = 0;
   Object.entries(orderItems).map( ([id, quantity]) => {
-   const item = allProducts.find( p => {
+    allProducts.find( p => {
      if (p.id.toString() === id) {
        totalPrice += p.price * quantity;
-     };
-   })});
+     }
+   })}
+ );
 
 
   return (

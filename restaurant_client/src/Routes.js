@@ -1,6 +1,5 @@
 import React from 'react';
 import {HashRouter as Router, Route} from 'react-router-dom';
-import Nav from './components/Nav';
 import Home from './components/Home';
 import Menu from './components/Menu';
 import CheckOut from './components/CheckOut';

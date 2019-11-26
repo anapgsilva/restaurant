@@ -22,6 +22,7 @@ const DropdownTime = (props) => {
 
   const submitTime = (event, state) => {
     const timeOrder = state.value;
+    console.log(timeOrder);
     return props.onChange(timeOrder);
   };
 
