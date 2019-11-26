@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import PaymentForm from './PaymentForm'
 
@@ -17,4 +18,6 @@ class App extends Component {
 }
  
 export default App;
+=======
+>>>>>>> f9e5ed3415a82528da98d09a4396dcb48900da4b
 

@@ -6,13 +6,28 @@ class UserForm extends Component {
 
   constructor() {
     super();
-    this.state ={
-
+    this.state = {
+      delivery: '',
+      currentUser: false
     }
+  }
+
+  componentDidMount() {
+    const currentUser = JSON.parse(localStorage.getItem('jwt'));
+
+    // if (currentUser.length > 0) {
+    //
+    // }
+
+    // const deliveryStatus = props.deliveryStatus;
+    // this.setState({delivery: deliveryStatus})
+
+
   }
 
   render() {
     return (
+<<<<<<< HEAD
       <Form>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
@@ -54,6 +69,13 @@ class UserForm extends Component {
         <Form.Group id="formGridCheckbox">
           <Form.Check type="checkbox" label="Check me out" />
         </Form.Group>
+=======
+      <div>
+        <form>
+
+        </form>
+      </div>
+>>>>>>> f9e5ed3415a82528da98d09a4396dcb48900da4b
 
         <Button variant="primary" type="submit">
           Submit

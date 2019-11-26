@@ -12,52 +12,65 @@ class OrderSummary extends Component {
       orderItems: {},
       allProducts: [],
       delivery: '',
-      paymentOption: ''
+      paymentOption: '',
+      time: '',
+      total: 0
     }
   }
 
-  //get all products
-  fetchProducts() {
+  //get all products (slowest action) and then set variables
+  fetchProducts(props) {
     axios.get(SERVER_URL).then( (results) => {
-      const products = results.data;
-      this.setState({allProducts: products});
+      const allProducts = results.data;
+
+      //Gets shopping cart from local storage
+      const orderItems = JSON.parse(localStorage.getItem('orderItems'));
+      //Gets delivery status from local storage
+      const delivery = this.props.deliveryStatus? this.props.deliveryStatus : JSON.parse(localStorage.getItem('delivery'));
+      //Gets payment option from local storage
+      const paymentOption = JSON.parse(localStorage.getItem('paymentOption'));
+      //get time for order
+      const time = this.props.time? this.props.time : JSON.parse(localStorage.getItem('time'));
+
+      const total = this.calculateTotal(allProducts, orderItems, delivery);
+
+      this.setState({allProducts, orderItems, delivery, paymentOption, time, total});
     })
+
+  }
+
+  calculateTotal(allProducts, orderItems) {
+    let totalPrice = 0;
+    if (Object.keys(orderItems).length > 0){
+      Object.entries(orderItems).map( ([id, quantity]) => {
+        allProducts.find( p => {
+         if (p.id.toString() === id) {
+           totalPrice += p.price * quantity;
+         };
+       })
+      });
+    }
+    this.setState({total: totalPrice});
+    return totalPrice;
   }
 
   componentDidMount() {
-
-    //Gets shopping cart from local storage
-    const orderItems = JSON.parse(localStorage.getItem('orderItems'));
-    //Gets delivery status from local storage
-    const delivery = JSON.parse(localStorage.getItem('delivery'));
-    //Gets payment option from local storage
-    const paymentOption = JSON.parse(localStorage.getItem('paymentOption'));
-    //sets state of all variables
-    this.setState({ orderItems, delivery, paymentOption });
-
     this.fetchProducts();
   }
 
-
-
-  render() {
-    const props = this.props;
-
-    let total = 0;
-    let deliveryCost;
+  render(props) {
+    const deliveryCost = "Delivery fee: $5.00";
     //updates total price according to delivery status
-    if (props.deliveryStatus) {
-      total += 5;
-      deliveryCost = "Delivery fee: $5.00";
-    }
+    const total = this.props.deliveryStatus ? (this.state.total + 5) : this.state.total;
 
     return(this.state.allProducts.length > 0 &&
       (<div className='orderList'>
         <h3>Order Summary</h3>
 
+        <h6>For {this.props.deliveryStatus ? "delivery" : "pick-up"} at {this.props.time} pm.</h6>
+
         {Object.entries(this.state.orderItems).map( ([id, quantity]) => {
           const item = this.state.allProducts.find( p => p.id.toString() === id);
-          total += quantity * item.price;
           return (
             <div className="item" key={id}>
               <label className="itemName">
@@ -72,7 +85,7 @@ class OrderSummary extends Component {
               </label>
             </div>
         )})}
-        {props.deliveryStatus ?
+        {this.props.deliveryStatus ?
         (<p className="totalPrice">{deliveryCost}</p>)
         : ""}
         <p className="totalPrice">Total ${Number(total).toFixed(2)}</p>

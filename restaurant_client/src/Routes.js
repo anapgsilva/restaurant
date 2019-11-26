@@ -1,6 +1,5 @@
 import React from 'react';
 import {HashRouter as Router, Route} from 'react-router-dom';
-import Nav from './components/Nav';
 import Home from './components/Home';
 import Menu from './components/Menu';
 import CheckOut from './components/CheckOut';
@@ -9,12 +8,23 @@ import SignUp from './components/SignUp';
 import OrderComplete from './components/OrderComplete';
 import Logout from './components/Logout';
 import 'bootstrap/dist/css/bootstrap.min.css';
+<<<<<<< HEAD
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 library.add(fab, faStar);
 //This is goign to replace App.js
+=======
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab, faStar);
+
+// This is goign to replace App.js
+>>>>>>> f9e5ed3415a82528da98d09a4396dcb48900da4b
 
 
 
@@ -23,7 +33,6 @@ library.add(fab, faStar);
 const Routes = (
   <Router>
     <div>
-      <Route component={Nav}/>
       <Route exact path="/" component={Home}/>
       <Route exact path="/menu" component={Menu}/>
       <Route exact path="/checkout" component={CheckOut}/>
@@ -36,6 +45,9 @@ const Routes = (
 );
 
 export default Routes;
+<<<<<<< HEAD
 
 
  
+=======
+>>>>>>> f9e5ed3415a82528da98d09a4396dcb48900da4b

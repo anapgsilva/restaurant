@@ -2,7 +2,11 @@ import React, {Component} from 'react';
 import Cart from './Cart';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+<<<<<<< HEAD
 
+=======
+import Nav from './Nav';
+>>>>>>> f9e5ed3415a82528da98d09a4396dcb48900da4b
 
 
 const SERVER_URL = "http://localhost:3000/products.json"
@@ -35,9 +39,9 @@ class Menu extends Component {
   componentDidMount() {
     this.fetchProducts();
 
-    const orderProducts = JSON.parse(localStorage.getItem('orderItems'));
-    if (orderProducts) {
-      this.setState({selected_products: orderProducts});
+    const orderItems = JSON.parse(localStorage.getItem('orderItems'));
+    if (orderItems) {
+      this.setState({selected_products: orderItems});
     };
 
   }
@@ -54,6 +58,7 @@ class Menu extends Component {
 
   render() {
     return (
+<<<<<<< HEAD
       <div className="main">
         <div className="menu">
           <h1>Menu</h1>
@@ -83,11 +88,44 @@ class Menu extends Component {
               })}
             </div>);
           })}
+=======
+      <div>
+        <Nav />
+        <div className="main">
+          <div className="menu">
+            <h1>Menu</h1>
+            {this.state.categories.map( cat => {
+              return (
+              <div key={cat}>
+                <h3>{cat}</h3>
+                {this.state.products.map( prod => {
+                    return (prod.category === cat &&
+                    <div key={prod.id}>
+                      <label className="product-name">
+                        {prod.name}
+                      </label>
+                      <label className="product-price">
+                        ${Number(prod.price).toFixed(2)}
+                      </label>
+                      {this.state.selected_products[Number(prod.id).toString()] ?
+                        (<button type="button">Added</button>)
+                        :
+                        (<button type="button" onClick={() => this.addItemToOrder(prod.id)}>Add</button>)
+                      }
+                      <br/>
+                      {prod.stars > 1 ? Array.from(Array(prod.stars).keys()).map( star => { return (<FontAwesomeIcon key={star} icon='star' />)
+                      }) : ""}
+                      <br/>
+                    </div>);
+                })}
+              </div>);
+            })}
+          </div>
+
+          <Cart onClick={this._handleChange} cart_products={this.state.selected_products} products={this.state.products} />
+>>>>>>> f9e5ed3415a82528da98d09a4396dcb48900da4b
         </div>
-
-        <Cart onClick={this._handleChange} cart_products={this.state.selected_products} products={this.state.products} />
       </div>
-
     );
   }
 
