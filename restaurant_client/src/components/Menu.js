@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Cart from './Cart';
 import axios from 'axios';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
@@ -75,10 +75,10 @@ class Menu extends Component {
                       :
                       (<button type="button" onClick={() => this.addItemToOrder(prod.id)}>Add</button>)
                     }
-                    // <br/>
-                    // {prod.stars > 1 ? Array.from(Array(prod.stars).keys()).map( star => { return (<FontAwesomeIcon key={star} icon='star' />)
-                    // }) : ""}
-                    // <br/>
+                    <br/>
+                    {prod.stars > 1 ? Array.from(Array(prod.stars).keys()).map( star => { return (<FontAwesomeIcon key={star} icon='star' />)
+                    }) : ""}
+                    <br/>
                   </div>);
               })}
             </div>);
