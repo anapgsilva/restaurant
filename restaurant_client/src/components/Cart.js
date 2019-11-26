@@ -8,45 +8,98 @@ const Cart = (props) => {
   const allProducts = props.products;
 
   const removeItem = function(id) {
-    return props.onClick(id);
+    orderItems[id] -= 1;
+    if (orderItems[id] === 0){
+      delete orderItems[id];
+    }
+    return props.onClick(orderItems);
   }
 
-  const submitOrder = (orderItems, allProducts) => {
-    console.log('orderItems', orderItems);
+  const addItem = function(id) {
+    //checks if item is already there and changes the quantity
+    if (orderItems[id]) {
+      orderItems[id] += 1;
+    } else {
+      orderItems[id] = 1;
+    }
+    return props.onClick(orderItems);
+  }
+
+  const submitOrder = (orderItems) => {
     let order = JSON.stringify(orderItems);
     localStorage.setItem('orderItems', order);
-    let products = JSON.stringify(allProducts);
-    localStorage.setItem('allProducts', products);
-    console.log('order', order);
-    console.log('products', products);
   }
 
-  return (allProducts.length > 0 ?
-    <aside className='orderList'>
-      <h1>Your Order</h1>
+  let totalPrice = 0;
+  if (Object.entries(orderItems).length > 0) {
+    Object.entries(orderItems).map( ([id, quantity]) => {
+      return allProducts.find( p => {
+        if (p.id.toString() === id) {
+          totalPrice += p.price * quantity;
+          return totalPrice;
+        };
+      })
+    });
+  }
 
-      {Object.entries(orderItems).map( ([id, quantity]) => {
-        console.log(orderItems);
-        const item = allProducts.find( p => p.id.toString() === id);
-        console.log(item);
-        return (quantity > 0 &&
-          <div key={id}>
-            <label>{quantity} X {item.name}<span>${item.price}</span></label>
-            <button onClick={ () => removeItem(id)}>
-            -
-            </button>
-          </div>)
-      })}
 
-      <button onClick={() => submitOrder(orderItems, allProducts)}>
-        <Link to="/checkout">Check Out</Link>
+  return (
+    allProducts.length > 0 &&
+
+      (<div className='orderList'>
+        <h2>Cart</h2>
+
+        {Object.keys(orderItems).length > 0 ?
+
+          ( <div>
+              <div className="title">
+                <label className="quantity">Qty</label>
+                <label className="itemPrice">Total</label>
+              </div>
+
+              <div className="items-list">
+
+                {Object.entries(orderItems).map( ([id, quantity]) => {
+                const item = allProducts.find( p => p.id.toString() === id);
+                return (quantity > 0 &&
+                  <div className="item" key={id}>
+                    <label className="itemName">
+                    {item.name}
+                    </label>
+
+
+                    <label className="quantity">
+                    <button className="minus" onClick={ () => removeItem(id)}>
+                    -
+                    </button>
+                    {quantity}
+                    <button className="plus" onClick={ () => addItem(id)}>
+                    +
+                    </button>
+                    </label>
+
+
+                    <label className="itemPrice">
+                    ${Number(quantity * item.price).toFixed(2)}
+                    </label>
+                  </div>)
+                })}
+              </div>
+
+              <p className="totalPrice">Total (exc. delivery): ${Number(totalPrice).toFixed(2)}</p>
+
+            </div>
+          )
+          : (<h4>Your cart is empty.</h4>)}
+
+
+      <button className="checkout-button" onClick={() => submitOrder(orderItems)}>
+        {Object.keys(orderItems).length > 0 ? (<Link to="/checkout">Check Out</Link>) : "Check Out"}
       </button>
-    </aside>
-    : ""
-  );
+    </div>)
+
+    );
+
 }
-
-
-
 
 export default Cart;

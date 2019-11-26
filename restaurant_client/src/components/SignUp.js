@@ -53,11 +53,24 @@ class SignUp extends Component {
       <div>
         <h2>Sign Up</h2>
         <form onSubmit={ this._handleSubmit }>
-          <input type="text" placeholder="Name" required onInput={ this._handleInputName } />
-          <input type="text" placeholder="Email" required onInput={ this._handleInputEmail } />
-          <input type="text" placeholder="Password" required onInput={ this._handleInputPassword } />
-          <input type="text" placeholder="000-000-000" required onInput={ this._handleInputPhoneNumber } />
-          <input type="text" placeholder="Address" onInput={ this._handleInputAddress } />
+          <label>Name:</label>
+          <input type="text" placeholder="Name" required onInput={ this._handleInputName } /><br/>
+
+          <label>E-mail:</label>
+          <input type="text" placeholder="Email" required onInput={ this._handleInputEmail } /><br/>
+
+          <label>Password:</label>
+          <input type="text" placeholder="Password" required onInput={ this._handleInputPassword } /><br/>
+
+          <label>Password confirmation:</label>
+          <input type="text" placeholder="Password" required onInput={ this._handleInputPassword } /><br/>
+
+          <label>Phone number:</label>
+          <input type="text" placeholder="000-000-000" required onInput={ this._handleInputPhoneNumber } /><br/>
+
+          <label>Delivery address:</label>
+          <input type="text" placeholder="Street address" onInput={ this._handleInputAddress } /><br/>
+
           <input type="submit" placeholder="SignUp" onClick={this._handleSubmit} />
         </form>
       </div>
