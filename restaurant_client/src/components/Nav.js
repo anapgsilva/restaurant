@@ -3,8 +3,10 @@ import {Link} from 'react-router-dom';
 import logo from "../logo.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import DropdownButton from 'react-bootstrap/DropdownButton';
-import {Dropdown,DropdownButton,Button, Form, FormGroup, Label, Input,Row, Col, Navbar}
-from 'react-bootstrap';
+import {Dropdown,DropdownButton,Button, Form, FormGroup, Label, Input,Row, Col, Navbar} from 'react-bootstrap';
+import SignIn from './SignIn';
+
+
 
 class Nav extends Component {
 
@@ -17,13 +19,19 @@ class Nav extends Component {
   fetchUser() {
   //need to fetch current user
   //if current user present then dont show login and signup below
-  
+
   }
 
   render() {
+    let userSession;
+    if (localStorage.getItem('jwt')) {
+      userSession = JSON.parse(localStorage.getItem('jwt'));
+    } else {
+      userSession = "";
+    }
+
     return (
       <Navbar bg="light" variant="light" className="justify-content-between">
-        <div></div>
         <Link to="/">
           <img src={logo} alt="Home" className="navbar-brand" />
         </Link>
@@ -43,25 +51,18 @@ class Nav extends Component {
             id="dropdown-item-button"
             title="Log In"
           >
-            <Form className="loginForm">
-              <Form.Group controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
-              </Form.Group>
-              <Form.Group controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
-              </Form.Group>
-              <Form.Group controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-              </Form.Group>
-              <Button variant="primary" type="submit">
-                Submit
-              </Button>
-            </Form>
+          <SignIn />
           </DropdownButton>
         </Form>
+
+
+        {userSession.length > 0 ? <Link to="/logout">Logout</Link> : <Link to="/signup">Sign Up</Link>}
+
+
       </Navbar>
+
+
+
     );
   }
 
