@@ -17,11 +17,13 @@ class CheckOut extends Component {
       ccName: '',
       ccNumber: '',
       ccCVV: '',
-      totalPrice: 0
+      totalPrice: 0,
+      time: ''
     }
     this._handleClick = this._handleClick.bind(this);
     this._handleChange = this._handleChange.bind(this);
     this._handleCardDetails = this._handleCardDetails.bind(this);
+    this.updateTime = this.updateTime.bind(this);
   }
 
   componentDidMount() {
@@ -47,6 +49,11 @@ class CheckOut extends Component {
     //sets delivery state in local storage
     let deliveryStatus = JSON.stringify(this.state.delivery);
     localStorage.setItem('delivery', deliveryStatus);
+  }
+
+  updateTime(timeOrder) {
+    this.setState({time: timeOrder});
+    localStorage.setItem('time', timeOrder);
   }
 
   _handleChange(event) {
@@ -93,7 +100,7 @@ class CheckOut extends Component {
             </button>
           </div>
 
-          <DropdownTime />
+          <DropdownTime onChange={this.updateTime} />
 
           <UserForm deliveryStatus={this.state.delivery} />
 
