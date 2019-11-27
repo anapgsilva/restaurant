@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-
+import Nav from './Nav';
 
 const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
 
@@ -56,6 +56,7 @@ class SignUp extends Component {
   render() {
     return (
       <div>
+        <Nav />
         <h2>Sign Up</h2>
         <form onSubmit={ this._handleSubmit }>
           <label>Name:</label>
