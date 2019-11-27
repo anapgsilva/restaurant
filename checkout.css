@@ -64,3 +64,23 @@
 h4 {
   padding-top: 50px;
 }
+
+.orderSummary {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto; /* Full-height: remove this if you want "auto" height */
+  min-width: 300px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #fff;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding: 20px;
+  text-align: center;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  margin-top: 30px;
+}
