@@ -43,7 +43,6 @@ class SignIn extends Component {
   render() {
     return (
       <div>
-        <h2>Log In</h2>
         <form>
           <label>Email: </label>
           <input type="text" placeholder="Email" required onInput={ this._handleInputEmail } />

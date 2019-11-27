@@ -166,22 +166,26 @@ label {
 }
 
 #bootstrap-override .navbar-light .navbar-nav .nav-link {
-    color: #37383b;
+    color: #555555;
 }
 
 #bootstrap-override .btn-outline-primary {
     border: none;
-    color: #37383b;
+    color: #555555;
 }
 
 #bootstrap-override .nav-link {
-    color: #37383b;
+    color: #555555;
     text-decoration: none;
     background-color: transparent;
 }
 
 #bootstrap-override a {
-  color: #37383b;
+  color: #555555;
   text-decoration: none;
   background-color: transparent;
+}
+
+.login-label {
+  text-align: left;
 }

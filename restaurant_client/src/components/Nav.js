@@ -44,7 +44,7 @@ const Nav = () => {
             }
 
             <li className="nav-item ml-2">
-              {localStorage.getItem('jwt') ? <Link to="/logout">Logout</Link> : <Link to="/signup" className="nav-link">Sign Up</Link>}
+              {localStorage.getItem('jwt') ? <Link to="/logout" className="nav-link">Logout</Link> : <Link to="/signup" className="nav-link">Sign Up</Link>}
             </li>
           </ul>
         </div>
