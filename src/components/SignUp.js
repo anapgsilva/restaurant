@@ -3,14 +3,9 @@ import axios from 'axios';
 import Nav from './Nav';
 import {Form, Col} from 'react-bootstrap';
 
-<<<<<<< HEAD:restaurant_client/src/components/SignUp.js
-const SERVER_URL = "http://localhost:3000/user/token";
-//const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
-=======
-
 // const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
 const SERVER_URL = "http://localhost:3000/users";
->>>>>>> bda4361935c51517a363e85806e624a6687db437:src/components/SignUp.js
+
 
 class SignUp extends Component {
   constructor () {

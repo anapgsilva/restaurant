@@ -4,10 +4,8 @@ import {withRouter} from 'react-router-dom';
 
 
 const SERVER_URL = "http://localhost:3000/user/token";
-<<<<<<< HEAD:restaurant_client/src/components/SignIn.js
-=======
+
 // const SERVER_URL = "https://restaurant-order-server.herokuapp.com/user/token";
->>>>>>> bda4361935c51517a363e85806e624a6687db437:src/components/SignIn.js
 
 
 class SignIn extends Component {

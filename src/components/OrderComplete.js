@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import SignUp from './SignUp';
 import OrderSummary from './OrderSummary';
 import Nav from './Nav';
 
