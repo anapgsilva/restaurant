@@ -11,7 +11,7 @@ class UserForm extends Component {
       address:'',
       suburb: '',
       postCode: ''
-      
+
     }
   }
 
@@ -23,6 +23,7 @@ class UserForm extends Component {
 
   render() {
     return (
+
       <Form>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
