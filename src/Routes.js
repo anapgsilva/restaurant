@@ -20,7 +20,7 @@ library.add(fab, faHeart);
 //This is not a component: just a collection of JSX
 
 const Routes = (
-  <Router>
+  <Router basename="/restaurant_client">
     <div>
       <Route exact path="/" component={Home}/>
       <Route exact path="/menu" component={Menu}/>
