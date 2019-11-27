@@ -4,7 +4,7 @@ import Nav from './Nav';
 
 const Home = () => {
 
-  // 
+  //
   // fetchUser() {
   //
   // }
@@ -13,11 +13,19 @@ const Home = () => {
 
   return (
     <div>
-      <Nav />
+      <div>
+        <Nav />
+      </div>
+
+      <div>
+
+      </div>
+
       <div>
         <h1>Our Restaurant</h1>
         <p>Restaurant Info, address, phone number, photos of the restaurant, etc</p>
       </div>
+
     </div>
   );
 

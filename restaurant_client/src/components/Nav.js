@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import logo from "../logo.png"
+import babbo from "../babbo.jpg"
+import babbologo from "../babbologo.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import DropdownButton from 'react-bootstrap/DropdownButton';
 import {DropdownButton, Form, Navbar} from 'react-bootstrap';
@@ -12,10 +13,10 @@ const Nav = () => {
 
 
     return (
-      <Navbar bg="light" variant="light" className="justify-content-between">
+      <Navbar id="bootstrap-override" bg="light" variant="light" className="justify-content-between">
 
         <Link to="/">
-          <img src={logo} alt="Home" className="navbar-brand" />
+          <img src={babbologo} alt="Home" className="navbar-brand" />
         </Link>
 
         <div class="nav-bar-links">
@@ -27,19 +28,18 @@ const Nav = () => {
             </li>
 
             {localStorage.getItem('jwt') ? "" :
+
             <li className="nav-item ml-2">
-              <div id="bootstrap-override">
-                <Form inline>
-                  <DropdownButton
-                    variant="outline-primary"
-                    className="dropdown"
-                    id="dropdown-item-button"
-                    title="Log In"
-                  >
-                  <SignIn />
-                  </DropdownButton>
-                </Form>
-              </div>
+              <Form inline>
+                <DropdownButton
+                  variant="outline-primary"
+                  className="dropdown"
+                  id="dropdown-item-button"
+                  title="Log In"
+                >
+                <SignIn />
+                </DropdownButton>
+              </Form>
             </li>
             }
 
