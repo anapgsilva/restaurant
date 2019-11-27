@@ -40,14 +40,24 @@ class OrderComplete extends Component {
     return(
       <div>
         <Nav />
-        <div className="main">
-          <div className="orderComplete">
+        <div id="main">
+          <div id="forms">
             <h3>Thank you for your order!</h3>
             <h6>Fast check out next time?</h6>
-            <SignUp />
+
+            <h4>Sign up</h4>
+            <form>
+              <label>Password:</label>
+              <input type="password" placeholder="Password" required onInput={ this._handleInputPassword } /><br/>
+
+              <label>Password confirmation:</label>
+              <input type="password" placeholder="Confirm Password" required onInput={ this._handleInputPasswordConfirmation } /><br/>
+
+              <input type="submit" placeholder="Sign Up" onClick={this._handleSubmit} />
+            </form>
           </div>
 
-          <div>
+          <div className="orderList">
             <OrderSummary />
           </div>
 

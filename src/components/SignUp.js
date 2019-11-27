@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Nav from './Nav';
+import {Form, Col} from 'react-bootstrap';
+
 
 // const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
 const SERVER_URL = "http://localhost:3000/users";
@@ -59,7 +61,14 @@ class SignUp extends Component {
       <div>
         <Nav />
         <h2>Sign Up</h2>
-        <form onSubmit={ this._handleSubmit }>
+        <Form onSubmit={ this._handleSubmit }>
+          <Form.Row>
+            <Form.Group as={Col} controlId="formGridEmail">
+              <Form.Label>Name</Form.Label>
+              <Form.Control type="text" placeholder="Enter Name" />
+            </Form.Group>
+          </Form.Row>
+
           <label>Name:</label>
           <input type="text" placeholder="Name" required onInput={ this._handleInputName } /><br/>
 
@@ -79,7 +88,7 @@ class SignUp extends Component {
           <input type="text" placeholder="Street address" onInput={ this._handleInputAddress } /><br/>
 
           <input type="submit" placeholder="Sign Up" onClick={this._handleSubmit} />
-        </form>
+        </Form>
       </div>
     );
   }

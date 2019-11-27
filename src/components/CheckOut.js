@@ -91,8 +91,12 @@ class CheckOut extends Component {
   }
 
   createOrder() {
+    //Check that all input is present - delivery type and timeout, user details
+    //ootherwise
     //make order and each line item
     console.log("will make request");
+
+
     // redirect to /ordercomplete if all verified
     this.props.history.push('/ordercomplete');
   }
@@ -151,7 +155,7 @@ class CheckOut extends Component {
 
 
 
-        <div>
+        <div className="orderSummary">
           <OrderSummary deliveryStatus={this.state.delivery} time={this.state.time} />
         </div>
 

@@ -27,7 +27,7 @@ const DropdownTime = (props) => {
   };
 
   return (
-    <Dropdown id="dropdown-time" onChange={submitTime} search searchInput={{type: 'string'}} selection options={options} placeholder="Select a time" />
+    <Dropdown id="dropdown-time" onChange={submitTime} search searchInput={{type: 'string'}} selection options={options} placeholder="Select a time" required />
   );
 }
 
