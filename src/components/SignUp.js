@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import Nav from './Nav';
 
-const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
+const SERVER_URL = "http://localhost:3000/users";
 
 class SignUp extends Component {
   constructor () {
