@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import SignUp from './SignUp';
 import OrderSummary from './OrderSummary';
-
+import Nav from './Nav';
 
 class OrderComplete extends Component {
 
@@ -38,17 +38,20 @@ class OrderComplete extends Component {
 
   render() {
     return(
-      <div className="main">
-        <div className="orderComplete">
-          <h3>Thank you for your order!</h3>
-          <h6>Fast check out next time?</h6>
-          <SignUp />
-        </div>
+      <div>
+        <Nav />
+        <div className="main">
+          <div className="orderComplete">
+            <h3>Thank you for your order!</h3>
+            <h6>Fast check out next time?</h6>
+            <SignUp />
+          </div>
 
-        <div>
-          <OrderSummary />
-        </div>
+          <div>
+            <OrderSummary />
+          </div>
 
+        </div>
       </div>
     );
 

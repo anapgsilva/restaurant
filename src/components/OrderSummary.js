@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-const SERVER_URL = "https://restaurant-order-server.herokuapp.com/products.json"
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/products.json"
+const SERVER_URL = "http://localhost:3000/products.json"
 
 
 class OrderSummary extends Component {
@@ -64,7 +65,7 @@ class OrderSummary extends Component {
     const total = this.props.deliveryStatus ? (this.state.total + 5) : this.state.total;
 
     return(this.state.allProducts.length > 0 &&
-      (<div className='orderList'>
+      (<div className='orderSummary'>
         <h3>Order Summary</h3>
 
         <h6>For {this.props.deliveryStatus ? "delivery" : "pick-up"} at {this.props.time} pm.</h6>
@@ -86,7 +87,7 @@ class OrderSummary extends Component {
             </div>
         )})}
         {this.props.deliveryStatus ?
-        (<p className="totalPrice">{deliveryCost}</p>)
+        (<p className="deliveryPrice">{deliveryCost}</p>)
         : ""}
         <p className="totalPrice">Total ${Number(total).toFixed(2)}</p>
 

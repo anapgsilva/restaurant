@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Form, Button, Col} from 'react-bootstrap';
+import {Form, Col} from 'react-bootstrap';
 
 class UserForm extends Component {
 

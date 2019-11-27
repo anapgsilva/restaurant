@@ -6,7 +6,8 @@ import Nav from './Nav';
 
 
 
-const SERVER_URL = "https://restaurant-order-server.herokuapp.com/products.json"
+const SERVER_URL = "http://localhost:3000/products.json"
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/products.json"
 
 class Menu extends Component {
 
@@ -57,13 +58,14 @@ class Menu extends Component {
     return (
       <div>
         <Nav />
-        <div id="main">
+        <div id="main" className="container-lg container-fluid">
           <div id="menu">
             <h1>Menu</h1>
             {this.state.categories.map( cat => {
               return (
               <div id="category" key={cat}>
                 <h3>{cat}</h3>
+                <span id="cat-divider"></span>
                 {this.state.products.map( prod => {
                     return (prod.category === cat &&
                     <div key={prod.id}>
@@ -74,9 +76,9 @@ class Menu extends Component {
                         ${Number(prod.price).toFixed(2)}
                       </label>
                       {this.state.selected_products[Number(prod.id).toString()] ?
-                        (<button type="button">Added</button>)
+                        (<button className="quantity" type="button">Added</button>)
                         :
-                        (<button type="button" onClick={() => this.addItemToOrder(prod.id)}>Add</button>)
+                        (<button className="quantity" type="button" onClick={() => this.addItemToOrder(prod.id)}>Add</button>)
                       }
                       <br/>
                       {prod.stars > 1 ? Array.from(Array(prod.stars).keys()).map( star => { return (<FontAwesomeIcon key={star} icon='heart' />)
