@@ -22,7 +22,22 @@ class UserForm extends Component {
 
   render() {
     return (
+
       <Form>
+        <Form.Row>
+          <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>Name</Form.Label>
+            <Form.Control type="name" placeholder="Enter Name" />
+          </Form.Group>
+        </Form.Row>
+
+        <Form.Row>
+          <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>Phone number</Form.Label>
+            <Form.Control type="number" placeholder="Enter phone number" />
+          </Form.Group>
+        </Form.Row>
+
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Email</Form.Label>

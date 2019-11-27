@@ -99,19 +99,25 @@ class CheckOut extends Component {
         <div className="leftside">
 
           <div className="kind-order">
-            <h3>Please select:</h3>
+            <h4>Please select:</h4><br/>
 
             <Button onClick={this._handleClick} value='Pick-up'>Pick-Up</Button>
             <Button onClick={this._handleClick} value='Delivery'>Delivery</Button>
 
           </div>
 
-          <DropdownTime onChange={this.updateTime} />
+          <div>
+            <h4>Time for the order:</h4>
+            <DropdownTime onChange={this.updateTime} /><br/>
+          </div>
 
-          <UserForm deliveryStatus={this.state.delivery} />
+          <div>
+            <h4>Customer contact details:</h4>
+            <UserForm deliveryStatus={this.state.delivery} />
+          </div>
 
           <form className="payment-form">
-            <h3>Payment option:</h3>
+            <h4>Payment option:</h4><br/>
             <div className="cash-option">
               <label>
                 <input type="radio" value="Cash" checked={this.state.paymentOption === "Cash"} onChange={this._handleChange}/>
