@@ -1,0 +1,83 @@
+body {
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* nav////////////////////////////////////////////////////////////// */
+
+#bootstrap-override .navbar-light .navbar-nav .nav-link {
+    color: #555555;
+}
+
+#bootstrap-override .navbar-light .navbar-nav:hover .nav-link:hover {
+    font-weight: bold;
+}
+
+#bootstrap-override .btn-outline-primary {
+    border: none;
+    color: #555555;
+}
+
+#bootstrap-override .btn-outline-primary {
+    border: none;
+}
+
+#bootstrap-override .nav-link {
+    color: #555555;
+    text-decoration: none;
+    background-color: transparent;
+}
+#bootstrap-override .nav-link:hover {
+    font-weight: bold;
+}
+
+#bootstrap-override a {
+  color: #555555;
+  text-decoration: none;
+  background-color: transparent;
+}
+#bootstrap-override a:hover {
+  font-weight: bold;
+}
+
+#dropdown-item-button {
+  color: #555555;
+}
+
+#bootstrap-override .btn-outline-primary:hover {
+  color: #555555;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+#bootstrap-override .btn-outline-primary.dropdown-toggle {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#bootstrap-override .btn-outline-primary:hover .dropdown-toggle:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#bootstrap-override .btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle {
+    color: #555555;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+nav {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
