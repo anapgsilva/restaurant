@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import logo from "../logo.png"
 import babbologo from "../babbologo.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import DropdownButton from 'react-bootstrap/DropdownButton';
