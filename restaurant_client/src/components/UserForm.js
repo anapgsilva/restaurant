@@ -27,6 +27,20 @@ class UserForm extends Component {
       <Form>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>Name</Form.Label>
+            <Form.Control type="name" placeholder="Enter Name" />
+          </Form.Group>
+        </Form.Row>
+
+        <Form.Row>
+          <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>Phone number</Form.Label>
+            <Form.Control type="number" placeholder="Enter phone number" />
+          </Form.Group>
+        </Form.Row>
+
+        <Form.Row>
+          <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Email</Form.Label>
             <Form.Control type="email" placeholder="Enter email" />
           </Form.Group>
@@ -38,7 +52,7 @@ class UserForm extends Component {
         </Form.Group>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridCity">
-            <Form.Label>Suberb</Form.Label>
+            <Form.Label>Suburb</Form.Label>
             <Form.Control />
           </Form.Group>
 
