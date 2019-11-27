@@ -3,7 +3,7 @@ import axios from 'axios';
 import {withRouter} from 'react-router-dom';
 
 
-const SERVER_URL = "https://dashboard.heroku.com/apps/restaurant-order-server/user/token";
+const SERVER_URL = "https://restaurant-order-server.herokuapp.com/user/token";
 
 
 class SignIn extends Component {

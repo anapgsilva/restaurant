@@ -10,9 +10,8 @@ class UserForm extends Component {
       phone_number:'',
       address:'',
       suburb: '',
-
-
-
+      postCode: ''
+      
     }
   }
 
