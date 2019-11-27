@@ -38,17 +38,20 @@ class OrderComplete extends Component {
 
   render() {
     return(
-      <div className="main">
-        <div className="orderComplete">
-          <h3>Thank you for your order!</h3>
-          <h6>Fast check out next time?</h6>
-          <SignUp />
-        </div>
+      <div>
+        <Nav />
+        <div className="main">
+          <div className="orderComplete">
+            <h3>Thank you for your order!</h3>
+            <h6>Fast check out next time?</h6>
+            <SignUp />
+          </div>
 
-        <div>
-          <OrderSummary />
-        </div>
+          <div>
+            <OrderSummary />
+          </div>
 
+        </div>
       </div>
     );
 
