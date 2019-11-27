@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   get 'users/current' => 'users#current'
   
   root :to => "products#index"
-  resources :sessions, only:[:create]
-  get: logged_in, to: "session#logged_in"
+
+  
   resources :users
   resources :orders
   resources :line_items
