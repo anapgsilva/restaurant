@@ -5,8 +5,8 @@ class UserForm extends Component {
 
   constructor() {
     super();
-    this.state ={
-
+    this.state = {
+      //get the delivery status
     }
   }
 
@@ -14,7 +14,9 @@ class UserForm extends Component {
     return (
       <div>
         <form>
-          
+//check if user present, get details and prefill form
+//in form show name, email, phoneno., (address- only show if delivery true)
+
         </form>
       </div>
 

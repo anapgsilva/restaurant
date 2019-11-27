@@ -32,31 +32,40 @@ class Nav extends Component {
 
     return (
       <Navbar bg="light" variant="light" className="justify-content-between">
+
         <Link to="/">
           <img src={logo} alt="Home" className="navbar-brand" />
         </Link>
 
-        <ul className="navbar-nav align-items-center">
-          <li className="nav-item ml-5">
-            <Link to="/menu" className="nav-link">
-              Menu
-            </Link>
-          </li>
-        </ul>
+        <div class="nav-bar-links">
+          <ul className="navbar-nav align-items-center">
+            <li className="nav-item ml-2">
+              <Link to="/menu" className="nav-link">
+                Menu
+              </Link>
+            </li>
 
-        <Form inline>
-          <DropdownButton
-            variant="outline-primary"
-            className="dropdown"
-            id="dropdown-item-button"
-            title="Log In"
-          >
-          <SignIn />
-          </DropdownButton>
-        </Form>
+            <li className="nav-item ml-2">
+              <div id="bootstrap-override">
+                <Form inline>
+                  <DropdownButton
+                    variant="outline-primary"
+                    className="dropdown"
+                    id="dropdown-item-button"
+                    title="Log In"
+                  >
+                  <SignIn />
+                  </DropdownButton>
+                </Form>
+              </div>
+            </li>
 
+            <li className="nav-item ml-2">
+              {userSession.length > 0 ? <Link to="/logout">Logout</Link> : <Link to="/signup" className="nav-link">Sign Up</Link>}
+            </li>
+          </ul>
+        </div>
 
-        {userSession.length > 0 ? <Link to="/logout">Logout</Link> : <Link to="/signup">Sign Up</Link>}
 
 
       </Navbar>

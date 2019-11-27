@@ -164,3 +164,24 @@ label {
   border-radius: 10px;
 
 }
+
+#bootstrap-override .navbar-light .navbar-nav .nav-link {
+    color: #37383b;
+}
+
+#bootstrap-override .btn-outline-primary {
+    border: none;
+    color: #37383b;
+}
+
+#bootstrap-override .nav-link {
+    color: #37383b;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+#bootstrap-override a {
+  color: #37383b;
+  text-decoration: none;
+  background-color: transparent;
+}
