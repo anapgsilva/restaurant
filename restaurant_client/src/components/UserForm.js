@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Form, Button, Col} from 'react-bootstrap'
-import ChekOut from './CheckOut'
+import {Form, Button, Col} from 'react-bootstrap';
 
 class UserForm extends Component {
 
@@ -9,14 +8,15 @@ class UserForm extends Component {
     this.state ={
       name: '',
       phone_number:'',
-      address:'',
-
-
+      address:''
     }
   }
+
+
   componentDidMount(){
-    
+
   }
+
 
   render() {
     return (
@@ -62,9 +62,6 @@ class UserForm extends Component {
           <Form.Check type="checkbox" label="Check me out" />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
       </Form>
     );
 
