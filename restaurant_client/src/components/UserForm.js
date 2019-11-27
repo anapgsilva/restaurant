@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Form, Button, Col} from 'react-bootstrap'
-import ChekOut from './CheckOut'
+
 
 class UserForm extends Component {
 
@@ -10,10 +10,8 @@ class UserForm extends Component {
       name: '',
       phone_number:'',
       address:'',
-      Suberb: '',
-      
-
-
+      suburb: '',
+      postCode: ''
     }
   }
   componentDidMount(){
@@ -36,7 +34,7 @@ class UserForm extends Component {
         </Form.Group>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridCity">
-            <Form.Label>Suberb</Form.Label>
+            <Form.Label>Suburb</Form.Label>
             <Form.Control />
           </Form.Group>
 
