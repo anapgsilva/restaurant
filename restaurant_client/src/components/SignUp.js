@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import axios from 'axios';
 
 
+const SERVER_URL = "https://dashboard.heroku.com/apps/restaurant-order-server/users";
+
 class SignUp extends Component {
   constructor () {
     super();
@@ -43,7 +45,7 @@ class SignUp extends Component {
   }
 
   createUser = event => {
-    axios.post('http://localhost:3000/users', { user:
+    axios.post(SERVER_URL, { user:
       {name: this.state.name, email: this.state.email, password: this.state.password, password_confirmation: this.state.password_confirmation, phone_number: this.state.phone_number, address: this.state.address}
     }).then( result => {
       console.log( result );
