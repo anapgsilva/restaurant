@@ -87,7 +87,7 @@ class OrderSummary extends Component {
             </div>
         )})}
         {this.props.deliveryStatus ?
-        (<p className="totalPrice">{deliveryCost}</p>)
+        (<p className="deliveryPrice">{deliveryCost}</p>)
         : ""}
         <p className="totalPrice">Total ${Number(total).toFixed(2)}</p>
 

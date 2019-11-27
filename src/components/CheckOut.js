@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import PaymentForm from './PaymentForm';
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import UserForm from './UserForm';
 import OrderSummary from './OrderSummary';
-import {Button} from 'semantic-ui-react';
+// import {Button} from 'semantic-ui-react';
 import DropdownTime from './DropdownTime';
 import {withRouter} from 'react-router-dom';
 
-
+const SERVER_URL = "http://localhost:3000/products.json"
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/products.json"
 
 class CheckOut extends Component {
 
@@ -22,11 +23,12 @@ class CheckOut extends Component {
       time: ''
     };
 
-    this._handleClick = this._handleClick.bind(this);
+    this.onRadioChange = this.onRadioChange.bind(this);
     this._handleChange = this._handleChange.bind(this);
     this._handleCardDetails = this._handleCardDetails.bind(this);
     this.updateTime = this.updateTime.bind(this);
     this.createOrder = this.createOrder.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -38,11 +40,17 @@ class CheckOut extends Component {
     const paymentOption = JSON.parse(localStorage.getItem('paymentOption'));
     //sets state of all variables
     this.setState({ orderItems, delivery, paymentOption });
+
   }
 
-  _handleClick(event, state) {
-    const value = state.value;
-    console.log(value);
+  onSubmit(event) {
+    event.preventDefault();
+    console.log(event);
+  }
+
+  onRadioChange(event) {
+    console.log(event.target.value);
+    const value = event.target.value;
     //get value of button and set state
     if (value === "Pick-up"){
       this.setState({delivery: false});
@@ -54,7 +62,7 @@ class CheckOut extends Component {
     let deliveryStatus = JSON.stringify(this.state.delivery);
     localStorage.setItem('delivery', deliveryStatus);
   }
-  //
+
   updateTime(timeOrder) {
     console.log(timeOrder);
     // //save stime in state
@@ -95,46 +103,53 @@ class CheckOut extends Component {
 
     return (
       <div id="main">
+        <div className="forms">
 
-        <div className="leftside">
+          <Link to="/menu">Back to Menu</Link>
 
-          <div className="kind-order">
-            <h4>Please select:</h4><br/>
-
-            <Button onClick={this._handleClick} value='Pick-up'>Pick-Up</Button>
-            <Button onClick={this._handleClick} value='Delivery'>Delivery</Button>
-
-          </div>
-
-          <div>
-            <h4>Time for the order:</h4>
-            <DropdownTime onChange={this.updateTime} /><br/>
-          </div>
-
-          <div>
-            <h4>Customer contact details:</h4>
-            <UserForm deliveryStatus={this.state.delivery} />
-          </div>
-
-          <form className="payment-form">
-            <h4>Payment option:</h4><br/>
-            <div className="cash-option">
+          <form id="delivery-form">
+            <div className="custom-control custom-radio custom-control-inline">
               <label>
-                <input type="radio" value="Cash" checked={this.state.paymentOption === "Cash"} onChange={this._handleChange}/>
-                Cash
+                <input type="radio" value="Pick-up" checked={this.state.delivery === false} onChange={this.onRadioChange}/>
+                Pick-up
               </label>
             </div>
-            <div className="card-option">
+            <div className="custom-control custom-radio custom-control-inline">
               <label>
-                <input type="radio" value="Card" checked={this.state.paymentOption === "Card"} onChange={this._handleChange}/>
-                Card
+                <input type="radio" value="Delivery" checked={this.state.delivery === true} onChange={this.onRadioChange}/>
+                Delivery
               </label>
             </div>
           </form>
 
-          {this.state.paymentOption === "Card" ? <PaymentForm onClick={this._handleCardDetails} orderItems={this.state.orderItems} totalPrice={this.state.totalPrice} /> : <button onClick={this.createOrder} className="pay">Submit Order</button>}
+          <div id="time-form">
+            <h4>Time for order:</h4>
+            <DropdownTime onChange={this.updateTime} /><br/>
+          </div>
 
-        </div>
+          <h4>Customer contact details:</h4>
+          <UserForm deliveryStatus={this.state.delivery} />
+
+
+          <h4>Payment option:</h4><br/>
+          <form id="payment-form">
+              <div id="option" className="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input type="radio" value="Cash" checked={this.state.paymentOption === "Cash"} onChange={this._handleChange}/>
+                  Cash
+                </label>
+              </div>
+              <div id="option" className="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input type="radio" value="Card" checked={this.state.paymentOption === "Card"} onChange={this._handleChange}/>
+                  Card
+                </label>
+              </div>
+
+            {this.state.paymentOption === "Card" ? <PaymentForm id="stripe" onClick={this._handleCardDetails} orderItems={this.state.orderItems} totalPrice={this.state.totalPrice} /> : <button onClick={this.createOrder} className="pay">Submit Order</button>}
+          </form>
+
+
 
 
         <div>
@@ -142,7 +157,7 @@ class CheckOut extends Component {
         </div>
 
       </div>
-
+    </div>
 
     );
   }

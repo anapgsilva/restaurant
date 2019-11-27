@@ -1,0 +1,66 @@
+#delivery-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#delivery-form input {
+  margin-top: 30px;
+  display: inline;
+  width: 1em;
+  height: 1em;
+  border: 0px;
+  margin-right: 10px;
+}
+
+#delivery-form label {
+  font-size: 20px;
+}
+
+#time-form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#payment-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#payment-form input {
+  display: inline;
+  width: 1em;
+  height: 1em;
+  border: 0px;
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+#payment-form label {
+  font-size: 20px;
+}
+
+#option {
+  min-width: 100px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.pay {
+  font-size: 18px;
+  border-radius: 10px;
+  width: 150px;
+}
+
+h4 {
+  padding-top: 50px;
+}
