@@ -65,7 +65,7 @@ class OrderSummary extends Component {
     const total = this.props.deliveryStatus ? (this.state.total + 5) : this.state.total;
 
     return(this.state.allProducts.length > 0 &&
-      (<div className='orderList'>
+      (<div className='orderSummary'>
         <h3>Order Summary</h3>
 
         <h6>For {this.props.deliveryStatus ? "delivery" : "pick-up"} at {this.props.time} pm.</h6>

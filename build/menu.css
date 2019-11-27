@@ -5,7 +5,7 @@
   padding: 20px 30px;
   flex-direction: row;
   background-color: #b0bfd9;
-
+  height: 100%;
 }
 
 #menu {
@@ -50,6 +50,7 @@
 label {
   margin-right: 20px;
 }
+
 .orderList {
   display: flex;
   flex-direction: column;
@@ -67,6 +68,7 @@ label {
   text-align: center;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
+  margin-top: 30px;
 }
 
 
@@ -108,10 +110,16 @@ label {
   margin-right: 0;
 }
 
+p.deliveryPrice {
+  margin-top: 10px;
+}
 
 p.totalPrice {
   text-align: center;
   margin-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+
 }
 
 .checkout-button {
@@ -129,52 +137,4 @@ p.totalPrice {
 .checkout-button a:hover {
   text-decoration: none;
   color: #071fba;
-}
-
-
-.kind-order {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.kind-order button {
-  display: inline;
-  margin-left: 20px;
-  height: 40px;
-  font-size: 20px;
-  border-radius: 10px;
-}
-
-.payment-form {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.payment-form h2 {
-  margin-right: 20px;
-}
-
-.payment-form label {
-  font-size: 20px;
-}
-
-.ccForm {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  border: 1px solid #ccc;
-  border-radius: 15px;
-  padding: 5px;
-}
-
-.pay {
-  width: 70px;
-  height: 40px;
-  font-size: 20px;
-  border-radius: 10px;
-
 }

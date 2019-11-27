@@ -7,8 +7,7 @@ import OrderSummary from './OrderSummary';
 import DropdownTime from './DropdownTime';
 import {withRouter} from 'react-router-dom';
 
-const SERVER_URL = "http://localhost:3000/products.json"
-// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/products.json"
+
 
 class CheckOut extends Component {
 
