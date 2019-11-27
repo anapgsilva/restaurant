@@ -24,7 +24,7 @@ class SignIn extends Component {
   _handleSubmit = event => {
     event.preventDefault();
 
-    axios.post('http://localhost:3000/user/token', {
+    axios.post('https://restaurant-order-server.herokuapp.com/user/token', {
       "auth": {
         "email": this.state.email,
         "password": this.state.password,
