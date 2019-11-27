@@ -3,6 +3,9 @@ import axios from 'axios';
 import {withRouter} from 'react-router-dom';
 
 
+const SERVER_URL = "https://dashboard.heroku.com/apps/restaurant-order-server/user/token";
+
+
 class SignIn extends Component {
   constructor () {
     super();
@@ -24,7 +27,7 @@ class SignIn extends Component {
   _handleSubmit = event => {
     event.preventDefault();
 
-    axios.post('https://restaurant-order-server.herokuapp.com/user/token', {
+    axios.post(SERVER_URL, {
       "auth": {
         "email": this.state.email,
         "password": this.state.password,
