@@ -28,9 +28,11 @@ class OrderComplete extends Component {
 
 
 
-    localStorage.setItem('orderItems', JSON.stringify({}));
-    localStorage.setItem('delivery', JSON.stringify(false));
-    localStorage.setItem('paymentOption', JSON.stringify(""));
+    // localStorage.setItem('orderItems', JSON.stringify({}));
+    // localStorage.setItem('delivery', JSON.stringify(false));
+    // localStorage.setItem('paymentOption', "");
+    // localStorage.setItem('total', JSON.stringify(0));
+    // localStorage.setItem('time', "");
 
   }
 

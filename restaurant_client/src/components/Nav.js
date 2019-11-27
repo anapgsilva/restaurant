@@ -1,34 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import logo from "../logo.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import DropdownButton from 'react-bootstrap/DropdownButton';
-import {Dropdown,DropdownButton,Button, Form, FormGroup, Label, Input,Row, Col, Navbar} from 'react-bootstrap';
+import {DropdownButton, Form, Navbar} from 'react-bootstrap';
 import SignIn from './SignIn';
 
 
 
-class Nav extends Component {
+const Nav = () => {
 
-  constructor() {
-    super();
-    this.state = {
-      current_user: {}
-    }
-  }
-  fetchUser() {
-  //need to fetch current user
-  //if current user present then dont show login and signup below
-
-  }
-
-  render() {
-    let userSession;
-    if (localStorage.getItem('jwt')) {
-      userSession = JSON.parse(localStorage.getItem('jwt'));
-    } else {
-      userSession = "";
-    }
 
     return (
       <Navbar bg="light" variant="light" className="justify-content-between">
@@ -45,6 +26,7 @@ class Nav extends Component {
               </Link>
             </li>
 
+            {localStorage.getItem('jwt') ? "" :
             <li className="nav-item ml-2">
               <div id="bootstrap-override">
                 <Form inline>
@@ -59,21 +41,21 @@ class Nav extends Component {
                 </Form>
               </div>
             </li>
+            }
 
             <li className="nav-item ml-2">
-              {userSession.length > 0 ? <Link to="/logout">Logout</Link> : <Link to="/signup" className="nav-link">Sign Up</Link>}
+              {localStorage.getItem('jwt') ? <Link to="/logout">Logout</Link> : <Link to="/signup" className="nav-link">Sign Up</Link>}
             </li>
           </ul>
         </div>
 
 
 
-      </Navbar>
+  </Navbar>
+);
 
 
 
-    );
-  }
 
 }
 
