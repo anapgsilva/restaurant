@@ -94,7 +94,7 @@ class CheckOut extends Component {
   render() {
 
     return (
-      <div className="main">
+      <div id="main">
 
         <div className="leftside">
 

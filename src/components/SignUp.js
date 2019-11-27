@@ -19,29 +19,28 @@ class SignUp extends Component {
 
 
   _handleInputName = event => {
-    this.setState( {name: event.target.value} )
+    this.setState( {name: event.target.value} );
   }
   _handleInputEmail = event => {
-    this.setState( {email: event.target.value} )
+    this.setState( {email: event.target.value} );
   }
   _handleInputPassword = event => {
-    this.setState( {password: event.target.value} )
+    this.setState( {password: event.target.value} );
   }
   _handleInputPasswordConfirmation = event => {
-    this.setState( {password_confirmation: event.target.value} )
+    this.setState( {password_confirmation: event.target.value} );
   }
   _handleInputPhoneNumber = event => {
-    this.setState( {phone_number: event.target.value} )
+    this.setState( {phone_number: event.target.value} );
   }
   _handleInputAddress = event => {
-    this.setState( {address: event.target.value} )
+    this.setState( {address: event.target.value} );
   }
 
   _handleSubmit = event => {
     event.preventDefault();
     this.createUser();
-    this.props.history.push('/')
-
+    this.props.history.push('/');
   }
 
   createUser = event => {
@@ -66,10 +65,10 @@ class SignUp extends Component {
           <input type="text" placeholder="Email" required onInput={ this._handleInputEmail } /><br/>
 
           <label>Password:</label>
-          <input type="text" placeholder="Password" required onInput={ this._handleInputPassword } /><br/>
+          <input type="password" placeholder="Password" required onInput={ this._handleInputPassword } /><br/>
 
           <label>Password confirmation:</label>
-          <input type="text" placeholder="Confirm Password" required onInput={ this._handleInputPasswordConfirmation } /><br/>
+          <input type="password" placeholder="Confirm Password" required onInput={ this._handleInputPasswordConfirmation } /><br/>
 
           <label>Phone number:</label>
           <input type="text" placeholder="000-000-000" required onInput={ this._handleInputPhoneNumber } /><br/>

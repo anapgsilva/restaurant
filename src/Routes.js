@@ -6,13 +6,12 @@ import CheckOut from './components/CheckOut';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import OrderComplete from './components/OrderComplete';
-import Logout from './components/Logout';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
-library.add(fab, faStar);
+library.add(fab, faHeart);
 //This is goign to replace App.js
 
 
@@ -29,7 +28,6 @@ const Routes = (
       <Route exact path="/signin" component={SignIn}/>
       <Route exact path="/signup" component={SignUp}/>
       <Route exact path="/ordercomplete" component={OrderComplete}/>
-      <Route exact path="/logout" component={Logout}/>
     </div>
   </Router>
 );

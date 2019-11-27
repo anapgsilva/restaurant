@@ -51,7 +51,7 @@ class SignIn extends Component {
           <input type="text" placeholder="Email" required onInput={ this._handleInputEmail } />
 
           <label>Password:</label>
-          <input type="text" placeholder="Password" required onInput={ this._handleInputPassword } />
+          <input type="password" placeholder="Password" required onInput={ this._handleInputPassword } />
 
           <input type="submit" placeholder="Log In" onClick={this._handleSubmit} />
         </form>

@@ -57,12 +57,12 @@ class Menu extends Component {
     return (
       <div>
         <Nav />
-        <div className="main">
-          <div className="menu">
+        <div id="main">
+          <div id="menu">
             <h1>Menu</h1>
             {this.state.categories.map( cat => {
               return (
-              <div key={cat}>
+              <div id="category" key={cat}>
                 <h3>{cat}</h3>
                 {this.state.products.map( prod => {
                     return (prod.category === cat &&
@@ -79,7 +79,7 @@ class Menu extends Component {
                         (<button type="button" onClick={() => this.addItemToOrder(prod.id)}>Add</button>)
                       }
                       <br/>
-                      {prod.stars > 1 ? Array.from(Array(prod.stars).keys()).map( star => { return (<FontAwesomeIcon key={star} icon='star' />)
+                      {prod.stars > 1 ? Array.from(Array(prod.stars).keys()).map( star => { return (<FontAwesomeIcon key={star} icon='heart' />)
                       }) : ""}
                       <br/>
                     </div>);
