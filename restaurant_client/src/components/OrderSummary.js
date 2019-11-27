@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-const SERVER_URL = "http://localhost:3000/products.json"
+const SERVER_URL = "https://dashboard.heroku.com/apps/restaurant-order-server/products.json"
 
 
 class OrderSummary extends Component {
