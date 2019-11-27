@@ -3,7 +3,7 @@ import axios from 'axios';
 import {withRouter} from 'react-router-dom';
 
 
-const SERVER_URL = "https://restaurant-order-server.herokuapp.com/user/token";
+const SERVER_URL = "http://localhost:3000/user/token";
 
 
 class SignIn extends Component {
@@ -34,6 +34,7 @@ class SignIn extends Component {
       }
     }).then( result => {
       localStorage.setItem("jwt", result.data.jwt)
+      console.log(result.data.jwt)
       console.log("user logged in")
       this.props.history.push('/') //where is user taken
     })
