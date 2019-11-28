@@ -69,6 +69,7 @@ class Menu extends Component {
         <div id="main" className="container-lg container-fluid">
           <div id="menu">
             <h1>Menu</h1>
+
             {this.state.categories.map( cat => {
               return (
               <div id="category" key={cat}>

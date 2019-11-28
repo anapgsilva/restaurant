@@ -3,16 +3,11 @@
 #main {
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 20px 30px;
   flex-direction: row;
-<<<<<<< HEAD
   background-color: #f8f9fa;
-=======
->>>>>>> 9dc845ab82d0c0033c521e7492acf802934ff3a2
   height: 100%;
-  background-color: rgba(225, 233, 247, 1);
-
 }
 
 #menu {
@@ -75,6 +70,7 @@ label {
   text-align: center;
   border-radius: 15px;
   margin-top: 30px;
+  margin-left: 115px;
 }
 
 
@@ -143,9 +139,9 @@ p.totalPrice {
   color: #071fba;
 }
 
-.orderList h2 {
+.orderList h1 {
   font-family: 'Amiri', serif;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .menubanner {

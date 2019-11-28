@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import Nav from './Nav';
 import {Form, Col} from 'react-bootstrap';
+import babbo_signup_img from "../babbo_signup_img.jpg"
 
 // const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
 const SERVER_URL = "http://localhost:3000/users";
@@ -61,9 +62,14 @@ class SignUp extends Component {
       <div id="page">
         <Nav />
 
+        <div className="menubanner">
+          <img src={babbo_signup_img} alt="Menu" className="d-block w-100" />
+        </div>
+
         <div id='main' className="signup">
           <div>
           <h2>Sign Up</h2>
+          <br />
           <Form id="forms" onSubmit={ this._handleSubmit }>
             <Form.Row>
               <Form.Group as={Col} controlId="formGridEmail">
@@ -110,9 +116,9 @@ class SignUp extends Component {
             <input type="submit" placeholder="Sign Up" />
           </Form>
         </div>
-        </div>
->>>>>>> 9dc845ab82d0c0033c521e7492acf802934ff3a2
       </div>
+    </div>
+
     );
   }
 }

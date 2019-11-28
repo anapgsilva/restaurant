@@ -6,6 +6,7 @@ import OrderSummary from './OrderSummary';
 // import {Button} from 'semantic-ui-react';
 import DropdownTime from './DropdownTime';
 import {withRouter} from 'react-router-dom';
+import babbologo from "../babbologo.png"
 
 
 
@@ -115,7 +116,14 @@ class CheckOut extends Component {
   render() {
 
     return (
+<div>
+
+  <Link to="/">
+    <img src={babbologo} alt="Home" className="navbar-brand" />
+  </Link>
+  
       <div id="main">
+
         <div id="forms">
 
           <Link className="back" to="/menu">Back to Menu</Link>
@@ -170,6 +178,7 @@ class CheckOut extends Component {
         </div>
 
       </div>
+</div>
 
     );
   }
