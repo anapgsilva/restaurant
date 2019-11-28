@@ -19,7 +19,11 @@ class CheckOut extends Component {
       delivery: false,
       paymentOption: "Cash",
       totalPrice: 0,
-      time: ''
+      time: '',
+      name: '',
+      phone_number:'',
+      email:'',
+      address:''
     };
 
     this.onRadioChange = this.onRadioChange.bind(this);
@@ -27,7 +31,6 @@ class CheckOut extends Component {
     this._handleCardDetails = this._handleCardDetails.bind(this);
     this.updateTime = this.updateTime.bind(this);
     this.createOrder = this.createOrder.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
     this._handleUserInfo = this._handleUserInfo.bind(this);
   }
 
@@ -40,12 +43,6 @@ class CheckOut extends Component {
     const paymentOption = JSON.parse(localStorage.getItem('paymentOption'));
     //sets state of all variables
     this.setState({ orderItems, delivery, paymentOption });
-
-  }
-
-  onSubmit(event) {
-    event.preventDefault();
-    console.log(event);
   }
 
   onRadioChange(event) {
@@ -81,13 +78,16 @@ class CheckOut extends Component {
   }
 
   _handleUserInfo(userInfo){
-    console.log(userInfo);
-
+    console.log("userInfo", userInfo);
+    this.setState({name: userInfo[0], phone_number: userInfo[1], email: userInfo[2], address: userInfo[3]});
   }
 
   _handleCardDetails(token) {
     console.log("handling card details", token);
     if (token) {
+      //create order
+      //create line items
+      
 
       //create
     }
@@ -103,6 +103,7 @@ class CheckOut extends Component {
     //Check that all input is present - delivery type and timeout, user details
     //ootherwise
     //make order and each line item
+    // "total_price", "user_id", "kind"
     console.log("will make request");
 
 
@@ -140,7 +141,7 @@ class CheckOut extends Component {
           </div>
 
           <h4>Customer contact details:</h4>
-          <UserForm deliveryStatus={this.state.delivery} onChange={this._handleUserInfo} />
+          <UserForm onSubmit={this._handleUserInfo} delivery={this.state.delivery} />
 
 
           <h4>Payment option:</h4><br/>
