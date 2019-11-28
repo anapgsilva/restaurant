@@ -4,7 +4,6 @@ import {withRouter} from 'react-router-dom';
 
 
 const SERVER_URL = "http://localhost:3000/user/token";
-
 // const SERVER_URL = "https://restaurant-order-server.herokuapp.com/user/token";
 
 

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import OrderSummary from './OrderSummary';
 import Nav from './Nav';
+import {Form, Col} from 'react-bootstrap';
 
 class OrderComplete extends Component {
 
@@ -45,18 +46,37 @@ class OrderComplete extends Component {
             <h6>Fast check out next time?</h6>
 
             <h4>Sign up</h4>
-            <form>
-              <label>Password:</label>
-              <input type="password" placeholder="Password" required onInput={ this._handleInputPassword } /><br/>
 
-              <label>Password confirmation:</label>
-              <input type="password" placeholder="Confirm Password" required onInput={ this._handleInputPasswordConfirmation } /><br/>
+            <Form id="forms" onSubmit={ this._handleSubmit }>
 
-              <input type="submit" placeholder="Sign Up" onClick={this._handleSubmit} />
-            </form>
+            <Form.Row>
+              <Form.Group as={Col} controlId="formGridEmail">
+                <Form.Label>Email:</Form.Label>
+                <Form.Control type="email" placeholder="Enter Email" required onInput={ this._handleInputEmail } />
+              </Form.Group>
+            </Form.Row>
+            
+              <Form.Row>
+                <Form.Group as={Col} controlId="formGridEmail">
+                  <Form.Label>Password:</Form.Label>
+                  <Form.Control type="password" placeholder="Password" required onInput={ this._handleInputPassword } />
+                </Form.Group>
+              </Form.Row>
+
+              <Form.Row>
+                <Form.Group as={Col} controlId="formGridEmail">
+                  <Form.Label>Password confirmation:</Form.Label>
+                  <Form.Control type="password" placeholder="Confirm password" required onInput={ this._handleInputPasswordConfirmation } />
+                </Form.Group>
+              </Form.Row>
+
+              <input className="pay" value="Sign Up" type="submit" />
+            </Form>
+
+
           </div>
 
-          <div className="orderList">
+          <div className="orderSummary">
             <OrderSummary />
           </div>
 
