@@ -64,33 +64,27 @@ class CheckOut extends Component {
     console.log(event.target.value);
     const value = event.target.value;
     //get value of button and set state
-    if (value === "Pick-up"){
-      this.setState({delivery: false});
-    } else if (value === "Delivery" ){
-      this.setState({delivery: true});
-    }
-    console.log(this.state.delivery);
-    // //sets delivery state in local storage
-    let deliveryStatus = JSON.stringify(this.state.delivery);
-    localStorage.setItem('delivery', deliveryStatus);
-
-    this.calculateTotal(this.state.allProducts, this.state.orderItems);
+    const delivery = value === 'Delivery';
+    this.setState({delivery});
+    //sets delivery state in local storage
+    localStorage.setItem('delivery', JSON.stringify({delivery}));
+    console.log(delivery);
+    this.calculateTotal(delivery, this.state.allProducts, this.state.orderItems);
   }
 
-  calculateTotal(allProducts, orderItems) {
-    let totalPrice = 0;
+  calculateTotal(delivery, allProducts, orderItems) {
+    let total = 0;
     if (Object.keys(orderItems).length > 0){
-      totalPrice = Object.entries(orderItems).reduce(
+      total = Object.entries(orderItems).reduce(
         (result, [id, quantity]) => {
           const item = allProducts.find( p => p.id.toString() === id);
           return result + (item.price * quantity);
         },
         0);
     }
-    totalPrice = this.state.delivery ? totalPrice += 5 : totalPrice;
+    const totalPrice = delivery ? total += 5 : total;
     console.log(totalPrice);
     this.setState({totalPrice: totalPrice});
-    console.log(this.state.totalPrice);
   }
 
 
@@ -100,7 +94,7 @@ class CheckOut extends Component {
     this.setState({time: timeOrder});
     //save time to local storage
     const time = JSON.stringify(timeOrder);
-    localStorage.setItem('time', time);
+    localStorage.setItem('time', JSON.stringify(time));
   }
 
   _handleChange(event) {
@@ -108,12 +102,14 @@ class CheckOut extends Component {
     this.setState({paymentOption: event.target.value})
     //saves payment type to local storage
     let paymentStatus = JSON.stringify(event.target.value);
-    localStorage.setItem('paymentOption', paymentStatus);
+    localStorage.setItem('paymentOption', JSON.stringify(paymentStatus));
   }
 
   _handleUserInfo(userInfo){
     console.log("userInfo", userInfo);
     this.setState({user_id: userInfo[0], name: userInfo[1], phone_number: userInfo[2], email: userInfo[3], address: userInfo[4], userInfo: true});
+
+    localStorage.setItem('email', JSON.stringify(this.state.email));
   }
 
   _handleCardDetails(token) {
@@ -134,19 +130,31 @@ class CheckOut extends Component {
       const kind = this.state.delivery ? "Delivery" : "Pick-up";
       const total_price = this.state.totalPrice;
       const user_id = this.state.user_id;
+      const name = this.state.name;
+      const phone_number = this.state.phone_number;
+      const email = this.state.email;
+      const address = this.state.address;
 
 
       axios.post(SERVER_URL_MAKEORDER, {
         orderItems: orderItems,
         kind: kind,
         total_price: total_price,
-        user_id: user_id
+        user_id: user_id,
+        name: name,
+        phone_number: phone_number,
+        email: email,
+        address: address
       }).then( result => {
-        console.log( "order created", result );
+        console.log( "order created", result.data );
+
+        const user_id = result.data.user_id;
+        this.setState({user_id: user_id});
+        localStorage.setItem('user_id', user_id);
         this.props.history.push('/ordercomplete');
 
       }).catch( error => {
-        window.alert("Order submission failed");
+        window.alert("Order submission failed. Please try again.");
       });
 
     }

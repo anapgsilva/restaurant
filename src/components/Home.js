@@ -29,26 +29,33 @@ class Home extends Component {
 
     if (jwt) {
       this.setState({loggedIn: true});
+      axios.get(SERVER_URL_CurrentUser , {
+        headers:{
+          Authorization: "Bearer " + jwt
+        }}).then( result => {
+        if (Object.keys(result.data).length > 0) {
+          this.setState({orders: result.data.orders});
+          this.setState({user_id: result.data.id});
+
+          const user_id = JSON.stringify(result.data.id);
+          localStorage.setItem('user_id', user_id);
+        };
+      })
+
+    } else {
+      this.setState({orders: []});
     }
 
-    axios.get(SERVER_URL_CurrentUser , {
-      headers:{
-        Authorization: "Bearer " + jwt
-      }}).then( result => {
-      if (Object.keys(result.data).length > 0) {
-        this.setState({orders: result.data.orders});
-        this.setState({user_id: result.data.id});
-
-        const user_id = JSON.stringify(result.data.id);
-        localStorage.setItem('user_id', user_id);
-      };
-    })
+    this.setLoggedIn();
   }
 
   setLoggedIn() {
-
+    if (window.localStorage.getItem('jwt')) {
+      this.setState({loggedIn: true});
+    } else {
+      this.setState({loggedIn: false});
+    }
   }
-
 
   render() {
     return (

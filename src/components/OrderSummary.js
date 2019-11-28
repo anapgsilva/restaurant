@@ -37,7 +37,7 @@ class OrderSummary extends Component {
       //get time for order
       const time = this.props.time? this.props.time : JSON.parse(localStorage.getItem('time'));
 
-      const total = this.calculateTotal(allProducts, orderItems, delivery);
+      const total = this.calculateTotal(allProducts, orderItems);
 
       this.setState({allProducts, orderItems, delivery, paymentOption, time, total});
     })
@@ -45,18 +45,17 @@ class OrderSummary extends Component {
   }
 
   calculateTotal(allProducts, orderItems) {
-    let totalPrice = 0;
+    let total = 0;
     if (Object.keys(orderItems).length > 0){
-      Object.entries(orderItems).map( ([id, quantity]) => {
-        allProducts.find( p => {
-         if (p.id.toString() === id) {
-           totalPrice += p.price * quantity;
-         };
-       })
-      });
+      total = Object.entries(orderItems).reduce(
+        (result, [id, quantity]) => {
+          const item = allProducts.find( p => p.id.toString() === id);
+          return result + (item.price * quantity);
+        },
+        0);
     }
-    this.setState({total: totalPrice});
-    return totalPrice;
+    console.log("in order summary", total);
+    return total;
   }
 
   render(props) {
@@ -68,7 +67,7 @@ class OrderSummary extends Component {
       (<div>
         <h3>Order Summary</h3>
 
-        <h6>For {this.props.deliveryStatus ? "delivery" : "pick-up"} at {this.props.time} pm.</h6>
+        <h6>For {this.props.deliveryStatus ? "delivery" : "pick-up"} at {this.state.time} pm.</h6>
 
         {Object.entries(this.state.orderItems).map( ([id, quantity]) => {
           const item = this.state.allProducts.find( p => p.id.toString() === id);

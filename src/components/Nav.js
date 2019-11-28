@@ -12,12 +12,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
-const Nav = () => {
+const Nav = (props) => {
   const history = useHistory();
 
   const logoutUser = () => {
     localStorage.clear();
     history.push("/");
+    // return props.setLoggedIn();
   }
 
   return (

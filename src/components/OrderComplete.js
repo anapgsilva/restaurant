@@ -11,12 +11,19 @@ class OrderComplete extends Component {
       orderItems: {},
       allProducts: [],
       delivery: '',
-      paymentOption: ''
-
+      paymentOption: '',
+      loggedIn: '',
+      email: "",
+      user_id: ""
     }
   }
 
   componentDidMount() {
+    //Check if user logged in
+    const jwt = window.localStorage.getItem('jwt');
+    if (jwt) {
+      this.setState({loggedIn: true});
+    }
 
     //Gets shopping cart from local storage
     const orderItems = JSON.parse(localStorage.getItem('orderItems'));
@@ -24,14 +31,12 @@ class OrderComplete extends Component {
     const delivery = JSON.parse(localStorage.getItem('delivery'));
     //Gets payment option from local storage
     const paymentOption = JSON.parse(localStorage.getItem('paymentOption'));
+    //get Email
+    const email = JSON.parse(localStorage.getItem('email'));
+    //get user_id
+    const user_id = JSON.parse(localStorage.getItem('user_id'));
     //sets state of all variables
-    this.setState({ orderItems, delivery, paymentOption });
-
-    // localStorage.setItem('orderItems', JSON.stringify({}));
-    // localStorage.setItem('delivery', JSON.stringify(false));
-    // localStorage.setItem('paymentOption', "");
-    // localStorage.setItem('total', JSON.stringify(0));
-    // localStorage.setItem('time', "");
+    this.setState({ orderItems, delivery, paymentOption, email, user_id });
 
   }
 
@@ -42,8 +47,10 @@ class OrderComplete extends Component {
         <div id="main">
           <div id="forms">
             <h3>Thank you for your order!</h3>
-            <h6>Fast check out next time?</h6>
 
+            {this.state.loggedIn ? "" :
+            <div>
+            <h6>Fast check out next time?</h6>
             <h4>Sign up</h4>
 
             <Form id="forms" onSubmit={ this._handleSubmit }>
@@ -71,7 +78,8 @@ class OrderComplete extends Component {
 
               <input className="pay" value="Sign Up" type="submit" />
             </Form>
-
+            </div>
+            }
 
           </div>
 
