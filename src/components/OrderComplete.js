@@ -5,8 +5,8 @@ import {Form, Col} from 'react-bootstrap';
 import axios from 'axios';
 
 
-// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
-const SERVER_URL = "http://localhost:3000/users";
+const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
+// const SERVER_URL = "http://localhost:3000/users";
 
 
 class OrderComplete extends Component {

@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import {withRouter} from 'react-router-dom';
-import {Form} from 'react-bootstrap';
+import {Form, Button, Col} from 'react-bootstrap';
 
 
-const SERVER_URL = "http://localhost:3000/user/token";
-// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/user/token";
+// const SERVER_URL = "http://localhost:3000/user/token";
+const SERVER_URL = "https://restaurant-order-server.herokuapp.com/user/token";
 
 
 class SignIn extends Component {
@@ -49,14 +49,26 @@ class SignIn extends Component {
 
   render() {
     return (
-      <Form>
-        <label>Email: </label>
-        <input type="text" placeholder="Email" required onInput={ this._handleInputEmail } />
+      <Form id="login">
 
-        <label>Password:</label>
-        <input type="password" placeholder="Password" required onInput={ this._handleInputPassword } />
+        <Form.Row>
+          <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>Email:</Form.Label>
+            <Form.Control type="email" placeholder="Enter Email" required onInput={ this._handleInputEmail } />
+          </Form.Group>
+        </Form.Row>
 
-        <input type="submit" placeholder="Log In" onClick={this._handleSubmit} />
+        <Form.Row>
+          <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Label>Password:</Form.Label>
+            <Form.Control type="password" placeholder="Password" required onInput={ this._handleInputPassword } />
+          </Form.Group>
+        </Form.Row>
+
+        <Button type="submit" onClick={this._handleSubmit} >
+          Log In
+        </Button>
+
       </Form>
     );
   }

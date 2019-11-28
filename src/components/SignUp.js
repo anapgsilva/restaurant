@@ -72,7 +72,7 @@ class SignUp extends Component {
           <br />
           <Form id="forms" onSubmit={ this._handleSubmit }>
             <Form.Row>
-              <Form.Group as={Col} controlId="formGridEmail">
+              <Form.Group as={Col} controlId="formGridName">
                 <Form.Label>Name:</Form.Label>
                 <Form.Control type="text" placeholder="Enter Name" required onInput={ this._handleInputName } />
               </Form.Group>
@@ -86,28 +86,28 @@ class SignUp extends Component {
             </Form.Row>
 
             <Form.Row>
-              <Form.Group as={Col} controlId="formGridEmail">
+              <Form.Group as={Col} controlId="formGridPassword">
                 <Form.Label>Password:</Form.Label>
                 <Form.Control type="password" placeholder="Password" required onInput={ this._handleInputPassword } />
               </Form.Group>
             </Form.Row>
 
             <Form.Row>
-              <Form.Group as={Col} controlId="formGridEmail">
+              <Form.Group as={Col} controlId="formGridPasswordConfirmation">
                 <Form.Label>Password confirmation:</Form.Label>
                 <Form.Control type="password" placeholder="Confirm password" required onInput={ this._handleInputPasswordConfirmation } />
               </Form.Group>
             </Form.Row>
 
             <Form.Row>
-              <Form.Group as={Col} controlId="formGridEmail">
+              <Form.Group as={Col} controlId="formGridPhone">
                 <Form.Label>Phone number:</Form.Label>
                 <Form.Control type="text" placeholder="000-000-000" required onInput={ this._handleInputPhoneNumber } />
               </Form.Group>
             </Form.Row>
 
             <Form.Row>
-              <Form.Group as={Col} controlId="formGridEmail">
+              <Form.Group as={Col} controlId="formGridAddress">
                 <Form.Label>Delivery address:</Form.Label>
                 <Form.Control type="text" placeholder="Street address" required onInput={ this._handleInputAddress} />
               </Form.Group>
