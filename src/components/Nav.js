@@ -36,7 +36,7 @@ const Nav = () => {
 
           <div id="bootstrap-override">
             <li className="nav-item ml-2">
-              {localStorage.getItem('jwt') ? <Link onClick={logoutUser} className="nav-link">Logout</Link> : ""}
+              {localStorage.getItem('jwt') ? <Link to="/" onClick={logoutUser} className="nav-link">Logout</Link> : ""}
             </li>
           </div>
 

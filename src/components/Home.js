@@ -6,9 +6,9 @@ import babbo_img_2 from "../babbo_img_2.jpg"
 import babbo_img_3 from "../babbo_img_3.jpg"
 import axios from "axios";
 
-// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users/current";
 const SERVER_URL_CurrentUser = "http://localhost:3000/users/current";
-const SERVER_URL_Orders = "http://localhost:3000/orders.json"
+// const SERVER_URL_Orders = "http://localhost:3000/orders.json"
 
 
 
@@ -72,10 +72,10 @@ class Home extends Component {
         {this.state.orders !== undefined ?
 
         <div id="list-orders">
-          {this.state.orders.map(order => (
-            <div id="order">
-              {order.line_items.map(item => (
-                <div>
+          {this.state.orders.map( (order, index) => (
+            <div id="order" key={index}>
+              {order.line_items.map((item, index) => (
+                <div key={index}>
                   {item.quantity} X {item.product.name} ${item.product.price}
                 </div>
               ))}

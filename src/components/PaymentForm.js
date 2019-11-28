@@ -1,6 +1,5 @@
 import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
-import {Form, Col} from 'react-bootstrap';
 
 
 const  PaymentForm = (props) => {
