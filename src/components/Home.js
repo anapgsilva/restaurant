@@ -4,14 +4,17 @@ import { Carousel } from 'react-bootstrap';
 import babbo_img_1 from "../babbo_img_1.jpg"
 import babbo_img_2 from "../babbo_img_2.jpg"
 import babbo_img_3 from "../babbo_img_3.jpg"
+import axios from "axios";
+
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
+const SERVER_URL = "http://localhost:3000/users";
+
+ 
 
 
 const Home = () => {
-
-  //
-  // fetchUser() {
-  //
-  // }
+ 
+  
 
 
   return (
