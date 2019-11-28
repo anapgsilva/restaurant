@@ -99,7 +99,7 @@ const Cart = (props) => {
 
             </div>
           )
-          : (<h6>Your cart is empty.</h6>)}
+          : (<h6>Your cart is empty</h6>)}
 
 
       <button className="checkout-button" onClick={() => submitOrder(orderItems)}>

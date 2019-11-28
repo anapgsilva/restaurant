@@ -3,6 +3,7 @@ import Cart from './Cart';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Nav from './Nav';
+import babbo_menu_img from "../babbo_menu_img.jpg"
 
 
 
@@ -60,6 +61,11 @@ class Menu extends Component {
     return (
       <div>
         <Nav />
+
+        <div className="menubanner">
+          <img src={babbo_menu_img} alt="Menu" className="d-block w-100" />
+        </div>
+
         <div id="main" className="container-lg container-fluid">
           <div id="menu">
             <h1>Menu</h1>
@@ -92,9 +98,12 @@ class Menu extends Component {
             })}
           </div>
 
+        <div className="cartaside">
           <Cart onClick={this._handleChange} cart_products={this.state.selected_products} products={this.state.products} />
         </div>
+
       </div>
+    </div>
     );
   }
 
