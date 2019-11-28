@@ -1,24 +1,29 @@
 {
   "files": {
-    "main.css": "/restaurant_client/static/css/main.7682a487.chunk.css",
-    "main.js": "/restaurant_client/static/js/main.e6f1d576.chunk.js",
-    "main.js.map": "/restaurant_client/static/js/main.e6f1d576.chunk.js.map",
+    "main.css": "/restaurant_client/static/css/main.3c41d961.chunk.css",
+    "main.js": "/restaurant_client/static/js/main.75a60101.chunk.js",
+    "main.js.map": "/restaurant_client/static/js/main.75a60101.chunk.js.map",
     "runtime-main.js": "/restaurant_client/static/js/runtime-main.6dd8802f.js",
     "runtime-main.js.map": "/restaurant_client/static/js/runtime-main.6dd8802f.js.map",
     "static/css/2.b0bb7f2c.chunk.css": "/restaurant_client/static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.00ace74f.chunk.js": "/restaurant_client/static/js/2.00ace74f.chunk.js",
-    "static/js/2.00ace74f.chunk.js.map": "/restaurant_client/static/js/2.00ace74f.chunk.js.map",
+    "static/js/2.1a44c08e.chunk.js": "/restaurant_client/static/js/2.1a44c08e.chunk.js",
+    "static/js/2.1a44c08e.chunk.js.map": "/restaurant_client/static/js/2.1a44c08e.chunk.js.map",
     "index.html": "/restaurant_client/index.html",
-    "precache-manifest.a38fafbac46eb77d58a862a436172497.js": "/restaurant_client/precache-manifest.a38fafbac46eb77d58a862a436172497.js",
+    "precache-manifest.26d1c4c7a9f5af621ed08a9e0b81253c.js": "/restaurant_client/precache-manifest.26d1c4c7a9f5af621ed08a9e0b81253c.js",
     "service-worker.js": "/restaurant_client/service-worker.js",
     "static/css/2.b0bb7f2c.chunk.css.map": "/restaurant_client/static/css/2.b0bb7f2c.chunk.css.map",
-    "static/css/main.7682a487.chunk.css.map": "/restaurant_client/static/css/main.7682a487.chunk.css.map"
+    "static/css/main.3c41d961.chunk.css.map": "/restaurant_client/static/css/main.3c41d961.chunk.css.map",
+    "static/media/babbo_img_1.jpg": "/restaurant_client/static/media/babbo_img_1.5b5f1b56.jpg",
+    "static/media/babbo_img_2.jpg": "/restaurant_client/static/media/babbo_img_2.8023ec85.jpg",
+    "static/media/babbo_img_3.jpg": "/restaurant_client/static/media/babbo_img_3.a51d60d8.jpg",
+    "static/media/babbo_menu_img.jpg": "/restaurant_client/static/media/babbo_menu_img.7678a3ac.jpg",
+    "static/media/babbo_signup_img.jpg": "/restaurant_client/static/media/babbo_signup_img.44abea0a.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.6dd8802f.js",
     "static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.00ace74f.chunk.js",
-    "static/css/main.7682a487.chunk.css",
-    "static/js/main.e6f1d576.chunk.js"
+    "static/js/2.1a44c08e.chunk.js",
+    "static/css/main.3c41d961.chunk.css",
+    "static/js/main.75a60101.chunk.js"
   ]
 }

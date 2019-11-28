@@ -1,17 +1,19 @@
+
+
 #main {
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 20px 30px;
   flex-direction: row;
-  background-color: #b0bfd9;
+  background-color: #f8f9fa;
   height: 100%;
 }
 
 #menu {
   margin: 0;
   display: inline-block;
-  max-width: 500px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -20,7 +22,7 @@
 
 #menu h1 {
   font-weight: 600;
-  font-family: 'Pacifico', Arial;
+  font-family: 'Amiri', serif;
   text-align: center;
   margin: 20px;
 }
@@ -28,7 +30,7 @@
 #category h3 {
   text-align: center;
   margin-top: 20px;
-  font-family: 'Pacifico', Arial;
+  font-family: 'Amiri', serif;
 }
 
 #cat-divider {
@@ -51,24 +53,30 @@ label {
   margin-right: 20px;
 }
 
+.cartaside {
+  position: -webkit-sticky;
+  position: sticky;
+  height: 100%;
+}
+
 .orderList {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: auto; /* Full-height: remove this if you want "auto" height */
-  min-width: 300px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  height: 100%;
+  width: 400px; /* Set the width of the sidebar */
   z-index: 1; /* Stay on top */
-  top: 1; /* Stay at the top */
+  position: sticky;
+  top: 0; /* Stay at the top */
   right: 0;
   background-color: #fff;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding: 20px;
   text-align: center;
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;
+  border-radius: 15px;
   margin-top: 30px;
+  margin-left: 115px;
 }
 
 
@@ -117,8 +125,7 @@ p.deliveryPrice {
 p.totalPrice {
   text-align: center;
   margin-top: 10px;
-  font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
 
 }
 
@@ -126,7 +133,6 @@ p.totalPrice {
   margin-top: 10px;
   width: 110px;
   font-size: 15px;
-  font-weight: bold;
   border-radius: 5px;
 }
 
@@ -137,4 +143,18 @@ p.totalPrice {
 .checkout-button a:hover {
   text-decoration: none;
   color: #071fba;
+}
+
+.orderList h1 {
+  font-family: 'Amiri', serif;
+  font-weight: 600;
+}
+
+.menubanner {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 370px;
+  background-size: 100%;
+  background-position: 50% 0px;
 }
