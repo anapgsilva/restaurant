@@ -91,7 +91,7 @@ class Menu extends Component {
                         (<button className="quantity" type="button" onClick={() => this.addItemToOrder(prod.id)}>Add</button>)
                       }
                       <br/>
-                      {prod.stars > 1 ? Array.from(Array(prod.stars).keys()).map( star => { return (<FontAwesomeIcon key={star} icon='heart' />)
+                      {prod.stars > 0 ? Array.from(Array(prod.stars).keys()).map( star => { return (<FontAwesomeIcon key={star} icon='heart' />)
                       }) : ""}
                       <br/>
                     </div>);

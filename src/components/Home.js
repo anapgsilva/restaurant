@@ -75,13 +75,13 @@ class Home extends Component {
         <div id="list-orders">
           {this.state.orders.map( (order, index) => (
             <div id="order" key={index}>
+              <p className="headerline"> Your {order.kind} order on {order.created_at.slice(0, 10)} </p>
               {order.line_items.map((item, index) => (
                 <div key={index}>
                   {item.quantity} X {item.product.name} ${item.product.price}
                 </div>
               ))}
-              <p>This was a {order.kind} order, on {order.created_at.slice(0, 10)}.</p>
-              <p>Total ${order.total_price}</p>
+              <p>Total: ${order.total_price}</p>
             </div>
           ))}
         </div>
