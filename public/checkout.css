@@ -37,6 +37,7 @@
 }
 
 #payment-form {
+  width: 400px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -47,8 +48,6 @@
   display: inline;
   width: 1em;
   height: 1em;
-  border: 0px;
-  margin-right: 10px;
   margin-left: 0;
 }
 
@@ -67,7 +66,7 @@
 .pay {
   font-size: 18px;
   border-radius: 10px;
-  width: 150px;
+  width: 200px;
 }
 
 h4 {

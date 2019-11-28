@@ -28,6 +28,7 @@ class CheckOut extends Component {
     this.updateTime = this.updateTime.bind(this);
     this.createOrder = this.createOrder.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this._handleUserInfo = this._handleUserInfo.bind(this);
   }
 
   componentDidMount() {
@@ -79,13 +80,21 @@ class CheckOut extends Component {
     localStorage.setItem('paymentOption', paymentStatus);
   }
 
-  _handleCardDetails(event) {
-    event.preventDefault();
-    console.log("handling card details");
+  _handleUserInfo(userInfo){
+    console.log(userInfo);
+
+  }
+
+  _handleCardDetails(token) {
+    console.log("handling card details", token);
+    if (token) {
+
+      //create
+    }
     // this.setState({ccName: name});
     // this.setState({ccNumber: number});
     // this.setState({ccCVV: cvv});
-    console.log(event.target.value);
+    // console.log(event.target.value);
     this.createOrder();
 
   }
@@ -131,7 +140,7 @@ class CheckOut extends Component {
           </div>
 
           <h4>Customer contact details:</h4>
-          <UserForm deliveryStatus={this.state.delivery} />
+          <UserForm deliveryStatus={this.state.delivery} onChange={this._handleUserInfo} />
 
 
           <h4>Payment option:</h4><br/>
@@ -149,7 +158,7 @@ class CheckOut extends Component {
                 </label>
               </div>
 
-            {this.state.paymentOption === "Card" ? <PaymentForm id="stripe" onClick={this._handleCardDetails} orderItems={this.state.orderItems} totalPrice={this.state.totalPrice} /> : <button onClick={this.createOrder} className="pay">Submit Order</button>}
+            {this.state.paymentOption === "Card" ? <PaymentForm id="stripe" onChange={this._handleCardDetails} orderItems={this.state.orderItems} totalPrice={this.state.totalPrice} /> : <button onClick={this.createOrder} className="pay">Submit Order</button>}
           </form>
 
         </div>
