@@ -67,7 +67,7 @@ class OrderSummary extends Component {
       (<div>
         <h3>Order Summary</h3>
 
-        <h6>For {this.props.deliveryStatus ? "delivery" : "pick-up"} at {this.state.time} pm.</h6>
+        <h6>For {this.props.deliveryStatus ? "delivery" : "pick-up"} at {this.props.time? this.props.time : this.state.time} pm.</h6>
 
         {Object.entries(this.state.orderItems).map( ([id, quantity]) => {
           const item = this.state.allProducts.find( p => p.id.toString() === id);

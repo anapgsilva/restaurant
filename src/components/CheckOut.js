@@ -20,7 +20,7 @@ class CheckOut extends Component {
     this.state = {
       orderItems: {},
       allProducts: [],
-      delivery: false,
+      delivery: '',
       paymentOption: "Cash",
       totalPrice: 0,
       time: '',
@@ -99,6 +99,13 @@ class CheckOut extends Component {
     // this.render();
   }
 
+  _handleUserInfo(userInfo){
+    console.log("userInfo", userInfo);
+    this.setState({user_id: userInfo[0], name: userInfo[1], phone_number: userInfo[2], email: userInfo[3], address: userInfo[4], userInfo: true});
+
+    localStorage.setItem('email', JSON.stringify(userInfo[3]));
+  }
+
   _handleChange(event) {
     //sets state of payment type
     this.setState({paymentOption: event.target.value})
@@ -107,12 +114,7 @@ class CheckOut extends Component {
     localStorage.setItem('paymentOption', JSON.stringify(paymentStatus));
   }
 
-  _handleUserInfo(userInfo){
-    console.log("userInfo", userInfo);
-    this.setState({user_id: userInfo[0], name: userInfo[1], phone_number: userInfo[2], email: userInfo[3], address: userInfo[4], userInfo: true});
 
-    localStorage.setItem('email', JSON.stringify(this.state.email));
-  }
 
   _handleCardDetails(token) {
     if (token && this.state.userInfo) {
@@ -183,7 +185,8 @@ class CheckOut extends Component {
 
             <Link className="back" to="/menu">Back to Menu</Link>
 
-            <form id="delivery-form">
+            {this.state.delivery !== "" && this.state.time ? "" :
+            (<div><form id="delivery-form">
               <div className="custom-control custom-radio custom-control-inline">
                 <label>
                   <input type="radio" value="Pick-up" checked={this.state.delivery === false} onChange={this.onRadioChange}/>
@@ -198,10 +201,11 @@ class CheckOut extends Component {
               </div>
             </form>
 
+
             <div id="time-form">
               <h4>Time for order:</h4>
               <DropdownTime onChange={this.updateTime} /><br/>
-            </div>
+            </div></div>)}
 
             {this.state.time ?
               <div>

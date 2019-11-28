@@ -20,8 +20,13 @@ class OrderComplete extends Component {
       paymentOption: '',
       loggedIn: '',
       email: "",
-      user_id: ""
+      user_id: "",
+      password: "",
+      password_confirmation: ''
     }
+    this._handleInputEmail = this._handleInputEmail.bind(this);
+    this._handleInputPassword = this._handleInputPassword.bind(this);
+    this._handleInputPasswordConfirmation = this._handleInputPasswordConfirmation.bind(this);
     this._handleSubmit = this._handleSubmit.bind(this);
   }
 
@@ -45,6 +50,17 @@ class OrderComplete extends Component {
     //sets state of all variables
     this.setState({ orderItems, delivery, paymentOption, email, user_id });
 
+  }
+
+
+  _handleInputEmail = event => {
+    this.setState( {email: event.target.value} );
+  }
+  _handleInputPassword = event => {
+    this.setState( {password: event.target.value} );
+  }
+  _handleInputPasswordConfirmation = event => {
+    this.setState( {password_confirmation: event.target.value} );
   }
 
 
@@ -76,7 +92,7 @@ class OrderComplete extends Component {
             <Form.Row>
               <Form.Group as={Col} controlId="formGridEmail">
                 <Form.Label>Email:</Form.Label>
-                <Form.Control type="email" placeholder="Enter Email" required onInput={ this._handleInputEmail } />
+                <Form.Control type="email" placeholder="Enter Email" defaultValue={this.state.email} required onInput={ this._handleInputEmail } />
               </Form.Group>
             </Form.Row>
 

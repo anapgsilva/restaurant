@@ -39,7 +39,7 @@ class UserForm extends Component {
         this.setState({address: res.data.address});
       })
     } catch(error) {
-      this.setState({name: "", phone_number: "", email: "", address: ""});
+      this.setState({user_id: "", name: "", phone_number: "", email: "", address: ""});
     };
 
 
@@ -82,7 +82,7 @@ class UserForm extends Component {
         <Form.Row>
           <Form.Group as={Col} controlId="formGridPhone">
             <Form.Label>Phone number</Form.Label>
-            <Form.Control type="number" placeholder="Enter phone number" defaultValue={this.state.phone_number} onChange={this._handleInputPhoneNumber} required/>
+            <Form.Control type="text" placeholder="Enter phone number" defaultValue={this.state.phone_number} onChange={this._handleInputPhoneNumber} required/>
           </Form.Group>
         </Form.Row>
 
