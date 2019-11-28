@@ -1,0 +1,13 @@
+#list-orders {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+}
+
+#order {
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}

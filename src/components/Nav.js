@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {DropdownButton, Form, Navbar} from 'react-bootstrap';
 import SignIn from './SignIn';
 import {Redirect} from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 
 
@@ -32,7 +34,13 @@ const Nav = () => {
             </Link>
           </li>
 
-          {localStorage.getItem('jwt') ? "" :
+          <div id="bootstrap-override">
+            <li className="nav-item ml-2">
+              {localStorage.getItem('jwt') ? <Link onClick={logoutUser} className="nav-link">Logout</Link> : ""}
+            </li>
+          </div>
+
+          {localStorage.getItem('jwt') ? <FontAwesomeIcon icon='user' size="2x" /> :
           <li className="nav-item ml-2">
             <div id="bootstrap-override">
               <Form inline>
@@ -45,15 +53,18 @@ const Nav = () => {
                 <SignIn />
                 </DropdownButton>
               </Form>
+
+
             </div>
           </li>
           }
 
-        <div id="bootstrap-override">
-          <li className="nav-item ml-2">
-            {localStorage.getItem('jwt') ? <Link onClick={logoutUser} className="nav-link">Logout</Link> : <Link to="/signup" className="nav-link">Sign Up</Link>}
-          </li>
-        </div>
+          <div id="bootstrap-override">
+            <li className="nav-item ml-2">
+              {localStorage.getItem('jwt') ? "" : <Link to="/signup" className="nav-link">Sign Up</Link>}
+            </li>
+          </div>
+
       </ul>
     </div>
 

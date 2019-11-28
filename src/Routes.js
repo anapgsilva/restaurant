@@ -9,9 +9,9 @@ import OrderComplete from './components/OrderComplete';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faUser } from '@fortawesome/free-solid-svg-icons';
 
-library.add(fab, faHeart);
+library.add(fab, faHeart, faUser);
 //This is goign to replace App.js
 
 
