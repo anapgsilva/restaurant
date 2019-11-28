@@ -58,7 +58,7 @@ const Cart = (props) => {
     allProducts.length > 0 &&
 
       (<div className='orderList'>
-        <h2>Online Order</h2>
+        <h1>Order</h1>
 
         {Object.keys(orderItems).length > 0 ?
 
