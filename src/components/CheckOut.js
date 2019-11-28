@@ -37,6 +37,7 @@ class CheckOut extends Component {
     this.updateTime = this.updateTime.bind(this);
     this.createOrder = this.createOrder.bind(this);
     this._handleUserInfo = this._handleUserInfo.bind(this);
+    // this.render = this.render.bind(this);
   }
 
   componentDidMount() {
@@ -94,7 +95,8 @@ class CheckOut extends Component {
     this.setState({time: timeOrder});
     //save time to local storage
     const time = JSON.stringify(timeOrder);
-    localStorage.setItem('time', JSON.stringify(time));
+    localStorage.setItem('time', time);
+    // this.render();
   }
 
   _handleChange(event) {

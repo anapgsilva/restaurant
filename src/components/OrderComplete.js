@@ -2,6 +2,12 @@ import React, {Component} from 'react';
 import OrderSummary from './OrderSummary';
 import Nav from './Nav';
 import {Form, Col} from 'react-bootstrap';
+import axios from 'axios';
+
+
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
+const SERVER_URL = "http://localhost:3000/users";
+
 
 class OrderComplete extends Component {
 
@@ -16,6 +22,7 @@ class OrderComplete extends Component {
       email: "",
       user_id: ""
     }
+    this._handleSubmit = this._handleSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -38,6 +45,17 @@ class OrderComplete extends Component {
     //sets state of all variables
     this.setState({ orderItems, delivery, paymentOption, email, user_id });
 
+  }
+
+
+  _handleSubmit() {
+    axios.post(SERVER_URL, { user:
+      {id: this.state.user_id, email: this.state.email, password: this.state.password, password_confirmation: this.state.password_confirmation}
+    }).then( result => {
+      console.log( "user created", result.data );
+    }).catch( error => {
+      console.log( "user not created", error );
+    })
   }
 
   render() {
