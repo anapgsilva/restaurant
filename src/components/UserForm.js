@@ -58,11 +58,11 @@ class UserForm extends Component {
   }
 
   //handle the variables
-  _handleInputs(props) {
+  _handleInputs() {
     const userInfo = [this.state.name, this.state.phone_number, this.state.email, this.state.address];
     console.log(userInfo);
 
-    return props.onChange(userInfo);
+    return userInfo;
 
   }
 

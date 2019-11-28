@@ -58,7 +58,7 @@ const Cart = (props) => {
     allProducts.length > 0 &&
 
       (<div className='orderList'>
-        <h2>Online Order</h2>
+        <h1>Order</h1>
 
         {Object.keys(orderItems).length > 0 ?
 
@@ -99,7 +99,7 @@ const Cart = (props) => {
 
             </div>
           )
-          : (<h6>Your cart is empty.</h6>)}
+          : (<h6>Your cart is empty</h6>)}
 
 
       <button className="checkout-button" onClick={() => submitOrder(orderItems)}>
