@@ -58,37 +58,58 @@ class SignUp extends Component {
 
   render() {
     return (
-      <div>
+      <div id="page">
         <Nav />
-        <h2>Sign Up</h2>
-        <Form onSubmit={ this._handleSubmit }>
-          <Form.Row>
-            <Form.Group as={Col} controlId="formGridEmail">
-              <Form.Label>Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter Name" />
-            </Form.Group>
-          </Form.Row>
+        <div id='main' className="signup">
+          <div>
+          <h2>Sign Up</h2>
+          <Form id="forms" onSubmit={ this._handleSubmit }>
+            <Form.Row>
+              <Form.Group as={Col} controlId="formGridEmail">
+                <Form.Label>Name:</Form.Label>
+                <Form.Control type="text" placeholder="Enter Name" required onInput={ this._handleInputName } />
+              </Form.Group>
+            </Form.Row>
 
-          <label>Name:</label>
-          <input type="text" placeholder="Name" required onInput={ this._handleInputName } /><br/>
+            <Form.Row>
+              <Form.Group as={Col} controlId="formGridEmail">
+                <Form.Label>Email:</Form.Label>
+                <Form.Control type="email" placeholder="Enter Email" required onInput={ this._handleInputEmail } />
+              </Form.Group>
+            </Form.Row>
 
-          <label>Email:</label>
-          <input type="text" placeholder="Email" required onInput={ this._handleInputEmail } /><br/>
+            <Form.Row>
+              <Form.Group as={Col} controlId="formGridEmail">
+                <Form.Label>Password:</Form.Label>
+                <Form.Control type="password" placeholder="Password" required onInput={ this._handleInputPassword } />
+              </Form.Group>
+            </Form.Row>
 
-          <label>Password:</label>
-          <input type="password" placeholder="Password" required onInput={ this._handleInputPassword } /><br/>
+            <Form.Row>
+              <Form.Group as={Col} controlId="formGridEmail">
+                <Form.Label>Password confirmation:</Form.Label>
+                <Form.Control type="password" placeholder="Confirm password" required onInput={ this._handleInputPasswordConfirmation } />
+              </Form.Group>
+            </Form.Row>
 
-          <label>Password confirmation:</label>
-          <input type="password" placeholder="Confirm Password" required onInput={ this._handleInputPasswordConfirmation } /><br/>
+            <Form.Row>
+              <Form.Group as={Col} controlId="formGridEmail">
+                <Form.Label>Phone number:</Form.Label>
+                <Form.Control type="text" placeholder="000-000-000" required onInput={ this._handleInputPhoneNumber } />
+              </Form.Group>
+            </Form.Row>
 
-          <label>Phone number:</label>
-          <input type="text" placeholder="000-000-000" required onInput={ this._handleInputPhoneNumber } /><br/>
+            <Form.Row>
+              <Form.Group as={Col} controlId="formGridEmail">
+                <Form.Label>Delivery address:</Form.Label>
+                <Form.Control type="text" placeholder="Street address" required onInput={ this._handleInputAddress} />
+              </Form.Group>
+            </Form.Row>
 
-          <label>Delivery address:</label>
-          <input type="text" placeholder="Street address" onInput={ this._handleInputAddress } /><br/>
-
-          <input type="submit" placeholder="Sign Up" onClick={this._handleSubmit} />
-        </Form>
+            <input type="submit" placeholder="Sign Up" />
+          </Form>
+        </div>
+        </div>
       </div>
     );
   }
