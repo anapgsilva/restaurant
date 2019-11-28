@@ -19,9 +19,7 @@ class Home extends Component {
     super(props);
     this.state = {
       user_id: '',
-      id: '',
       orders:[],
-      products:[]
     };
   }
 
@@ -32,9 +30,13 @@ class Home extends Component {
     axios.get(SERVER_URL_CurrentUser , {
       headers:{
         Authorization: "Bearer " + jwt
-      }}).then( res => {
-      if (Object.keys(res.data).length > 0) {
-        this.setState({orders: res.data.orders})
+      }}).then( result => {
+      if (Object.keys(result.data).length > 0) {
+        this.setState({orders: result.data.orders});
+        this.setState({user_id: result.data.id});
+
+        const user_id = JSON.stringify(result.data.id);
+        localStorage.setItem('user_id', user_id);
       };
     })
   }

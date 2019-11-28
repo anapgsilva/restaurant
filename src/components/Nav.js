@@ -40,7 +40,7 @@ const Nav = () => {
             </li>
           </div>
 
-          {localStorage.getItem('jwt') ? <FontAwesomeIcon icon='user' size="2x" /> :
+          {localStorage.getItem('jwt') ? <Link to="/"> <FontAwesomeIcon icon='user' size="2x" /></Link> :
           <li className="nav-item ml-2">
             <div id="bootstrap-override">
               <Form inline>

@@ -9,6 +9,7 @@ class UserForm extends Component {
   constructor(props) {
     super(props);
     this.state ={
+      user_id: '',
       name: '',
       phone_number:'',
       email:'',
@@ -30,8 +31,8 @@ class UserForm extends Component {
         headers:{
           Authorization: "Bearer " + jwt
         }}).then( res => {
-        console.log(res);
         // set in state and display
+        this.setState({user_id: res.data.id})
         this.setState({name: res.data.name});
         this.setState({phone_number: res.data.phone_number});
         this.setState({email: res.data.email});
@@ -62,8 +63,7 @@ class UserForm extends Component {
 
   //handle the variables
   _handleInputs(event) {
-    debugger;
-    const userInfo = [this.state.name, this.state.phone_number, this.state.email, this.state.address];
+    const userInfo = [this.state.user_id, this.state.name, this.state.phone_number, this.state.email, this.state.address];
     return this.props.onSubmit(userInfo);
   }
 
@@ -93,10 +93,12 @@ class UserForm extends Component {
           </Form.Group>
         </Form.Row>
 
+        {this.props.delivery ?
         <Form.Group controlId="formGridAddress1">
           <Form.Label>Address</Form.Label>
           <Form.Control placeholder="Unit/House No, Street address, Suburb" defaultValue={this.state.address} onChange={this._handleInputAddress} required/>
         </Form.Group>
+        : ""}
 
         <Button variant="primary" type="submit">
           Save

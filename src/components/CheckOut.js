@@ -3,11 +3,17 @@ import PaymentForm from './PaymentForm';
 import {Link} from 'react-router-dom';
 import UserForm from './UserForm';
 import OrderSummary from './OrderSummary';
-// import {Button} from 'semantic-ui-react';
 import DropdownTime from './DropdownTime';
 import {withRouter} from 'react-router-dom';
 import babbologo from "../babbologo.png"
+import axios from 'axios';
 
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/orders";
+const SERVER_URL_ORDERS = "http://localhost:3000/orders";
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
+const SERVER_URL_USERS = "http://localhost:3000/users";
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/orders/submitorder";
+const SERVER_URL_MAKEORDER = "http://localhost:3000/orders/generate_order";
 
 
 class CheckOut extends Component {
@@ -22,9 +28,10 @@ class CheckOut extends Component {
       totalPrice: 0,
       time: '',
       name: '',
-      phone_number:'',
-      email:'',
-      address:''
+      phone_number: '',
+      email: '',
+      address: '',
+      userInfo: false
     };
 
     this.onRadioChange = this.onRadioChange.bind(this);
@@ -80,36 +87,74 @@ class CheckOut extends Component {
 
   _handleUserInfo(userInfo){
     console.log("userInfo", userInfo);
-    this.setState({name: userInfo[0], phone_number: userInfo[1], email: userInfo[2], address: userInfo[3]});
+    this.setState({user_id: userInfo[0], name: userInfo[1], phone_number: userInfo[2], email: userInfo[3], address: userInfo[4], userInfo: true});
   }
 
   _handleCardDetails(token) {
-    console.log("handling card details", token);
-    if (token) {
-      //create order
-      //create line items
-      
-
-      //create
+    if (token && this.state.userInfo) {
+      this.createOrder();
+    } else {
+      window.alert("Please fill in contact details.")
     }
-    // this.setState({ccName: name});
-    // this.setState({ccNumber: number});
-    // this.setState({ccCVV: cvv});
-    // console.log(event.target.value);
-    this.createOrder();
-
   }
 
   createOrder() {
-    //Check that all input is present - delivery type and timeout, user details
-    //ootherwise
-    //make order and each line item
-    // "total_price", "user_id", "kind"
-    console.log("will make request");
+    if (this.state.userInfo) {
+      console.log("user details all in");
+      console.log("will make request");
+
+      //send data to back to make order, user, line-items
+      const orderItems = this.state.orderItems;
+      const kind = this.state.delivery ? "Delivery" : "Pick-up";
+      const total_price = this.state.totalPrice;
+      const user_id = this.state.user_id;
 
 
-    // redirect to /ordercomplete if all verified
-    this.props.history.push('/ordercomplete');
+      axios.post(SERVER_URL_MAKEORDER, {
+        orderItems, kind, total_price, user_id
+      }).then( result => {
+        console.log( "order created", result );
+        this.props.history.push('/ordercomplete');
+
+      }).catch( error => {
+        window.alert("Order submission failed");
+      });
+
+      //
+      // //get user id
+      // axios.post(SERVER_URL_USERS, {
+      //   "auth": {
+      //     "email": this.state.email,
+      //   }
+      // }).then( result => {
+      //   console.log( "get user", result );
+      //   const user_id = "";
+      // }).catch( error => {
+      //   console.log( error );
+      // })
+
+      //create order
+      // axios.post(SERVER_URL_ORDERS, {
+      //   order: {
+      //     user_id: user_id,
+      //     kind: kind,
+      //     total_price: this.state.totalPrice,
+      //     line_items: this.state.orderItems
+      //   }
+      // }).then( result => {
+      //   console.log( result );
+      //   const  = "";
+      // }).catch( error => {
+      //   console.log( error );
+      // })
+      //
+
+    }
+    else {
+      window.alert("Please fill in all details required for your order.")
+    }
+
+
   }
 
 
@@ -121,7 +166,7 @@ class CheckOut extends Component {
   <Link to="/">
     <img src={babbologo} alt="Home" className="navbar-brand" />
   </Link>
-  
+
       <div id="main">
 
         <div id="forms">
@@ -148,10 +193,17 @@ class CheckOut extends Component {
             <DropdownTime onChange={this.updateTime} /><br/>
           </div>
 
-          <h4>Customer contact details:</h4>
-          <UserForm onSubmit={this._handleUserInfo} delivery={this.state.delivery} />
+          {this.state.time ?
+            <div>
+            {!this.state.userInfo ?
+              <div><h4>Customer contact details:</h4>
+              <UserForm onSubmit={this._handleUserInfo} delivery={this.state.delivery} /></div>
+              : ""}
+            </div> : "" }
 
 
+          {this.state.userInfo ?
+          <div>
           <h4>Payment option:</h4><br/>
           <form id="payment-form">
               <div id="option" className="custom-control custom-radio custom-control-inline">
@@ -169,6 +221,8 @@ class CheckOut extends Component {
 
             {this.state.paymentOption === "Card" ? <PaymentForm id="stripe" onChange={this._handleCardDetails} orderItems={this.state.orderItems} totalPrice={this.state.totalPrice} /> : <button onClick={this.createOrder} className="pay">Submit Order</button>}
           </form>
+          </div>
+          : ""}
 
         </div>
 

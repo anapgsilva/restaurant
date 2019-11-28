@@ -35,7 +35,7 @@ class SignIn extends Component {
       }
     }).then( result => {
       localStorage.setItem("jwt", result.data.jwt)
-      console.log(result.data.jwt)
+      console.log(result.data)
       console.log("user logged in")
       this.props.history.push('/') //where is user taken
     })
@@ -49,15 +49,13 @@ class SignIn extends Component {
   render() {
     return (
       <div>
-        <form>
-          <label>Email: </label>
-          <input type="text" placeholder="Email" required onInput={ this._handleInputEmail } />
+        <label>Email: </label>
+        <input type="text" placeholder="Email" required onInput={ this._handleInputEmail } />
 
-          <label>Password:</label>
-          <input type="password" placeholder="Password" required onInput={ this._handleInputPassword } />
+        <label>Password:</label>
+        <input type="password" placeholder="Password" required onInput={ this._handleInputPassword } />
 
-          <input type="submit" placeholder="Log In" onClick={this._handleSubmit} />
-        </form>
+        <input type="submit" placeholder="Log In" onClick={this._handleSubmit} />
       </div>
     );
   }
