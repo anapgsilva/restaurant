@@ -3,7 +3,6 @@ import axios from 'axios';
 import Nav from './Nav';
 import {Form, Col} from 'react-bootstrap';
 import babbo_signup_img from "../babbo_signup_img.jpg"
-import Footer from './Footer';
 
 // const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
 const SERVER_URL = "http://localhost:3000/users";
@@ -118,7 +117,6 @@ class SignUp extends Component {
           </Form>
         </div>
       </div>
-      <Footer />
     </div>
 
     );

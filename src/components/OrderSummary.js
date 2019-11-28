@@ -19,6 +19,10 @@ class OrderSummary extends Component {
     }
   }
 
+  componentDidMount() {
+    this.fetchProducts();
+  }
+
   //get all products (slowest action) and then set variables
   fetchProducts(props) {
     axios.get(SERVER_URL).then( (results) => {
@@ -53,10 +57,6 @@ class OrderSummary extends Component {
     }
     this.setState({total: totalPrice});
     return totalPrice;
-  }
-
-  componentDidMount() {
-    this.fetchProducts();
   }
 
   render(props) {

@@ -1,7 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import babbo_sm_footer_logo from "../babbo_sm_footer_logo.png"
+import babbo_sm_footer_logo from "../babbo_sm_footer_logo.png";
 
 const Footer = () => {
 
@@ -10,7 +9,7 @@ const Footer = () => {
     <footer className="footercontainer">
         <div className="row">
 
-            <div className="col">
+            <div className="col-lg-2">
             <img
               src={babbo_sm_footer_logo}
               alt="Babbo Logo"

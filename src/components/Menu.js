@@ -4,11 +4,10 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Nav from './Nav';
 import babbo_menu_img from "../babbo_menu_img.jpg"
-import Footer from './Footer';
 
 
 
-const SERVER_URL = "http://localhost:3000/products.json"
+const SERVER_URL = "http://localhost:3000/products.json";
 
 // const SERVER_URL = "https://restaurant-order-server.herokuapp.com/products.json"
 
@@ -105,7 +104,7 @@ class Menu extends Component {
         </div>
 
       </div>
-      <Footer />
+
     </div>
     );
   }

@@ -94,7 +94,7 @@ class UserForm extends Component {
         </Form.Row>
 
         {this.props.delivery ?
-        <Form.Group controlId="formGridAddress1">
+        <Form.Group controlId="formGridAddress">
           <Form.Label>Address</Form.Label>
           <Form.Control placeholder="Unit/House No, Street address, Suburb" defaultValue={this.state.address} onChange={this._handleInputAddress} required/>
         </Form.Group>

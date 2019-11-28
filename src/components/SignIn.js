@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import {withRouter} from 'react-router-dom';
+import {Form} from 'react-bootstrap';
 
 
 const SERVER_URL = "http://localhost:3000/user/token";
@@ -35,8 +36,8 @@ class SignIn extends Component {
       }
     }).then( result => {
       localStorage.setItem("jwt", result.data.jwt)
-      console.log(result.data)
-      console.log("user logged in")
+      console.log(result.data);
+      console.log("user logged in");
       this.props.history.push('/') //where is user taken
     })
     .catch( err => {
@@ -48,7 +49,7 @@ class SignIn extends Component {
 
   render() {
     return (
-      <div>
+      <Form>
         <label>Email: </label>
         <input type="text" placeholder="Email" required onInput={ this._handleInputEmail } />
 
@@ -56,7 +57,7 @@ class SignIn extends Component {
         <input type="password" placeholder="Password" required onInput={ this._handleInputPassword } />
 
         <input type="submit" placeholder="Log In" onClick={this._handleSubmit} />
-      </div>
+      </Form>
     );
   }
 

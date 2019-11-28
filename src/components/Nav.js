@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom';
 import babbologo from "../babbologo.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import DropdownButton from 'react-bootstrap/DropdownButton';
-import {DropdownButton, Form, Navbar} from 'react-bootstrap';
+import {DropdownButton, Navbar} from 'react-bootstrap';
 import SignIn from './SignIn';
-import {Redirect} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
@@ -13,10 +13,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const Nav = () => {
+  const history = useHistory();
 
   const logoutUser = () => {
     localStorage.clear();
-    return <Redirect to='/menu' />;
+    history.push("/");
   }
 
   return (
@@ -36,15 +37,15 @@ const Nav = () => {
 
           <div id="bootstrap-override">
             <li className="nav-item ml-2">
-              {localStorage.getItem('jwt') ? <Link to="/" onClick={logoutUser} className="nav-link">Logout</Link> : ""}
+              {localStorage.getItem('jwt') ? <button className="nav-link" onClick={logoutUser} >Logout</button> : ""}
             </li>
           </div>
 
           {localStorage.getItem('jwt') ? <Link to="/"> <FontAwesomeIcon icon='user' size="2x" /></Link> :
           <li className="nav-item ml-2">
             <div id="bootstrap-override">
-              <Form inline>
                 <DropdownButton
+                  alignRight
                   variant="outline-primary"
                   className="dropdown"
                   id="dropdown-item-button"
@@ -52,9 +53,6 @@ const Nav = () => {
                 >
                 <SignIn />
                 </DropdownButton>
-              </Form>
-
-
             </div>
           </li>
           }

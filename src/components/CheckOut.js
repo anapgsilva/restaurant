@@ -9,10 +9,7 @@ import babbologo from "../babbologo.png"
 import axios from 'axios';
 
 // const SERVER_URL = "https://restaurant-order-server.herokuapp.com/orders";
-const SERVER_URL_ORDERS = "http://localhost:3000/orders";
-// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
-const SERVER_URL_USERS = "http://localhost:3000/users";
-// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/orders/submitorder";
+const SERVER_URL = "http://localhost:3000/products";
 const SERVER_URL_MAKEORDER = "http://localhost:3000/orders/generate_order";
 
 
@@ -51,6 +48,16 @@ class CheckOut extends Component {
     const paymentOption = JSON.parse(localStorage.getItem('paymentOption'));
     //sets state of all variables
     this.setState({ orderItems, delivery, paymentOption });
+
+    this.fetchProducts();
+  }
+
+  //get all products
+  fetchProducts() {
+    axios.get(SERVER_URL).then( (results) => {
+      const allProducts = results.data;
+      this.setState({allProducts: allProducts});
+    })
   }
 
   onRadioChange(event) {
@@ -66,7 +73,26 @@ class CheckOut extends Component {
     // //sets delivery state in local storage
     let deliveryStatus = JSON.stringify(this.state.delivery);
     localStorage.setItem('delivery', deliveryStatus);
+
+    this.calculateTotal(this.state.allProducts, this.state.orderItems);
   }
+
+  calculateTotal(allProducts, orderItems) {
+    let totalPrice = 0;
+    if (Object.keys(orderItems).length > 0){
+      totalPrice = Object.entries(orderItems).reduce(
+        (result, [id, quantity]) => {
+          const item = allProducts.find( p => p.id.toString() === id);
+          return result + (item.price * quantity);
+        },
+        0);
+    }
+    totalPrice = this.state.delivery ? totalPrice += 5 : totalPrice;
+    console.log(totalPrice);
+    this.setState({totalPrice: totalPrice});
+    console.log(this.state.totalPrice);
+  }
+
 
   updateTime(timeOrder) {
     console.log(timeOrder);
@@ -111,7 +137,10 @@ class CheckOut extends Component {
 
 
       axios.post(SERVER_URL_MAKEORDER, {
-        orderItems, kind, total_price, user_id
+        orderItems: orderItems,
+        kind: kind,
+        total_price: total_price,
+        user_id: user_id
       }).then( result => {
         console.log( "order created", result );
         this.props.history.push('/ordercomplete');
@@ -119,35 +148,6 @@ class CheckOut extends Component {
       }).catch( error => {
         window.alert("Order submission failed");
       });
-
-      //
-      // //get user id
-      // axios.post(SERVER_URL_USERS, {
-      //   "auth": {
-      //     "email": this.state.email,
-      //   }
-      // }).then( result => {
-      //   console.log( "get user", result );
-      //   const user_id = "";
-      // }).catch( error => {
-      //   console.log( error );
-      // })
-
-      //create order
-      // axios.post(SERVER_URL_ORDERS, {
-      //   order: {
-      //     user_id: user_id,
-      //     kind: kind,
-      //     total_price: this.state.totalPrice,
-      //     line_items: this.state.orderItems
-      //   }
-      // }).then( result => {
-      //   console.log( result );
-      //   const  = "";
-      // }).catch( error => {
-      //   console.log( error );
-      // })
-      //
 
     }
     else {
@@ -161,78 +161,82 @@ class CheckOut extends Component {
   render() {
 
     return (
-<div>
+      <div>
 
-  <Link to="/">
-    <img src={babbologo} alt="Home" className="navbar-brand" />
-  </Link>
+        <Link to="/">
+          <img src={babbologo} alt="Home" className="navbar-brand" />
+        </Link>
 
-      <div id="main">
+        <div id="main">
 
-        <div id="forms">
+          <div id="forms">
 
-          <Link className="back" to="/menu">Back to Menu</Link>
+            <Link className="back" to="/menu">Back to Menu</Link>
 
-          <form id="delivery-form">
-            <div className="custom-control custom-radio custom-control-inline">
-              <label>
-                <input type="radio" value="Pick-up" checked={this.state.delivery === false} onChange={this.onRadioChange}/>
-                Pick-up
-              </label>
+            <form id="delivery-form">
+              <div className="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input type="radio" value="Pick-up" checked={this.state.delivery === false} onChange={this.onRadioChange}/>
+                  Pick-up
+                </label>
+              </div>
+              <div className="custom-control custom-radio custom-control-inline">
+                <label>
+                  <input type="radio" value="Delivery" checked={this.state.delivery === true} onChange={this.onRadioChange}/>
+                  Delivery
+                </label>
+              </div>
+            </form>
+
+            <div id="time-form">
+              <h4>Time for order:</h4>
+              <DropdownTime onChange={this.updateTime} /><br/>
             </div>
-            <div className="custom-control custom-radio custom-control-inline">
-              <label>
-                <input type="radio" value="Delivery" checked={this.state.delivery === true} onChange={this.onRadioChange}/>
-                Delivery
-              </label>
-            </div>
-          </form>
 
-          <div id="time-form">
-            <h4>Time for order:</h4>
-            <DropdownTime onChange={this.updateTime} /><br/>
-          </div>
+            {this.state.time ?
+              <div>
+              {!this.state.userInfo ?
+                <div><h4>Customer contact details:</h4>
+                <UserForm onSubmit={this._handleUserInfo} delivery={this.state.delivery} /></div>
+                : ""}
+              </div> : "" }
 
-          {this.state.time ?
+
+            {this.state.userInfo ?
             <div>
-            {!this.state.userInfo ?
-              <div><h4>Customer contact details:</h4>
-              <UserForm onSubmit={this._handleUserInfo} delivery={this.state.delivery} /></div>
-              : ""}
-            </div> : "" }
+            <h4>Payment option:</h4><br/>
+            <form id="payment-form">
+                <div id="option" className="custom-control custom-radio custom-control-inline">
+                  <label>
+                    <input type="radio" value="Cash" checked={this.state.paymentOption === "Cash"} onChange={this._handleChange}/>
+                    Cash
+                  </label>
+                </div>
+                <div id="option" className="custom-control custom-radio custom-control-inline">
+                  <label>
+                    <input type="radio" value="Card" checked={this.state.paymentOption === "Card"} onChange={this._handleChange}/>
+                    Card
+                  </label>
+                </div>
 
+              {this.state.paymentOption === "Card" ?
+              <PaymentForm id="stripe" onChange={this._handleCardDetails} orderItems={this.state.orderItems} totalPrice={this.state.totalPrice} />
+              :
+              <button onClick={this.createOrder}  className="pay">Submit Order
+              </button>}
+            </form>
+            </div>
+            : ""}
 
-          {this.state.userInfo ?
-          <div>
-          <h4>Payment option:</h4><br/>
-          <form id="payment-form">
-              <div id="option" className="custom-control custom-radio custom-control-inline">
-                <label>
-                  <input type="radio" value="Cash" checked={this.state.paymentOption === "Cash"} onChange={this._handleChange}/>
-                  Cash
-                </label>
-              </div>
-              <div id="option" className="custom-control custom-radio custom-control-inline">
-                <label>
-                  <input type="radio" value="Card" checked={this.state.paymentOption === "Card"} onChange={this._handleChange}/>
-                  Card
-                </label>
-              </div>
-
-            {this.state.paymentOption === "Card" ? <PaymentForm id="stripe" onChange={this._handleCardDetails} orderItems={this.state.orderItems} totalPrice={this.state.totalPrice} /> : <button onClick={this.createOrder} className="pay">Submit Order</button>}
-          </form>
           </div>
-          : ""}
+
+
+          <div className="orderSummary">
+            <OrderSummary deliveryStatus={this.state.delivery} time={this.state.time} />
+          </div>
 
         </div>
-
-
-        <div className="orderSummary">
-          <OrderSummary deliveryStatus={this.state.delivery} time={this.state.time} />
-        </div>
-
       </div>
-</div>
 
     );
   }

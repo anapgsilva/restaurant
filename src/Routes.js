@@ -6,6 +6,7 @@ import CheckOut from './components/CheckOut';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import OrderComplete from './components/OrderComplete';
+import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -28,6 +29,7 @@ const Routes = (
       <Route exact path="/signin" component={SignIn}/>
       <Route exact path="/signup" component={SignUp}/>
       <Route exact path="/ordercomplete" component={OrderComplete}/>
+      <Route component={Footer} />
     </div>
   </Router>
 );

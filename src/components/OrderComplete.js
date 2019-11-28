@@ -12,6 +12,7 @@ class OrderComplete extends Component {
       allProducts: [],
       delivery: '',
       paymentOption: ''
+
     }
   }
 
@@ -25,8 +26,6 @@ class OrderComplete extends Component {
     const paymentOption = JSON.parse(localStorage.getItem('paymentOption'));
     //sets state of all variables
     this.setState({ orderItems, delivery, paymentOption });
-
-
 
     // localStorage.setItem('orderItems', JSON.stringify({}));
     // localStorage.setItem('delivery', JSON.stringify(false));
@@ -55,16 +54,16 @@ class OrderComplete extends Component {
                 <Form.Control type="email" placeholder="Enter Email" required onInput={ this._handleInputEmail } />
               </Form.Group>
             </Form.Row>
-            
+
               <Form.Row>
-                <Form.Group as={Col} controlId="formGridEmail">
+                <Form.Group as={Col} controlId="formGridPassword">
                   <Form.Label>Password:</Form.Label>
                   <Form.Control type="password" placeholder="Password" required onInput={ this._handleInputPassword } />
                 </Form.Group>
               </Form.Row>
 
               <Form.Row>
-                <Form.Group as={Col} controlId="formGridEmail">
+                <Form.Group as={Col} controlId="formGridPasswordConfirmation">
                   <Form.Label>Password confirmation:</Form.Label>
                   <Form.Control type="password" placeholder="Confirm password" required onInput={ this._handleInputPasswordConfirmation } />
                 </Form.Group>

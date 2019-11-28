@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Nav from './Nav';
-import Footer from './Footer';
 import { Carousel } from 'react-bootstrap';
 import babbo_img_1 from "../babbo_img_1.jpg"
 import babbo_img_2 from "../babbo_img_2.jpg"
@@ -20,12 +19,17 @@ class Home extends Component {
     this.state = {
       user_id: '',
       orders:[],
+      loggedIn: false
     };
   }
 
 
   componentDidMount(){
     const jwt = window.localStorage.getItem('jwt');
+
+    if (jwt) {
+      this.setState({loggedIn: true});
+    }
 
     axios.get(SERVER_URL_CurrentUser , {
       headers:{
@@ -41,10 +45,15 @@ class Home extends Component {
     })
   }
 
+  setLoggedIn() {
+
+  }
+
+
   render() {
     return (
       <div>
-        <Nav />
+        <Nav  />
 
         <Carousel>
           <Carousel.Item>
@@ -72,7 +81,7 @@ class Home extends Component {
           </Carousel.Item>
         </Carousel>
 
-        {this.state.orders !== undefined ?
+        {(this.state.loggedIn && this.state.orders !== undefined) ?
 
         <div id="list-orders">
           {this.state.orders.map( (order, index) => (
@@ -90,7 +99,6 @@ class Home extends Component {
         : ""
         }
 
-        <Footer />
       </div>
 
     )

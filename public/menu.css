@@ -53,15 +53,21 @@ label {
   margin-right: 20px;
 }
 
+.cartaside {
+  position: -webkit-sticky;
+  position: sticky;
+  height: 100%;
+}
+
 .orderList {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100%; /* Full-height: remove this if you want "auto" height */
+  height: 100%;
   width: 400px; /* Set the width of the sidebar */
-  /* position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
+  position: sticky;
   top: 0; /* Stay at the top */
   right: 0;
   background-color: #fff;
@@ -151,9 +157,4 @@ p.totalPrice {
   height: 370px;
   background-size: 100%;
   background-position: 50% 0px;
-}
-
-.cartaside {
-  height: 100%;
-  position: relative;
 }
