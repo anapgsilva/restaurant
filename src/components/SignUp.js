@@ -62,12 +62,6 @@ class SignUp extends Component {
         <Nav />
         <h2>Sign Up</h2>
         <Form onSubmit={ this._handleSubmit }>
-          <Form.Row>
-            <Form.Group as={Col} controlId="formGridEmail">
-              <Form.Label>Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter Name" />
-            </Form.Group>
-          </Form.Row>
 
           <label>Name:</label>
           <input type="text" placeholder="Name" required onInput={ this._handleInputName } /><br/>
