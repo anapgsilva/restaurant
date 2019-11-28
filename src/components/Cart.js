@@ -58,7 +58,7 @@ const Cart = (props) => {
     allProducts.length > 0 &&
 
       (<div className='orderList'>
-        <h2>Order Online With Us</h2>
+        <h2>Online Order</h2>
 
         {Object.keys(orderItems).length > 0 ?
 
@@ -95,7 +95,7 @@ const Cart = (props) => {
                 })}
               </div>
 
-              <p className="totalPrice">Total (exc. delivery): ${Number(totalPrice).toFixed(2)}</p>
+              <p className="totalPrice">Total: ${Number(totalPrice).toFixed(2)}</p>
 
             </div>
           )

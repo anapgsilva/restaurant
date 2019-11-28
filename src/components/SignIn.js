@@ -35,6 +35,7 @@ class SignIn extends Component {
       }
     }).then( result => {
       localStorage.setItem("jwt", result.data.jwt)
+      console.log(result.data.jwt)
       console.log("user logged in")
       this.props.history.push('/') //where is user taken
     })
