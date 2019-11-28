@@ -106,9 +106,9 @@ class CheckOut extends Component {
 
     return (
       <div id="main">
-        <div className="forms">
+        <div id="forms">
 
-          <Link to="/menu">Back to Menu</Link>
+          <Link className="back" to="/menu">Back to Menu</Link>
 
           <form id="delivery-form">
             <div className="custom-control custom-radio custom-control-inline">
@@ -152,7 +152,7 @@ class CheckOut extends Component {
             {this.state.paymentOption === "Card" ? <PaymentForm id="stripe" onClick={this._handleCardDetails} orderItems={this.state.orderItems} totalPrice={this.state.totalPrice} /> : <button onClick={this.createOrder} className="pay">Submit Order</button>}
           </form>
 
-
+        </div>
 
 
         <div className="orderSummary">
@@ -160,7 +160,6 @@ class CheckOut extends Component {
         </div>
 
       </div>
-    </div>
 
     );
   }

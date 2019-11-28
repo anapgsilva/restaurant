@@ -1,17 +1,20 @@
+
+
 #main {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   padding: 20px 30px;
   flex-direction: row;
-  background-color: #b0bfd9;
   height: 100%;
+  background-color: rgba(225, 233, 247, 1);
+
 }
 
 #menu {
   margin: 0;
   display: inline-block;
-  max-width: 500px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -66,8 +69,7 @@ label {
   overflow-x: hidden; /* Disable horizontal scroll */
   padding: 20px;
   text-align: center;
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;
+  border-radius: 15px;
   margin-top: 30px;
 }
 

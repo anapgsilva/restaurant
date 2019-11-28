@@ -1,3 +1,12 @@
+.back {
+  color: #000;
+}
+
+.back:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+
 #delivery-form {
   display: flex;
   flex-direction: row;
@@ -68,19 +77,19 @@ h4 {
 .orderSummary {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  height: auto; /* Full-height: remove this if you want "auto" height */
-  min-width: 300px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  right: 0;
+  height: 100%; /* Full-height: remove this if you want "auto" height
+  width: 400px; /* Set the width of the sidebar */
+  /* position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  /* z-index: 1; /* Stay on top */
+  /* top: 0; /* Stay at the top */
+  /* right: 0; */
   background-color: #fff;
-  overflow-x: hidden; /* Disable horizontal scroll */
+  /* overflow-x: hidden; /* Disable horizontal scroll */
   padding: 20px;
   text-align: center;
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;
+  border-radius: 15px;
   margin-top: 30px;
+  margin-left: 20px;
 }
