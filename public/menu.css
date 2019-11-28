@@ -20,7 +20,7 @@
 
 #menu h1 {
   font-weight: 600;
-  font-family: 'Pacifico', Arial;
+  font-family: 'Amiri', serif;
   text-align: center;
   margin: 20px;
 }
@@ -28,7 +28,7 @@
 #category h3 {
   text-align: center;
   margin-top: 20px;
-  font-family: 'Pacifico', Arial;
+  font-family: 'Amiri', serif;
 }
 
 #cat-divider {
@@ -117,8 +117,7 @@ p.deliveryPrice {
 p.totalPrice {
   text-align: center;
   margin-top: 10px;
-  font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
 
 }
 
@@ -126,7 +125,6 @@ p.totalPrice {
   margin-top: 10px;
   width: 110px;
   font-size: 15px;
-  font-weight: bold;
   border-radius: 5px;
 }
 
@@ -137,4 +135,9 @@ p.totalPrice {
 .checkout-button a:hover {
   text-decoration: none;
   color: #071fba;
+}
+
+.orderList h2 {
+  font-family: 'Amiri', serif;
+  font-weight: bold;
 }

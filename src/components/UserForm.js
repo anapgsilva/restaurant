@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Form, Button, Col} from 'react-bootstrap';
+import {Form, Col} from 'react-bootstrap';
 // import jwtDecode from 'jwt-decode';
 import axios from 'axios';
 const SERVER_URL = "http://localhost:3000/users/current";
@@ -20,7 +20,7 @@ class UserForm extends Component {
 
   componentDidMount(){
     const jwt = window.localStorage.getItem('jwt');
-    
+
     axios.get(SERVER_URL, {
       headers:{
         Authorization: "Bearer " + jwt
@@ -73,7 +73,7 @@ class UserForm extends Component {
         
       </Form>
     );
-    
+
 
   }
 
