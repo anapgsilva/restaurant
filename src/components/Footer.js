@@ -4,7 +4,38 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Footer = () => {
 
-  return ()
-    
+  return (
 
-}
+    <footer className="footercontainer">
+        <div class="row">
+
+            <div className="col-sm">
+              <p className="ttl">LOCATION</p>
+              <p>75 Washington Place</p>
+              <p>Sydney, Australia</p>
+              <p>2095</p>
+            </div>
+
+            <div className="col-sm">
+              <p className="ttl">CONTACT</p>
+              <p>T 212 539 1776</p>
+              <p>F 212 539 0959</p>
+              <p>Babbo@ga.co</p>
+            </div>
+
+            <div className="col-sm">
+              <p className="ttl">HOURS</p>
+              <p>Sunday-Thursday</p>
+              <p>5:00PM - 11:00PM</p>
+              <br />
+              <p>Friday-Saturday</p>
+              <p>5:00PM - 11:30PM</p>
+            </div>
+
+
+      </div>
+    </footer>
+  )
+};
+
+export default Footer;

@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from './Nav';
+import Footer from './Footer';
 import { Carousel } from 'react-bootstrap';
 import babbo_img_1 from "../babbo_img_1.jpg"
 import babbo_img_2 from "../babbo_img_2.jpg"
@@ -47,6 +48,8 @@ const Home = () => {
           />
       </Carousel.Item>
     </Carousel>
+
+    <Footer />
 
   </div>
   );

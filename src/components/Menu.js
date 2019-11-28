@@ -4,6 +4,7 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Nav from './Nav';
 import babbo_menu_img from "../babbo_menu_img.jpg"
+import Footer from './Footer';
 
 
 
@@ -104,6 +105,7 @@ class Menu extends Component {
         </div>
 
       </div>
+      <Footer />
     </div>
     );
   }

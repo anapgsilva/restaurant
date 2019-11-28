@@ -81,3 +81,24 @@ nav {
   flex-direction: row;
   justify-content: space-between;
 }
+
+.footercontainer {
+  padding: 50px;
+  display: block;
+  height: 175px;
+  justify-content: center;
+  /* padding-top: 40px; */
+  background-color: #2b2b2b;
+}
+
+.footercontainer p {
+  text-align: center;
+  margin: 0 auto;
+  color: #ffffff;
+  font-size: 11px;
+}
+
+.footercontainer p.ttl {
+  font-weight: bold;
+  padding: 5px;
+}
