@@ -7,7 +7,11 @@ const Footer = () => {
   return (
 
     <footer className="footercontainer">
-        <div class="row">
+        <div className="row">
+
+            <div className="col-sm">
+
+            </div>
 
             <div className="col-sm">
               <p className="ttl">LOCATION</p>

@@ -42,6 +42,7 @@ class SignIn extends Component {
     .catch( err => {
       this.setState({ errorMessage: 'Invalid email or password'})
     }) //error logic
+
   }
 
 
