@@ -11,9 +11,9 @@ class UserForm extends Component {
     this.state ={
       name: '',
       phone_number:'',
-      address:'',
-      suburb: '',
-      postCode: ''
+      email:'',
+      address:''
+      
     }
   }
 
@@ -28,13 +28,17 @@ class UserForm extends Component {
 
     }).then( res => {
       console.log(res);
-      
-      this.setState({name: res.data.name});
-      console.log(res.data.name);
       // set in state and display
+      this.setState({name: res.data.name});
+      this.setState({phone_number: res.data.phone_number});
+      this.setState({email: res.data.email});
+      this.setState({address: res.data.address});
+      
+      console.log(res.data.name);
+      
     }) 
     
-    // this.setState({username: result.username})
+    
   }
    // post request to orders after user after pay
 
@@ -44,41 +48,29 @@ class UserForm extends Component {
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Name</Form.Label>
-            <Form.Control type="name" placeholder="Enter Name"  />
-            {this.state.name}
-            
+            <Form.Control type="name" placeholder="Enter Name" value={this.state.name}/>
           </Form.Group>
         </Form.Row>
 
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Phone number</Form.Label>
-            <Form.Control type="number" placeholder="Enter phone number" />
+            <Form.Control type="number" placeholder="Enter phone number" value={this.state.phone_number}/>
           </Form.Group>
         </Form.Row>
 
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Email</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control type="email" placeholder="Enter email" value={this.state.email} />
           </Form.Group>
         </Form.Row>
 
         <Form.Group controlId="formGridAddress1">
           <Form.Label>Address</Form.Label>
-          <Form.Control placeholder="Unit or House No/ St No Main St" />
+          <Form.Control placeholder="Unit or House No/ St No Main St" value={this.state.address}/>
         </Form.Group>
-        <Form.Row>
-          <Form.Group as={Col} controlId="formGridCity">
-            <Form.Label>Suburb</Form.Label>
-            <Form.Control />
-          </Form.Group>
-
-          <Form.Group as={Col} controlId="formGridZip">
-            <Form.Label>Post Code</Form.Label>
-            <Form.Control />
-          </Form.Group>
-        </Form.Row>
+        
       </Form>
     );
     

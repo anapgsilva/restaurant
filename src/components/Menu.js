@@ -7,10 +7,7 @@ import Nav from './Nav';
 
 
 const SERVER_URL = "http://localhost:3000/products.json"
-<<<<<<< HEAD:restaurant_client/src/components/Menu.js
-=======
 // const SERVER_URL = "https://restaurant-order-server.herokuapp.com/products.json"
->>>>>>> bda4361935c51517a363e85806e624a6687db437:src/components/Menu.js
 
 class Menu extends Component {
 
