@@ -87,6 +87,7 @@ class CheckOut extends Component {
     const totalPrice = delivery ? total += 5 : total;
     console.log(totalPrice);
     this.setState({totalPrice: totalPrice});
+    localStorage.setItem('totalPrice', JSON.stringify(totalPrice) );
   }
 
 
@@ -104,6 +105,8 @@ class CheckOut extends Component {
     console.log("userInfo", userInfo);
     this.setState({user_id: userInfo[0], name: userInfo[1], phone_number: userInfo[2], email: userInfo[3], address: userInfo[4], userInfo: true});
 
+    localStorage.setItem('name', JSON.stringify(userInfo[1]));
+    localStorage.setItem('phone_number', JSON.stringify(userInfo[2]));
     localStorage.setItem('email', JSON.stringify(userInfo[3]));
   }
 
@@ -140,18 +143,20 @@ class CheckOut extends Component {
       const email = this.state.email;
       const address = this.state.address;
 
+      console.log("user if a string?", user_id);
 
       axios.post(SERVER_URL_MAKEORDER, {
         orderItems: orderItems,
         kind: kind,
         total_price: total_price,
         user_id: user_id,
-        name: name,
-        phone_number: phone_number,
-        email: email,
-        address: address
+        // name: name,
+        // phone_number: phone_number,
+        // email: email,
+        // address: address
       }).then( result => {
         console.log( "order created", result.data );
+        localStorage.setItem('order_id', JSON.stringify(result.data.id));
 
         const user_id = result.data.user_id;
         this.setState({user_id: user_id});

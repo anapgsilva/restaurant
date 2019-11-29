@@ -41,7 +41,8 @@ class SignIn extends Component {
       this.props.history.push('/') //where is user taken
     })
     .catch( err => {
-      this.setState({ errorMessage: 'Invalid email or password'})
+      window.alert("Invalid email and/or password");
+      this.setState({ errorMessage: 'Invalid email or password'});
     }) //error logic
 
   }

@@ -52,18 +52,18 @@ class UserForm extends Component {
 
 
   _handleInputName = event => {
-    this.setState( {name: event.target.value})
+    this.setState( {name: event.target.value});
   }
 
   _handleInputPhoneNumber = event => {
-    this.setState( {phone_number: event.target.value})
+    this.setState( {phone_number: event.target.value});
   }
   _handleInputEmail = event => {
-    this.setState( {email: event.target.value})
+    this.setState( {email: event.target.value});
   }
 
   _handleInputAddress = event => {
-    this.setState( {address: event.target.value})
+    this.setState( {address: event.target.value});
   }
 
   //handle the variables

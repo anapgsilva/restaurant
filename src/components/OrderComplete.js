@@ -5,10 +5,11 @@ import {Form, Col} from 'react-bootstrap';
 import axios from 'axios';
 
 
-const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
-// const SERVER_URL = "http://localhost:3000/users";
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
+// const SERVER_URL = `http://localhost:3000/users/${this.state.user_id}`;
 // const SERVER_URL_TOKEN = "http://localhost:3000/user/token";
 const SERVER_URL_TOKEN = "https://restaurant-order-server.herokuapp.com/user/token";
+
 
 
 class OrderComplete extends Component {
@@ -20,12 +21,17 @@ class OrderComplete extends Component {
       allProducts: [],
       delivery: '',
       paymentOption: '',
+      totalPrice: '',
       loggedIn: '',
+      name: '',
+      phone_number: '',
       email: "",
       user_id: "",
       password: "",
       password_confirmation: ''
     }
+    this._handleInputName = this._handleInputName.bind(this);
+    this._handleInputPhoneNumber = this._handleInputPhoneNumber.bind(this);
     this._handleInputEmail = this._handleInputEmail.bind(this);
     this._handleInputPassword = this._handleInputPassword.bind(this);
     this._handleInputPasswordConfirmation = this._handleInputPasswordConfirmation.bind(this);
@@ -45,16 +51,28 @@ class OrderComplete extends Component {
     const delivery = JSON.parse(localStorage.getItem('delivery'));
     //Gets payment option from local storage
     const paymentOption = JSON.parse(localStorage.getItem('paymentOption'));
+    //Gets total price from local storage
+    const totalPrice = JSON.parse(localStorage.getItem('totalPrice'));
+    //get Name
+    const name = JSON.parse(localStorage.getItem('name'));
+    //get Phone number
+    const phone_number = JSON.parse(localStorage.getItem('phone_number'));
     //get Email
     const email = JSON.parse(localStorage.getItem('email'));
     //get user_id
     const user_id = JSON.parse(localStorage.getItem('user_id'));
     //sets state of all variables
-    this.setState({ orderItems, delivery, paymentOption, email, user_id });
+    this.setState({ orderItems, delivery, paymentOption, name, phone_number, email, user_id });
 
   }
 
 
+  _handleInputName = event => {
+    this.setState( {name: event.target.value} );
+  }
+  _handleInputPhoneNumber = event => {
+    this.setState( {phone_number: event.target.value} );
+  }
   _handleInputEmail = event => {
     this.setState( {email: event.target.value} );
   }
@@ -67,34 +85,52 @@ class OrderComplete extends Component {
 
 
   _handleSubmit() {
-    axios.post(SERVER_URL, { user:
-      {id: this.state.user_id, email: this.state.email, password: this.state.password, password_confirmation: this.state.password_confirmation}
-    }).then( result => {
-      console.log( "user created", result );
 
-      axios.post(SERVER_URL_TOKEN, {
-        "auth": {
-          "email": this.state.email,
-          "password": this.state.password,
-        }
-      }).then( result => {
-        localStorage.setItem("jwt", result.data.jwt)
-        console.log(result.data);
-        console.log("user logged in");
-        this.props.history.push('/') //where is user taken
-      })
-      .catch( err => {
-        this.setState({ errorMessage: 'Invalid email or password'})
-      }) //error logic
+    const order_id = JSON.parse(localStorage.getItem('order_id'));
+    this.props.history.push('/') //where is user taken
+    localStorage.removeItem("orderItems");
+      localStorage.removeItem("delivery");
+      localStorage.removeItem("paymentOption");
 
 
-    }).catch( error => {
-      console.log( "user not created", error );
-    })
-
-
-
+    //make user
+    // axios.put(`http://localhost:3000/users/${this.state.user_id}`, { user:
+    //   {name: this.state.name, phone_number: this.state.phone_number, email: this.state.email, address: this.state.address, password: this.state.password, password_confirmation: this.state.password_confirmation, orders: {id: order_id}}
+    // }).then( result => {
+    //   console.log( "user updated", result.data.user_id );
+    //
+    //   this.logIn();
+    //   localStorage.removeItem("orderItems");
+    //   localStorage.removeItem("delivery");
+    //   localStorage.removeItem("paymentOption");
+    //
+    // }).catch( error => {
+    //   window.alert( "There is already a user with this email.");
+    // })
   }
+
+
+  // logIn = () => {
+  //   axios.post(SERVER_URL_TOKEN, {
+  //     "auth": {
+  //       "email": this.state.email,
+  //       "password": this.state.password,
+  //     }
+  //   }).then( result => {
+  //     console.log(result);
+  //     localStorage.setItem("jwt", result.data.jwt)
+  //     console.log("user logged in");
+  //     this.props.history.push('/') //where is user taken
+  //   })
+  //   .catch( err => {
+  //     this.setState({ errorMessage: 'Invalid email or password'})
+  //   }) //error logic
+  //
+  // }
+
+
+
+
 
   render() {
     return(
@@ -110,6 +146,20 @@ class OrderComplete extends Component {
             <h4>Sign up</h4>
 
             <Form id="forms" onSubmit={ this._handleSubmit }>
+
+            <Form.Row>
+              <Form.Group as={Col} controlId="formGridName">
+                <Form.Label>Name:</Form.Label>
+                <Form.Control type="text" placeholder="Enter Name" defaultValue={this.state.name} required onInput={ this._handleInputName } />
+              </Form.Group>
+            </Form.Row>
+
+            <Form.Row>
+              <Form.Group as={Col} controlId="formGridPhone">
+                <Form.Label>Phone number:</Form.Label>
+                <Form.Control type="text" placeholder="Enter phone number" defaultValue={this.state.phone_number} required onInput={ this._handleInputPhoneNumber } />
+              </Form.Group>
+            </Form.Row>
 
             <Form.Row>
               <Form.Group as={Col} controlId="formGridEmail">
