@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 // const SERVER_URL = "http://localhost:3000/users/current";
-const SERVER_URL = "restaurant-order-server.herokuapp.com/users/current";
+const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users/current";
 
 
 

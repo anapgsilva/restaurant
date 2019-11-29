@@ -45,6 +45,7 @@ const Cart = (props) => {
 
 
   let totalPrice = 0;
+
   totalPrice = Object.entries(orderItems).reduce(
     (result, [id, quantity]) => {
       const item = allProducts.find( p => p.id.toString() === id);

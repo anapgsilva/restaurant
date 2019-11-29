@@ -9,9 +9,9 @@ import babbologo from "../babbologo.png"
 import axios from 'axios';
 
 // const SERVER_URL = "http://localhost:3000/products";
-const SERVER_URL = "restaurant-order-server.herokuapp.com/products";
+const SERVER_URL = "https://restaurant-order-server.herokuapp.com/products";
 // const SERVER_URL_MAKEORDER = "http://localhost:3000/orders/generate_order";
-const SERVER_URL_MAKEORDER = "restaurant-order-server.herokuapp.com/orders/generate_order";
+const SERVER_URL_MAKEORDER = "https://restaurant-order-server.herokuapp.com/orders/generate_order";
 
 
 class CheckOut extends Component {
