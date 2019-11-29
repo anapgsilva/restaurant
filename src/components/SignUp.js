@@ -6,7 +6,8 @@ import babbo_signup_img from "../babbo_signup_img.jpg"
 
 // const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
 const SERVER_URL = "http://localhost:3000/users";
-
+const SERVER_URL_TOKEN = "http://localhost:3000/user/token";
+// const SERVER_URL_TOKEN = "https://restaurant-order-server.herokuapp.com/user/token";
 
 class SignUp extends Component {
   constructor () {
@@ -17,7 +18,8 @@ class SignUp extends Component {
       password: '',
       password_confirmation: '',
       phone_number: '',
-      address: ''
+      address: '',
+      errorMessage: ""
     }
   }
 
@@ -52,10 +54,31 @@ class SignUp extends Component {
       {name: this.state.name, email: this.state.email, password: this.state.password, password_confirmation: this.state.password_confirmation, phone_number: this.state.phone_number, address: this.state.address}
     }).then( result => {
       console.log( result );
+
+      this.logIn();
+
     }).catch( error => {
       console.log( error );
-    })
+    });
   }
+
+    logIn = () => {
+      axios.post(SERVER_URL_TOKEN, {
+        "auth": {
+          "email": this.state.email,
+          "password": this.state.password,
+        }
+      }).then( result => {
+        console.log(result);
+        localStorage.setItem("jwt", result.data.jwt)
+        console.log("user logged in");
+        this.props.history.push('/') //where is user taken
+      })
+      .catch( err => {
+        this.setState({ errorMessage: 'Invalid email or password'})
+      }) //error logic
+
+    }
 
   render() {
     return (
@@ -102,14 +125,14 @@ class SignUp extends Component {
             <Form.Row>
               <Form.Group as={Col} controlId="formGridPhone">
                 <Form.Label>Phone number:</Form.Label>
-                <Form.Control type="text" placeholder="000-000-000" required onInput={ this._handleInputPhoneNumber } />
+                <Form.Control type="text" placeholder="000-000-000" onInput={ this._handleInputPhoneNumber } />
               </Form.Group>
             </Form.Row>
 
             <Form.Row>
               <Form.Group as={Col} controlId="formGridAddress">
                 <Form.Label>Delivery address:</Form.Label>
-                <Form.Control type="text" placeholder="Street address" required onInput={ this._handleInputAddress} />
+                <Form.Control type="text" placeholder="Street address" onInput={ this._handleInputAddress} />
               </Form.Group>
             </Form.Row>
 

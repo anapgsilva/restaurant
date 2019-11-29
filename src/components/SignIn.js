@@ -4,8 +4,8 @@ import {withRouter} from 'react-router-dom';
 import {Form, Button, Col} from 'react-bootstrap';
 
 
-// const SERVER_URL = "http://localhost:3000/user/token";
-const SERVER_URL = "https://restaurant-order-server.herokuapp.com/user/token";
+const SERVER_URL = "http://localhost:3000/user/token";
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/user/token";
 
 
 class SignIn extends Component {

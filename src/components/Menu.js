@@ -7,8 +7,8 @@ import babbo_menu_img from "../babbo_menu_img.jpg"
 
 
 
-// const SERVER_URL = "http://localhost:3000/products.json";
-const SERVER_URL = "https://restaurant-order-server.herokuapp.com/products.json"
+const SERVER_URL = "http://localhost:3000/products.json";
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/products.json"
 
 
 class Menu extends Component {

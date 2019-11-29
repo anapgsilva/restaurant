@@ -5,8 +5,10 @@ import {Form, Col} from 'react-bootstrap';
 import axios from 'axios';
 
 
-const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
-// const SERVER_URL = "http://localhost:3000/users";
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
+const SERVER_URL = "http://localhost:3000/users";
+// const SERVER_URL_TOKEN = "http://localhost:3000/user/token";
+const SERVER_URL_TOKEN = "https://restaurant-order-server.herokuapp.com/user/token";
 
 
 class OrderComplete extends Component {
@@ -68,10 +70,30 @@ class OrderComplete extends Component {
     axios.post(SERVER_URL, { user:
       {id: this.state.user_id, email: this.state.email, password: this.state.password, password_confirmation: this.state.password_confirmation}
     }).then( result => {
-      console.log( "user created", result.data );
+      console.log( "user created", result );
+
+      axios.post(SERVER_URL_TOKEN, {
+        "auth": {
+          "email": this.state.email,
+          "password": this.state.password,
+        }
+      }).then( result => {
+        localStorage.setItem("jwt", result.data.jwt)
+        console.log(result.data);
+        console.log("user logged in");
+        this.props.history.push('/') //where is user taken
+      })
+      .catch( err => {
+        this.setState({ errorMessage: 'Invalid email or password'})
+      }) //error logic
+
+
     }).catch( error => {
       console.log( "user not created", error );
     })
+
+
+
   }
 
   render() {
