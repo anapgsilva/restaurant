@@ -1,3 +1,9 @@
+Restaurant Application
+
+Open it here: https://anapgsilva.github.io/restaurant_client/#/
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
