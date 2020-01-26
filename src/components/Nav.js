@@ -8,9 +8,6 @@ import {useHistory} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-
-
-
 const Nav = (props) => {
   const history = useHistory();
 
@@ -18,7 +15,7 @@ const Nav = (props) => {
     window.localStorage.clear();
     window.localStorage.removeItem('jwt');
     history.push("/");
-    // return props.setLoggedIn();
+    return props.setLoggedIn();
   }
 
   return (
