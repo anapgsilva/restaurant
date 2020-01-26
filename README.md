@@ -14,9 +14,9 @@ Page for the menu and ordering cart.
 
 The front end of this application was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). [Font Awesome](https://fontawesome.com/) was also used for icons.
 
-[STRIPE](https://stripe.com/docs/development) was integrated for the card payment method.
+[STRIPE](https://stripe.com/docs/development) was integrated for the card payment method, using the package [react-stripe-checkout](https://www.npmjs.com/package/react-stripe-checkout).
 
-The back end was built on Ruby on Rails, using JWT and knock for user authentication.
+The back end was built on Ruby on Rails, using JWT and [Knock](https://dev.to/amckean12/user-authentication-for-a-rails-api-and-a-react-client-part-1-server-side-3fej) for user authentication.
 
 Rack-cors was used for communication between front and back end.
 
