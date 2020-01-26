@@ -2,9 +2,17 @@
 
 [Open it here.](https://anapgsilva.github.io/restaurant_client/#/)
 
-A version of Menu Log for an individual restaurant. Users can make orders for pick-up or delivery, with the optional choice of creating a user account. Website built using REACT.js and Ruby on Rails. Deployed to Heroku and Github Pages.
+Great fun building this group project part of the Software Engineering Immersive course at General Assembly Sydney. Enjoyed the most building both order and check-out components.
+
+This website is a version of Menu Log for an individual restaurant. Users can make orders for pick-up or delivery, with the optional choice of creating a user account. Website built using REACT.js and Ruby on Rails. Deployed to Heroku and Github Pages.
+
 
 ## Preview
+
+User home page, where a record of past orders is kept.
+
+<img src="https://anapgsilva.github.io/restaurant_client/babbo-home.png" width="500">
+
 Page for the menu and ordering cart.
 
 <img src="https://anapgsilva.github.io/restaurant_client/babbo.png" width="500">
