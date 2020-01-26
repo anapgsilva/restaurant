@@ -18,7 +18,7 @@ The front end of this application was bootstrapped with [Create React App](https
 
 The back end was built on Ruby on Rails, using [Knock](https://dev.to/amckean12/user-authentication-for-a-rails-api-and-a-react-client-part-1-server-side-3fej) for user authentication (Rails JWT gem version).
 
-Rack-cors was used for communication between front and back end.
+[Rack-cors](https://github.com/cyu/rack-cors) was used for communication between front and back end.
 
 
 ### Available Scripts
