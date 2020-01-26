@@ -18,7 +18,7 @@ This website is a version of Menu Log for an individual restaurant. Users can ma
 <img src="https://anapgsilva.github.io/restaurant_client/babbo.png" width="500">
 
 
-### Add-ons
+### Dependencies
 
 The front end of this application was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). [Font Awesome](https://fontawesome.com/) was also used for icons.
 
