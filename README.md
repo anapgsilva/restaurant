@@ -7,16 +7,16 @@ A version of Menu Log for an individual restaurant. Users can make orders for pi
 ## Preview
 Page for the menu and ordering cart.
 
-<img src="https://anapgsilva.github.io/restaurant_client/public/babbo.png" width="500">
+<img src="https://anapgsilva.github.io/restaurant_client/babbo.png" width="500">
 
 
 ### Add-ons
 
 The front end of this application was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). [Font Awesome](https://fontawesome.com/) was also used for icons.
 
-[STRIPE](https://stripe.com/docs/development) was integrated for the card payment method, using the package [react-stripe-checkout](https://www.npmjs.com/package/react-stripe-checkout).
+[STRIPE](https://stripe.com/docs/development) was integrated for the card payment method, using the npm package [react-stripe-checkout](https://www.npmjs.com/package/react-stripe-checkout) and the rails gem stripe.
 
-The back end was built on Ruby on Rails, using JWT and [Knock](https://dev.to/amckean12/user-authentication-for-a-rails-api-and-a-react-client-part-1-server-side-3fej) for user authentication.
+The back end was built on Ruby on Rails, using [Knock](https://dev.to/amckean12/user-authentication-for-a-rails-api-and-a-react-client-part-1-server-side-3fej) for user authentication (Rails JWT gem version).
 
 Rack-cors was used for communication between front and back end.
 
