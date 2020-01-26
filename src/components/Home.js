@@ -43,6 +43,7 @@ class Home extends Component {
 
     } else {
       this.setState({orders: []});
+      this.setState({loggedIn: false});
     }
 
     this.setLoggedIn();
