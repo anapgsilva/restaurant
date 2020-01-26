@@ -15,7 +15,8 @@ const Nav = (props) => {
   const history = useHistory();
 
   const logoutUser = () => {
-    localStorage.clear();
+    window.localStorage.clear();
+    window.localStorage.removeItem('jwt');
     history.push("/");
     // return props.setLoggedIn();
   }
