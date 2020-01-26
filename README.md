@@ -2,10 +2,6 @@
 
 [Open it here.](https://anapgsilva.github.io/restaurant_client/#/)
 
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-
 A version of Menu Log for an individual restaurant. Users can make orders for pick-up or delivery, with the optional choice of creating a user account. Website built using REACT.js and Ruby on Rails. Deployed to Heroku and Github Pages.
 
 ## Preview
