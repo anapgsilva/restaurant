@@ -7,7 +7,7 @@ A version of Menu Log for an individual restaurant. Users can make orders for pi
 ## Preview
 Page for the menu and ordering cart.
 
-<img src="https://github.com/anapgsilva/restaurant_client/babbo.png" width="500">
+<img src="https://github.com/anapgsilva/restaurant_client/public/babbo.png" width="500">
 
 
 ### Add-ons
