@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import babbologo from "../babbologo.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import DropdownButton from 'react-bootstrap/DropdownButton';
 import {DropdownButton, Navbar} from 'react-bootstrap';
 import SignIn from './SignIn';
 import {useHistory} from 'react-router-dom';

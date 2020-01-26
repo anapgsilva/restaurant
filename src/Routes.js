@@ -13,11 +13,8 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faHeart, faUser } from '@fortawesome/free-solid-svg-icons';
 
 library.add(fab, faHeart, faUser);
-//This is goign to replace App.js
 
-
-
-
+//This is going to replace App.js
 //This is not a component: just a collection of JSX
 
 const Routes = (
