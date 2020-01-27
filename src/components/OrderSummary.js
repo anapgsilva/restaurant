@@ -18,6 +18,8 @@ class OrderSummary extends Component {
       time: '',
       total: 0
     }
+    this.fetchProducts = this.fetchProducts.bind(this);
+    this.calculateTotal = this.calculateTotal.bind(this);
   }
 
   componentDidMount() {

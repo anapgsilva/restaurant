@@ -25,7 +25,7 @@ class CheckOut extends Component {
       allProducts: [],
       delivery: '',
       paymentOption: "Cash",
-      totalPrice: 0,
+      totalPrice: '',
       time: '',
       name: '',
       phone_number: '',
@@ -73,6 +73,7 @@ class CheckOut extends Component {
     axios.get(SERVER_URL).then( (results) => {
       const allProducts = results.data;
       this.setState({allProducts: allProducts});
+      this.calculateTotal(this.state.delivery, allProducts, this.state.orderItems);
     })
   }
 
@@ -97,6 +98,7 @@ class CheckOut extends Component {
         0);
     }
     const totalPrice = delivery ? total += 5 : total;
+    console.log('Total price calculated', totalPrice);
     this.setState({totalPrice});
     localStorage.setItem('totalPrice', JSON.stringify(totalPrice) );
   }
@@ -166,7 +168,7 @@ class CheckOut extends Component {
           user_id: user_id})
         .then( result => {
           localStorage.setItem('user_id', JSON.stringify(user_id));
-
+          console.log('totalPrice already user', totalPrice);
           this.props.history.push('/ordercomplete');
         })
         .catch( error => {
