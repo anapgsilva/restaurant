@@ -150,8 +150,11 @@ class CheckOut extends Component {
         const newAddress = this.state.address;
         if (newAddress !== null || newAddress !== "" ) {
           //update user details
-          axios.put(`${SERVER_URL_USERS}/${user_id}`, {address: newAddress}
-          ).then(res => {
+          axios.put(`${SERVER_URL_USERS}/${user_id}`, {
+            name: this.state.name,
+            phone_number: this.state.phone_number,
+            address: newAddress
+          }).then(res => {
             console.log('saved address? ', res.data);
           }).catch(err => console.log('address not saved', err));
         }
@@ -224,7 +227,7 @@ class CheckOut extends Component {
               <div>
               {!this.state.userInfo ?
                 <div><h4>Customer contact details:</h4>
-                <UserForm onSubmit={this._handleUserInfo} delivery={this.state.delivery} name={this.state.name} phoneNumber={this.state.phone_number} email={this.state.email} address={this.state.email} /></div>
+                <UserForm onSubmit={this._handleUserInfo} delivery={this.state.delivery} name={this.state.name} phoneNumber={this.state.phone_number} email={this.state.email} address={this.state.address} /></div>
                 : ""}
               </div> : "" }
 

@@ -99,6 +99,7 @@ class OrderComplete extends Component {
       name: this.state.name, phone_number: this.state.phone_number, email: this.state.email, address: this.state.address, password: this.state.password, password_confirmation: this.state.password_confirmation
       }})
     .then( result => {
+      console.log('user created');
       this.logIn();
 
     }).catch( error => {
@@ -115,6 +116,7 @@ class OrderComplete extends Component {
       }
     }).then( result => {
       const jwt = result.data.jwt;
+      console.log('jwt', jwt);
       localStorage.setItem("jwt", jwt);
 
       //axios request to get the user_id
@@ -143,6 +145,7 @@ class OrderComplete extends Component {
     })
     .catch( err => {
       this.setState({ errorMessage: 'Invalid email or password'})
+      console.log(err);
     }) //error logic
   }
 
