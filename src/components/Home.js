@@ -20,8 +20,8 @@ class Home extends Component {
       orders:[],
       loggedIn: false
     };
+    this.setLoggedIn = this.setLoggedIn.bind(this);
   }
-
 
   componentDidMount(){
     this.setLoggedIn();
