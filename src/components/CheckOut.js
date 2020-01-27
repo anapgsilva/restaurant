@@ -8,10 +8,12 @@ import {withRouter} from 'react-router-dom';
 import babbologo from "../babbologo.png"
 import axios from 'axios';
 
-// const SERVER_URL = "http://localhost:3000/products";
-const SERVER_URL = "https://restaurant-order-server.herokuapp.com/products";
-// const SERVER_URL_MAKEORDER = "http://localhost:3000/orders/generate_order";
-const SERVER_URL_MAKEORDER = "https://restaurant-order-server.herokuapp.com/orders/generate_order";
+const SERVER_URL = "http://localhost:3000/products";
+const SERVER_URL_MAKEORDER = "http://localhost:3000/orders/generate_order";
+const SERVER_URL_USERS = "http://localhost:3000/users";
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/products";
+// const SERVER_URL_MAKEORDER = "https://restaurant-order-server.herokuapp.com/orders/generate_order";
+// const SERVER_URL_USERS = "https://restaurant-order-server.herokuapp.com/users";
 
 
 class CheckOut extends Component {
@@ -38,18 +40,30 @@ class CheckOut extends Component {
     this.updateTime = this.updateTime.bind(this);
     this.createOrder = this.createOrder.bind(this);
     this._handleUserInfo = this._handleUserInfo.bind(this);
-    // this.render = this.render.bind(this);
+    this.fetchProducts = this.fetchProducts.bind(this);
+    this.calculateTotal = this.calculateTotal.bind(this);
   }
 
   componentDidMount() {
     //Gets shopping cart from local storage
     const orderItems = JSON.parse(localStorage.getItem('orderItems'));
     //Gets delivery status from local storage
-    const delivery = JSON.parse(localStorage.getItem('delivery'));
+    let delivery = JSON.parse(localStorage.getItem('delivery'));
+    if (delivery !== true || delivery !== false) {
+      delivery = false;
+    }
     //Gets payment option from local storage
-    const paymentOption = JSON.parse(localStorage.getItem('paymentOption'));
+    let paymentOption = localStorage.getItem('paymentOption');
+    if (paymentOption !== 'Cash' || paymentOption !== 'Card') {
+      paymentOption = 'Cash';
+    }
+    const name = JSON.parse(localStorage.getItem('name'));
+    const phone_number = JSON.parse(localStorage.getItem('phone_number'));
+    const email = JSON.parse(localStorage.getItem('email'));
+    const address = JSON.parse(localStorage.getItem('address'));
+
     //sets state of all variables
-    this.setState({ orderItems, delivery, paymentOption });
+    this.setState({ orderItems, delivery, paymentOption, name, phone_number, email, address });
 
     this.fetchProducts();
   }
@@ -63,14 +77,12 @@ class CheckOut extends Component {
   }
 
   onRadioChange(event) {
-    console.log(event.target.value);
     const value = event.target.value;
     //get value of button and set state
     const delivery = value === 'Delivery';
     this.setState({delivery});
     //sets delivery state in local storage
-    localStorage.setItem('delivery', JSON.stringify({delivery}));
-    console.log(delivery);
+    localStorage.setItem('delivery', JSON.stringify(delivery));
     this.calculateTotal(delivery, this.state.allProducts, this.state.orderItems);
   }
 
@@ -85,40 +97,37 @@ class CheckOut extends Component {
         0);
     }
     const totalPrice = delivery ? total += 5 : total;
-    console.log(totalPrice);
-    this.setState({totalPrice: totalPrice});
+    this.setState({totalPrice});
     localStorage.setItem('totalPrice', JSON.stringify(totalPrice) );
   }
 
 
   updateTime(timeOrder) {
-    console.log(timeOrder);
-    // //save stime in state
+    //saves time in state
     this.setState({time: timeOrder});
     //save time to local storage
     const time = JSON.stringify(timeOrder);
     localStorage.setItem('time', time);
-    // this.render();
   }
 
   _handleUserInfo(userInfo){
-    console.log("userInfo", userInfo);
     this.setState({user_id: userInfo[0], name: userInfo[1], phone_number: userInfo[2], email: userInfo[3], address: userInfo[4], userInfo: true});
 
-    localStorage.setItem('name', JSON.stringify(userInfo[1]));
-    localStorage.setItem('phone_number', JSON.stringify(userInfo[2]));
-    localStorage.setItem('email', JSON.stringify(userInfo[3]));
+    if (userInfo[0] === ''){
+      localStorage.setItem('name', JSON.stringify(userInfo[1]));
+      localStorage.setItem('phone_number', JSON.stringify(userInfo[2]));
+      localStorage.setItem('email', JSON.stringify(userInfo[3]));
+      localStorage.setItem('address', JSON.stringify(userInfo[4]));
+    }
+
   }
 
   _handleChange(event) {
     //sets state of payment type
-    this.setState({paymentOption: event.target.value})
+    this.setState({paymentOption: event.target.value});
     //saves payment type to local storage
-    let paymentStatus = JSON.stringify(event.target.value);
-    localStorage.setItem('paymentOption', JSON.stringify(paymentStatus));
+    localStorage.setItem('paymentOption', JSON.stringify(event.target.value));
   }
-
-
 
   _handleCardDetails(token) {
     if (token && this.state.userInfo) {
@@ -130,48 +139,46 @@ class CheckOut extends Component {
 
   createOrder() {
     if (this.state.userInfo) {
-      console.log("user details all in");
-      console.log("will make request");
 
       //send data to back to make order, user, line-items
       const orderItems = this.state.orderItems;
       const kind = this.state.delivery ? "Delivery" : "Pick-up";
-      const total_price = this.state.totalPrice;
+      const totalPrice = this.state.totalPrice;
       const user_id = this.state.user_id;
-      const name = this.state.name;
-      const phone_number = this.state.phone_number;
-      const email = this.state.email;
-      const address = this.state.address;
 
-      console.log("user if a string?", user_id);
+      if (user_id !== '') {
+        const newAddress = this.state.address;
+        if (newAddress !== null || newAddress !== "" ) {
+          //update user details
+          axios.put(`${SERVER_URL_USERS}/${user_id}`, {address: newAddress}
+          ).then(res => {
+            console.log('saved address? ', res.data);
+          }).catch(err => console.log('address not saved', err));
+        }
 
-      axios.post(SERVER_URL_MAKEORDER, {
-        orderItems: orderItems,
-        kind: kind,
-        total_price: total_price,
-        user_id: user_id,
-        // name: name,
-        // phone_number: phone_number,
-        // email: email,
-        // address: address
-      }).then( result => {
-        console.log( "order created", result.data );
-        localStorage.setItem('order_id', JSON.stringify(result.data.id));
+        axios.post(SERVER_URL_MAKEORDER, {
+          orderItems: orderItems,
+          kind: kind,
+          total_price: totalPrice,
+          user_id: user_id})
+        .then( result => {
+          localStorage.setItem('user_id', JSON.stringify(user_id));
 
-        const user_id = result.data.user_id;
-        this.setState({user_id: user_id});
-        localStorage.setItem('user_id', user_id);
+          this.props.history.push('/ordercomplete');
+        })
+        .catch( error => {
+          window.alert("Order submission failed. Please try again.");
+        });
+      }
+      else {
+        localStorage.setItem('orderItems', JSON.stringify(orderItems));
+        localStorage.setItem('totalPrice', JSON.stringify(totalPrice));
         this.props.history.push('/ordercomplete');
-
-      }).catch( error => {
-        window.alert("Order submission failed. Please try again.");
-      });
-
+      }
     }
     else {
       window.alert("Please fill in all details required for your order.")
     }
-
 
   }
 
@@ -217,7 +224,7 @@ class CheckOut extends Component {
               <div>
               {!this.state.userInfo ?
                 <div><h4>Customer contact details:</h4>
-                <UserForm onSubmit={this._handleUserInfo} delivery={this.state.delivery} /></div>
+                <UserForm onSubmit={this._handleUserInfo} delivery={this.state.delivery} name={this.state.name} phoneNumber={this.state.phone_number} email={this.state.email} address={this.state.email} /></div>
                 : ""}
               </div> : "" }
 

@@ -6,10 +6,8 @@ import babbo_img_2 from "../babbo_img_2.jpg"
 import babbo_img_3 from "../babbo_img_3.jpg"
 import axios from "axios";
 
-const SERVER_URL_CurrentUser = "https://restaurant-order-server.herokuapp.com/users/current";
-// const SERVER_URL_CurrentUser = "http://localhost:3000/users/current";
-
-
+// const SERVER_URL_CurrentUser = "https://restaurant-order-server.herokuapp.com/users/current";
+const SERVER_URL_CurrentUser = "http://localhost:3000/users/current";
 
 
 class Home extends Component {
@@ -28,7 +26,7 @@ class Home extends Component {
   }
 
   setLoggedIn() {
-    const jwt = window.localStorage.getItem('jwt');
+    const jwt = localStorage.getItem('jwt');
 
     if (jwt) {
       this.setState({loggedIn: true});
@@ -36,6 +34,7 @@ class Home extends Component {
         headers:{
           Authorization: "Bearer " + jwt
         }}).then( result => {
+
         if (Object.keys(result.data).length > 0) {
           this.setState({orders: result.data.orders});
           this.setState({user_id: result.data.id});

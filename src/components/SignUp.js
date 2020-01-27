@@ -4,10 +4,11 @@ import Nav from './Nav';
 import {Form, Col} from 'react-bootstrap';
 import babbo_signup_img from "../babbo_signup_img.jpg"
 
-const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
-// const SERVER_URL = "http://localhost:3000/users";
-// const SERVER_URL_TOKEN = "http://localhost:3000/user/token";
-const SERVER_URL_TOKEN = "https://restaurant-order-server.herokuapp.com/user/token";
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
+// const SERVER_URL_TOKEN = "https://restaurant-order-server.herokuapp.com/user/token";
+const SERVER_URL = "http://localhost:3000/users";
+const SERVER_URL_TOKEN = "http://localhost:3000/user/token";
+
 
 class SignUp extends Component {
   constructor () {
@@ -53,7 +54,6 @@ class SignUp extends Component {
     axios.post(SERVER_URL, { user:
       {name: this.state.name, email: this.state.email, password: this.state.password, password_confirmation: this.state.password_confirmation, phone_number: this.state.phone_number, address: this.state.address}
     }).then( result => {
-      console.log( result );
 
       this.logIn();
 
@@ -69,9 +69,8 @@ class SignUp extends Component {
           "password": this.state.password,
         }
       }).then( result => {
-        console.log(result);
+        console.log('result.data when we login', result.data);
         localStorage.setItem("jwt", result.data.jwt)
-        console.log("user logged in");
         this.props.history.push('/') //where is user taken
       })
       .catch( err => {

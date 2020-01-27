@@ -4,8 +4,8 @@ import {withRouter} from 'react-router-dom';
 import {Form, Button, Col} from 'react-bootstrap';
 
 
-// const SERVER_URL = "http://localhost:3000/user/token";
-const SERVER_URL = "https://restaurant-order-server.herokuapp.com/user/token";
+const SERVER_URL = "http://localhost:3000/user/token";
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/user/token";
 
 
 class SignIn extends Component {
@@ -41,7 +41,6 @@ class SignIn extends Component {
       this.props.setLoggedIn();
     })
     .catch( err => {
-      window.alert("Invalid email and/or password");
       this.setState({ errorMessage: 'Invalid email or password'});
     }) //error logic
 

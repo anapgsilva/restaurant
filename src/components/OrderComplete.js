@@ -5,17 +5,22 @@ import {Form, Col} from 'react-bootstrap';
 import axios from 'axios';
 
 
-// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
-// const SERVER_URL = `http://localhost:3000/users/${this.state.user_id}`;
-// const SERVER_URL_TOKEN = "http://localhost:3000/user/token";
-const SERVER_URL_TOKEN = "https://restaurant-order-server.herokuapp.com/user/token";
+const SERVER_URL_TOKEN = "http://localhost:3000/user/token";
+const SERVER_URL_USERS = "http://localhost:3000/users";
+const SERVER_URL_CurrentUser = "http://localhost:3000/users/current";
+const SERVER_URL_MAKEORDER = "http://localhost:3000/orders/generate_order";
 
+
+// const SERVER_URL_TOKEN = "https://restaurant-order-server.herokuapp.com/user/token";
+// const SERVER_URL_USERS = "https://restaurant-order-server.herokuapp.com/users";
+// const SERVER_URL_CurrentUser = "https://restaurant-order-server.herokuapp.com/users/current";
+// const SERVER_URL_MAKEORDER = "https://restaurant-order-server.herokuapp.com/orders/generate_order";
 
 
 class OrderComplete extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       orderItems: {},
       allProducts: [],
@@ -26,6 +31,7 @@ class OrderComplete extends Component {
       name: '',
       phone_number: '',
       email: "",
+      address: "",
       user_id: "",
       password: "",
       password_confirmation: ''
@@ -36,13 +42,22 @@ class OrderComplete extends Component {
     this._handleInputPassword = this._handleInputPassword.bind(this);
     this._handleInputPasswordConfirmation = this._handleInputPasswordConfirmation.bind(this);
     this._handleSubmit = this._handleSubmit.bind(this);
+    this.logIn = this.logIn.bind(this);
   }
 
   componentDidMount() {
     //Check if user logged in
     const jwt = window.localStorage.getItem('jwt');
+
     if (jwt) {
       this.setState({loggedIn: true});
+    }
+    else {
+      const name = JSON.parse(localStorage.getItem('name'));
+      const phone_number = JSON.parse(localStorage.getItem('phone_number'));
+      const email = JSON.parse(localStorage.getItem('email'));
+      const address = JSON.parse(localStorage.getItem('address'));
+      this.setState({ name, phone_number, email, address});
     }
 
     //Gets shopping cart from local storage
@@ -50,19 +65,12 @@ class OrderComplete extends Component {
     //Gets delivery status from local storage
     const delivery = JSON.parse(localStorage.getItem('delivery'));
     //Gets payment option from local storage
-    const paymentOption = JSON.parse(localStorage.getItem('paymentOption'));
+    const paymentOption = localStorage.getItem('paymentOption');
     //Gets total price from local storage
     const totalPrice = JSON.parse(localStorage.getItem('totalPrice'));
-    //get Name
-    const name = JSON.parse(localStorage.getItem('name'));
-    //get Phone number
-    const phone_number = JSON.parse(localStorage.getItem('phone_number'));
-    //get Email
-    const email = JSON.parse(localStorage.getItem('email'));
-    //get user_id
-    const user_id = JSON.parse(localStorage.getItem('user_id'));
+
     //sets state of all variables
-    this.setState({ orderItems, delivery, paymentOption, name, phone_number, email, user_id });
+    this.setState({ orderItems, delivery, paymentOption, totalPrice});
 
   }
 
@@ -86,50 +94,57 @@ class OrderComplete extends Component {
 
   _handleSubmit() {
 
-    const order_id = JSON.parse(localStorage.getItem('order_id'));
-    this.props.history.push('/') //where is user taken
-    localStorage.removeItem("orderItems");
-      localStorage.removeItem("delivery");
-      localStorage.removeItem("paymentOption");
-
-
     //make user
-    // axios.put(`http://localhost:3000/users/${this.state.user_id}`, { user:
-    //   {name: this.state.name, phone_number: this.state.phone_number, email: this.state.email, address: this.state.address, password: this.state.password, password_confirmation: this.state.password_confirmation, orders: {id: order_id}}
-    // }).then( result => {
-    //   console.log( "user updated", result.data.user_id );
-    //
-    //   this.logIn();
-    //   localStorage.removeItem("orderItems");
-    //   localStorage.removeItem("delivery");
-    //   localStorage.removeItem("paymentOption");
-    //
-    // }).catch( error => {
-    //   window.alert( "There is already a user with this email.");
-    // })
+    axios.post(SERVER_URL_USERS, {user: {
+      name: this.state.name, phone_number: this.state.phone_number, email: this.state.email, address: this.state.address, password: this.state.password, password_confirmation: this.state.password_confirmation
+      }})
+    .then( result => {
+      this.logIn();
+
+    }).catch( error => {
+      window.alert( "There is already a user with this email.");
+    })
   }
 
 
-  // logIn = () => {
-  //   axios.post(SERVER_URL_TOKEN, {
-  //     "auth": {
-  //       "email": this.state.email,
-  //       "password": this.state.password,
-  //     }
-  //   }).then( result => {
-  //     console.log(result);
-  //     localStorage.setItem("jwt", result.data.jwt)
-  //     console.log("user logged in");
-  //     this.props.history.push('/') //where is user taken
-  //   })
-  //   .catch( err => {
-  //     this.setState({ errorMessage: 'Invalid email or password'})
-  //   }) //error logic
-  //
-  // }
+  logIn = () => {
+    axios.post(SERVER_URL_TOKEN, {
+      "auth": {
+        "email": this.state.email,
+        "password": this.state.password,
+      }
+    }).then( result => {
+      const jwt = result.data.jwt;
+      localStorage.setItem("jwt", jwt);
 
+      //axios request to get the user_id
+      axios.get(SERVER_URL_CurrentUser , {
+        headers:{
+          Authorization: "Bearer " + jwt
+        }}).then( result => {
 
+          const user_id = result.data.id;
+          const kind = this.state.delivery ? "Delivery" : "Pick-up";
 
+          //axios request to save order
+          axios.post(SERVER_URL_MAKEORDER, {
+            orderItems: this.state.orderItems,
+            kind: kind,
+            total_price: this.state.totalPrice,
+            user_id: user_id
+          }).then( res => {
+            localStorage.removeItem("orderItems");
+            localStorage.removeItem("delivery");
+            localStorage.removeItem("paymentOption");
+            this.props.history.push('/'); //where is user taken
+          })
+          .catch(err => console.log(err));
+      });
+    })
+    .catch( err => {
+      this.setState({ errorMessage: 'Invalid email or password'})
+    }) //error logic
+  }
 
 
   render() {

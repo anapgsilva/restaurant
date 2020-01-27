@@ -4,8 +4,8 @@ import {Form, Button, Col} from 'react-bootstrap';
 import axios from 'axios';
 
 
-// const SERVER_URL = "http://localhost:3000/users/current";
-const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users/current";
+const SERVER_URL = "http://localhost:3000/users/current";
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users/current";
 
 
 
@@ -31,25 +31,33 @@ class UserForm extends Component {
   componentDidMount(){
     const jwt = window.localStorage.getItem('jwt');
 
-    try {
-      axios.get(SERVER_URL, {
-        headers:{
-          Authorization: "Bearer " + jwt
-        }}).then( res => {
-        // set in state and display
-        this.setState({user_id: res.data.id})
-        this.setState({name: res.data.name});
-        this.setState({phone_number: res.data.phone_number});
-        this.setState({email: res.data.email});
-        this.setState({address: res.data.address});
-      })
-    } catch(error) {
-      this.setState({user_id: "", name: "", phone_number: "", email: "", address: ""});
-    };
+    if (jwt) {
+      try {
+        axios.get(SERVER_URL, {
+          headers:{
+            Authorization: "Bearer " + jwt
+          }}).then( res => {
+            // set in state and display
+            this.setState({user_id: res.data.id})
+            localStorage.setItem('user_id', JSON.stringify(res.data.id));
+            this.setState({name: res.data.name});
+            this.setState({phone_number: res.data.phone_number});
+            this.setState({email: res.data.email});
+            this.setState({address: res.data.address});
+          })
+        } catch(error) {
+          this.setState({user_id: "", name: "", phone_number: "", email: "", address: ""});
+        };
 
+    } else {
+      const name = this.props.name;
+      const phone_number = this.props.phoneNumber;
+      const email = this.props.email;
+      const address = this.props.address;
 
+      this.setState({name, phone_number, email, address});
+    }
   }
-
 
   _handleInputName = event => {
     this.setState( {name: event.target.value});

@@ -45,21 +45,14 @@ const Cart = (props) => {
 
 
   let totalPrice = 0;
-
-  // totalPrice = Object.entries(orderItems).reduce(
-  //   (result, [id, quantity]) => {
-  //     const item = allProducts.find( p => p.id.toString() === id);
-  //     return result + (item.price * quantity);
-  //   },
-  //   0);
-  
-  Object.entries(orderItems).map( ([id, quantity]) => {
-    allProducts.find( p => {
-      if (p.id.toString() === id) {
-       totalPrice += p.price * quantity;
-      }
-    })}
-  );
+  if (Object.entries(orderItems).length > 0 && allProducts.length > 0) {
+    totalPrice = Object.entries(orderItems).reduce(
+      (result, [id, quantity]) => {
+        const item = allProducts.find( p => p.id.toString() === id);
+        return result + (item.price * quantity);
+      },
+      0);
+  }
 
 
   return (

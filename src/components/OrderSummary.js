@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import axios from 'axios';
 
 
-const SERVER_URL = "https://restaurant-order-server.herokuapp.com/products.json"
-// const SERVER_URL = "http://localhost:3000/products.json"
+// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/products.json"
+const SERVER_URL = "http://localhost:3000/products.json"
 
 
 class OrderSummary extends Component {
@@ -32,9 +32,9 @@ class OrderSummary extends Component {
       //Gets shopping cart from local storage
       const orderItems = JSON.parse(localStorage.getItem('orderItems'));
       //Gets delivery status from local storage
-      const delivery = this.props.deliveryStatus? this.props.deliveryStatus : JSON.parse(localStorage.getItem('delivery'));
+      const delivery = this.props.deliveryStatus? this.props.deliveryStatus : localStorage.getItem('delivery');
       //Gets payment option from local storage
-      const paymentOption = JSON.parse(localStorage.getItem('paymentOption'));
+      const paymentOption = localStorage.getItem('paymentOption');
       //get time for order
       const time = this.props.time? this.props.time : JSON.parse(localStorage.getItem('time'));
 
@@ -55,7 +55,6 @@ class OrderSummary extends Component {
         },
         0);
     }
-    console.log("in order summary", total);
     return total;
   }
 
