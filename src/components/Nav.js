@@ -49,7 +49,7 @@ const Nav = (props) => {
                   id="dropdown-item-button"
                   title="Log In"
                 >
-                <SignIn />
+                <SignIn setLoggedIn={props.setLoggedIn} />
                 </DropdownButton>
             </div>
           </li>

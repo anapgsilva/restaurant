@@ -24,6 +24,10 @@ class Home extends Component {
 
 
   componentDidMount(){
+    this.setLoggedIn();
+  }
+
+  setLoggedIn() {
     const jwt = window.localStorage.getItem('jwt');
 
     if (jwt) {
@@ -35,7 +39,7 @@ class Home extends Component {
         if (Object.keys(result.data).length > 0) {
           this.setState({orders: result.data.orders});
           this.setState({user_id: result.data.id});
-
+          this.setState({loggedIn: true});
           const user_id = JSON.stringify(result.data.id);
           localStorage.setItem('user_id', user_id);
         };
@@ -45,22 +49,12 @@ class Home extends Component {
       this.setState({orders: []});
       this.setState({loggedIn: false});
     }
-
-    this.setLoggedIn();
-  }
-
-  setLoggedIn() {
-    if (window.localStorage.getItem('jwt')) {
-      this.setState({loggedIn: true});
-    } else {
-      this.setState({loggedIn: false});
-    }
   }
 
   render() {
     return (
       <div>
-        <Nav  />
+        <Nav setLoggedIn={this.setLoggedIn} />
 
         <Carousel>
           <Carousel.Item>
