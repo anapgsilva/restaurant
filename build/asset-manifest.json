@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/restaurant_client/static/css/main.3c41d961.chunk.css",
-    "main.js": "/restaurant_client/static/js/main.e0e3a1e7.chunk.js",
-    "main.js.map": "/restaurant_client/static/js/main.e0e3a1e7.chunk.js.map",
+    "main.js": "/restaurant_client/static/js/main.242806fa.chunk.js",
+    "main.js.map": "/restaurant_client/static/js/main.242806fa.chunk.js.map",
     "runtime-main.js": "/restaurant_client/static/js/runtime-main.6d91e1b3.js",
     "runtime-main.js.map": "/restaurant_client/static/js/runtime-main.6d91e1b3.js.map",
     "static/css/2.2ec3db0d.chunk.css": "/restaurant_client/static/css/2.2ec3db0d.chunk.css",
-    "static/js/2.03efeb89.chunk.js": "/restaurant_client/static/js/2.03efeb89.chunk.js",
-    "static/js/2.03efeb89.chunk.js.map": "/restaurant_client/static/js/2.03efeb89.chunk.js.map",
+    "static/js/2.ecb2b129.chunk.js": "/restaurant_client/static/js/2.ecb2b129.chunk.js",
+    "static/js/2.ecb2b129.chunk.js.map": "/restaurant_client/static/js/2.ecb2b129.chunk.js.map",
     "index.html": "/restaurant_client/index.html",
-    "precache-manifest.9663a16131fd0996af488320bf9e0764.js": "/restaurant_client/precache-manifest.9663a16131fd0996af488320bf9e0764.js",
+    "precache-manifest.e9765e182406b6f5f956a06d836dc2ef.js": "/restaurant_client/precache-manifest.e9765e182406b6f5f956a06d836dc2ef.js",
     "service-worker.js": "/restaurant_client/service-worker.js",
     "static/css/2.2ec3db0d.chunk.css.map": "/restaurant_client/static/css/2.2ec3db0d.chunk.css.map",
     "static/css/main.3c41d961.chunk.css.map": "/restaurant_client/static/css/main.3c41d961.chunk.css.map",
-    "static/js/2.03efeb89.chunk.js.LICENSE": "/restaurant_client/static/js/2.03efeb89.chunk.js.LICENSE",
+    "static/js/2.ecb2b129.chunk.js.LICENSE": "/restaurant_client/static/js/2.ecb2b129.chunk.js.LICENSE",
     "static/media/babbo_img_1.jpg": "/restaurant_client/static/media/babbo_img_1.5b5f1b56.jpg",
     "static/media/babbo_img_2.jpg": "/restaurant_client/static/media/babbo_img_2.8023ec85.jpg",
     "static/media/babbo_img_3.jpg": "/restaurant_client/static/media/babbo_img_3.a51d60d8.jpg",
@@ -23,8 +23,8 @@
   "entrypoints": [
     "static/js/runtime-main.6d91e1b3.js",
     "static/css/2.2ec3db0d.chunk.css",
-    "static/js/2.03efeb89.chunk.js",
+    "static/js/2.ecb2b129.chunk.js",
     "static/css/main.3c41d961.chunk.css",
-    "static/js/main.e0e3a1e7.chunk.js"
+    "static/js/main.242806fa.chunk.js"
   ]
 }
