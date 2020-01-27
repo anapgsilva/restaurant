@@ -128,8 +128,6 @@ class OrderComplete extends Component {
           const user_id = result.data.id;
           const kind = this.state.delivery ? "Delivery" : "Pick-up";
 
-          console.log('totalPrice new user', this.state.totalPrice);
-
           //axios request to save order
           axios.post(SERVER_URL_MAKEORDER, {
             orderItems: this.state.orderItems,
