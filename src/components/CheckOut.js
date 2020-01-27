@@ -8,12 +8,12 @@ import {withRouter} from 'react-router-dom';
 import babbologo from "../babbologo.png"
 import axios from 'axios';
 
-const SERVER_URL = "http://localhost:3000/products";
-const SERVER_URL_MAKEORDER = "http://localhost:3000/orders/generate_order";
-const SERVER_URL_USERS = "http://localhost:3000/users";
-// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/products";
-// const SERVER_URL_MAKEORDER = "https://restaurant-order-server.herokuapp.com/orders/generate_order";
-// const SERVER_URL_USERS = "https://restaurant-order-server.herokuapp.com/users";
+// const SERVER_URL = "http://localhost:3000/products";
+// const SERVER_URL_MAKEORDER = "http://localhost:3000/orders/generate_order";
+// const SERVER_URL_USERS = "http://localhost:3000/users";
+const SERVER_URL = "https://restaurant-order-server.herokuapp.com/products";
+const SERVER_URL_MAKEORDER = "https://restaurant-order-server.herokuapp.com/orders/generate_order";
+const SERVER_URL_USERS = "https://restaurant-order-server.herokuapp.com/users";
 
 
 class CheckOut extends Component {

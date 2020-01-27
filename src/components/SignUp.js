@@ -4,10 +4,10 @@ import Nav from './Nav';
 import {Form, Col} from 'react-bootstrap';
 import babbo_signup_img from "../babbo_signup_img.jpg"
 
-// const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
-// const SERVER_URL_TOKEN = "https://restaurant-order-server.herokuapp.com/user/token";
-const SERVER_URL = "http://localhost:3000/users";
-const SERVER_URL_TOKEN = "http://localhost:3000/user/token";
+const SERVER_URL = "https://restaurant-order-server.herokuapp.com/users";
+const SERVER_URL_TOKEN = "https://restaurant-order-server.herokuapp.com/user/token";
+// const SERVER_URL = "http://localhost:3000/users";
+// const SERVER_URL_TOKEN = "http://localhost:3000/user/token";
 
 
 class SignUp extends Component {

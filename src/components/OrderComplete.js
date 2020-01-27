@@ -5,16 +5,16 @@ import {Form, Col} from 'react-bootstrap';
 import axios from 'axios';
 
 
-const SERVER_URL_TOKEN = "http://localhost:3000/user/token";
-const SERVER_URL_USERS = "http://localhost:3000/users";
-const SERVER_URL_CurrentUser = "http://localhost:3000/users/current";
-const SERVER_URL_MAKEORDER = "http://localhost:3000/orders/generate_order";
+// const SERVER_URL_TOKEN = "http://localhost:3000/user/token";
+// const SERVER_URL_USERS = "http://localhost:3000/users";
+// const SERVER_URL_CurrentUser = "http://localhost:3000/users/current";
+// const SERVER_URL_MAKEORDER = "http://localhost:3000/orders/generate_order";
 
 
-// const SERVER_URL_TOKEN = "https://restaurant-order-server.herokuapp.com/user/token";
-// const SERVER_URL_USERS = "https://restaurant-order-server.herokuapp.com/users";
-// const SERVER_URL_CurrentUser = "https://restaurant-order-server.herokuapp.com/users/current";
-// const SERVER_URL_MAKEORDER = "https://restaurant-order-server.herokuapp.com/orders/generate_order";
+const SERVER_URL_TOKEN = "https://restaurant-order-server.herokuapp.com/user/token";
+const SERVER_URL_USERS = "https://restaurant-order-server.herokuapp.com/users";
+const SERVER_URL_CurrentUser = "https://restaurant-order-server.herokuapp.com/users/current";
+const SERVER_URL_MAKEORDER = "https://restaurant-order-server.herokuapp.com/orders/generate_order";
 
 
 class OrderComplete extends Component {
