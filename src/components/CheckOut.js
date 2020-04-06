@@ -27,6 +27,7 @@ class CheckOut extends Component {
       paymentOption: "Cash",
       totalPrice: '',
       time: '',
+      user_id: '',
       name: '',
       phone_number: '',
       email: '',
@@ -144,7 +145,7 @@ class CheckOut extends Component {
       //send data to back to make order, user, line-items
       const orderItems = this.state.orderItems;
       const kind = this.state.delivery ? "Delivery" : "Pick-up";
-      const totalPrice = this.state.totalPrice;
+      const totalPrice = Number(this.state.totalPrice).toFixed(2);
       const user_id = this.state.user_id;
 
       if (user_id !== '') {

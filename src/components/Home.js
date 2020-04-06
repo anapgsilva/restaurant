@@ -92,7 +92,7 @@ class Home extends Component {
                   {item.quantity} X {item.product.name} ${item.product.price}
                 </div>
               ))}
-              <p>Total: ${order.total_price}</p>
+              <p>Total: ${Number(order.total_price).toFixed(2)}</p>
             </div>
           ))}
         </div>

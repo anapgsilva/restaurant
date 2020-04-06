@@ -132,7 +132,7 @@ class OrderComplete extends Component {
           axios.post(SERVER_URL_MAKEORDER, {
             orderItems: this.state.orderItems,
             kind: kind,
-            total_price: this.state.totalPrice,
+            total_price: Number(this.state.totalPrice).toFixed(2),
             user_id: user_id
           }).then( res => {
             localStorage.removeItem("orderItems");
