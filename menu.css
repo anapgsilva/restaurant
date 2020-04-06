@@ -1,5 +1,3 @@
-
-
 #main {
   margin: 0 auto;
   display: flex;
@@ -60,6 +58,8 @@ label {
 }
 
 .orderList {
+  background-color: pink;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
