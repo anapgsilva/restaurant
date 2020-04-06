@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/restaurant_client/static/css/main.3c41d961.chunk.css",
-    "main.js": "/restaurant_client/static/js/main.ea2cbca8.chunk.js",
-    "main.js.map": "/restaurant_client/static/js/main.ea2cbca8.chunk.js.map",
-    "runtime-main.js": "/restaurant_client/static/js/runtime-main.6d91e1b3.js",
-    "runtime-main.js.map": "/restaurant_client/static/js/runtime-main.6d91e1b3.js.map",
-    "static/css/2.2ec3db0d.chunk.css": "/restaurant_client/static/css/2.2ec3db0d.chunk.css",
-    "static/js/2.ecb2b129.chunk.js": "/restaurant_client/static/js/2.ecb2b129.chunk.js",
-    "static/js/2.ecb2b129.chunk.js.map": "/restaurant_client/static/js/2.ecb2b129.chunk.js.map",
+    "main.js": "/restaurant_client/static/js/main.291832f0.chunk.js",
+    "main.js.map": "/restaurant_client/static/js/main.291832f0.chunk.js.map",
+    "runtime-main.js": "/restaurant_client/static/js/runtime-main.55487b26.js",
+    "runtime-main.js.map": "/restaurant_client/static/js/runtime-main.55487b26.js.map",
+    "static/css/2.f93178fb.chunk.css": "/restaurant_client/static/css/2.f93178fb.chunk.css",
+    "static/js/2.8dfd2958.chunk.js": "/restaurant_client/static/js/2.8dfd2958.chunk.js",
+    "static/js/2.8dfd2958.chunk.js.map": "/restaurant_client/static/js/2.8dfd2958.chunk.js.map",
     "index.html": "/restaurant_client/index.html",
-    "precache-manifest.58a728638f26acd6fb2971a78a2507b5.js": "/restaurant_client/precache-manifest.58a728638f26acd6fb2971a78a2507b5.js",
+    "precache-manifest.cec42fd2d018e616a498ff5a83179112.js": "/restaurant_client/precache-manifest.cec42fd2d018e616a498ff5a83179112.js",
     "service-worker.js": "/restaurant_client/service-worker.js",
-    "static/css/2.2ec3db0d.chunk.css.map": "/restaurant_client/static/css/2.2ec3db0d.chunk.css.map",
+    "static/css/2.f93178fb.chunk.css.map": "/restaurant_client/static/css/2.f93178fb.chunk.css.map",
     "static/css/main.3c41d961.chunk.css.map": "/restaurant_client/static/css/main.3c41d961.chunk.css.map",
-    "static/js/2.ecb2b129.chunk.js.LICENSE": "/restaurant_client/static/js/2.ecb2b129.chunk.js.LICENSE",
+    "static/js/2.8dfd2958.chunk.js.LICENSE.txt": "/restaurant_client/static/js/2.8dfd2958.chunk.js.LICENSE.txt",
     "static/media/babbo_img_1.jpg": "/restaurant_client/static/media/babbo_img_1.5b5f1b56.jpg",
     "static/media/babbo_img_2.jpg": "/restaurant_client/static/media/babbo_img_2.8023ec85.jpg",
     "static/media/babbo_img_3.jpg": "/restaurant_client/static/media/babbo_img_3.a51d60d8.jpg",
@@ -21,10 +21,10 @@
     "static/media/babbo_signup_img.jpg": "/restaurant_client/static/media/babbo_signup_img.44abea0a.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6d91e1b3.js",
-    "static/css/2.2ec3db0d.chunk.css",
-    "static/js/2.ecb2b129.chunk.js",
+    "static/js/runtime-main.55487b26.js",
+    "static/css/2.f93178fb.chunk.css",
+    "static/js/2.8dfd2958.chunk.js",
     "static/css/main.3c41d961.chunk.css",
-    "static/js/main.ea2cbca8.chunk.js"
+    "static/js/main.291832f0.chunk.js"
   ]
 }
